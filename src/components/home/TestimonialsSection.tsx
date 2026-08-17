@@ -16,8 +16,8 @@ const reviewImages = [
 const metrics = [
   { icon: Star, value: "4.9 / 5.0", label: "Average rating", tone: "text-amber-300" },
   { icon: Users, value: "14K+", label: "Happy customers", tone: "text-blue-300" },
-  { icon: Tv, value: "50K+", label: "Live channels", tone: "text-orange-300" },
-  { icon: Globe2, value: "80+", label: "Countries supported", tone: "text-orange-300" },
+  { icon: Tv, value: "50K+", label: "Live channels", tone: "text-primary-300" },
+  { icon: Globe2, value: "80+", label: "Countries supported", tone: "text-primary-300" },
   { icon: RefreshCw, value: "94%", label: "Renewal rate", tone: "text-pink-300" },
 ];
 
@@ -32,12 +32,12 @@ export default function TestimonialsSection() {
           </span>
           <h2 className="mt-6 text-4xl font-black uppercase leading-[0.98] tracking-tight text-black sm:text-5xl animate-fade-up">
             <span className="block">Trusted by Thousands of</span>
-            <span className="mt-1 block bg-gradient-to-r from-orange-400 via-orange-400 to-orange-400 bg-clip-text text-transparent">
+            <span className="mt-1 block bg-gradient-to-r from-primary-400 via-primary-400 to-primary-400 bg-clip-text text-transparent">
               Happy Cord-Cutters
             </span>
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-slate-600 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            Read real reviews from our global community. Discover why IPTV Fiesta is rated as the most reliable, buffer-free IPTV service for live sports, movies, and international channels.
+            Read real reviews from our global community. Discover why ArgonTV is rated as the most reliable, buffer-free IPTV service for live sports, movies, and international channels.
           </p>
         </div>
 
@@ -73,7 +73,7 @@ export default function TestimonialsSection() {
               >
                 <Image
                   src={`/reviews/${img}`}
-                  alt="IPTV Fiesta Customer Review"
+                  alt="ArgonTV Customer Review"
                   fill
                   sizes="(max-width: 640px) 220px, 280px"
                   className="object-contain group-hover:scale-105 transition-transform duration-300"
@@ -85,22 +85,22 @@ export default function TestimonialsSection() {
 
         <div className="mt-12 text-center animate-fade-up" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
           <a
-            href="https://wa.me/213552069874?text=Hello%2C%20I%20would%20like%20a%20free%20trial%20for%20fiestaiptv%20IPTV."
+            href="https://wa.me/213552069874?text=Hello%2C%20I%20would%20like%20a%20free%20trial%20for%20argontv%20IPTV."
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 px-7 py-4 text-sm font-extrabold text-black shadow-[0_0_28px_rgba(255,107,0,0.42)] transition-transform hover:-translate-y-0.5 hover:scale-105"
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-7 py-4 text-sm font-extrabold text-black shadow-[0_0_28px_rgba(255,107,0,0.42)] transition-transform hover:-translate-y-0.5 hover:scale-105"
           >
             <Trophy className="h-4 w-4" /> Get Your Free Trial
           </a>
           <div className="mt-7 flex flex-wrap justify-center gap-x-6 gap-y-2 text-[10px] text-slate-500">
             <span className="flex items-center gap-1.5">
-              <Headphones className="h-3 w-3 text-emerald-400" /> Instant WhatsApp delivery
+              <Headphones className="h-3 w-3 text-[#25D366]" /> Instant WhatsApp delivery
             </span>
             <span className="flex items-center gap-1.5">
-              <Tv className="h-3 w-3 text-orange-300" /> Works on all devices
+              <Tv className="h-3 w-3 text-primary-300" /> Works on all devices
             </span>
             <span className="flex items-center gap-1.5">
-              <ShieldCheck className="h-3 w-3 text-orange-300" /> 99.9% uptime guaranteed
+              <ShieldCheck className="h-3 w-3 text-primary-300" /> 99.9% uptime guaranteed
             </span>
           </div>
         </div>

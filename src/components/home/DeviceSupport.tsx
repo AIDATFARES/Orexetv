@@ -1,111 +1,109 @@
-import { Monitor, Smartphone, Tv, Box, Laptop } from "lucide-react";
+import { Monitor, Smartphone, Tv, Box, Laptop, Wifi } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function DeviceSupport() {
   return (
-    <section className="py-24 bg-slate-50 text-black relative z-10 border-y border-black/10 overflow-hidden">
-      <div className="max-w-[1240px] mx-auto px-6">
-        
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#FF6B00] mb-3 block">
-            SUPPORTED IPTV DEVICES
-          </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black tracking-tight">
-            Watch the Best IPTV Service on{" "}
-            <Link
-              href="/installation"
-              className="text-[#FF6B00] hover:text-orange-400 transition-colors"
-            >
-              All Your Favorite Devices
-            </Link>
-          </h2>
-        </div>
+    <section className="py-24 bg-gradient-to-b from-slate-50 to-white text-black relative z-10 overflow-hidden border-y border-slate-200">
+      {/* Background glow */}
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[800px] h-[800px] bg-[#7000FF]/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-        {/* Center Image Display */}
-        <div className="relative mx-auto max-w-[800px] mb-16 group">
-          {/* Subtle background glow for the image */}
-          <div className="absolute inset-0 bg-orange-400/10 blur-[80px] rounded-full scale-90 -z-10 group-hover:bg-orange-400/20 transition-all duration-700"></div>
+      <div className="max-w-[1240px] mx-auto px-6 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           
-          <div className="relative overflow-hidden rounded-2xl border border-black/10 bg-white shadow-xl transition-transform duration-500 hover:scale-[1.02]">
-            <Image
-              src="/devices-banner.webp"
-              alt="Supported IPTV Devices - Smart TV, Laptop, Smartphone"
-              width={1200}
-              height={500}
-              sizes="(max-width: 1024px) 100vw, 800px"
-              className="w-full aspect-[21/9] sm:aspect-[2.5/1] object-cover object-center"
-              priority
-            />
-          </div>
-        </div>
-
-        {/* 3-Column Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          {/* Card 1 */}
-          <div className="relative bg-white rounded-2xl p-8 border-y border-r border-slate-200 border-l-4 border-l-[#FF6B00] shadow-lg hover:shadow-xl hover:border-orange-200 hover:border-l-[#FF6B00] transition-all duration-300 group overflow-hidden">
-            <div className="h-12 w-12 rounded-xl bg-orange-50 text-[#FF6B00] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 relative z-10">
-              <Tv className="h-6 w-6 stroke-[2.5]" />
+          {/* Left Side: Radical Image Display */}
+          <div className="w-full lg:flex-1 relative group perspective-1000 min-w-0">
+            {/* Animated Glow */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#7000FF] to-[#FF00BD] blur-[60px] opacity-15 group-hover:opacity-30 transition-opacity duration-700 rounded-3xl"></div>
+            
+            {/* Image Container with 3D-like float effect */}
+            <div className="relative rounded-[2rem] overflow-hidden border-2 border-white bg-white/50 backdrop-blur-md p-4 shadow-[0_20px_50px_rgba(112,0,255,0.1)] transition-transform duration-700 group-hover:-translate-y-2 group-hover:rotate-1">
+              <div className="relative rounded-2xl overflow-hidden shadow-inner">
+                <Image
+                  src="/devices-banner-neon.png"
+                  alt="Supported IPTV Devices"
+                  width={800}
+                  height={500}
+                  className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
             </div>
-            <h3 className="text-xl font-bold text-black mb-3">
-              Smart TVs, Android Boxes & Firestick
-            </h3>
-            <p className="text-slate-600 leading-relaxed text-sm">
-              Our premium IPTV subscription is fully compatible with Samsung and LG Smart TVs, Amazon Firestick, Android TV boxes, and smartphones. Enjoy buffer-free live TV on any screen using our simple{" "}
-              <Link
-                href="/installation"
-                className="text-[#FF6B00] font-semibold hover:text-orange-400 transition-colors"
+            
+            {/* Floating decorative elements */}
+            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 animate-bounce" style={{ animationDuration: '3s' }}>
+              <div className="bg-[#22c55e]/10 p-2 rounded-full">
+                <Wifi className="text-[#22c55e]" size={20} strokeWidth={3} />
+              </div>
+              <span className="font-bold text-sm">Zero Buffering</span>
+            </div>
+          </div>
+
+          {/* Right Side: Title & Paragraph */}
+          <div className="w-full lg:flex-1 space-y-8 min-w-0 flex flex-col justify-center">
+            <div>
+              <span className="inline-block py-1.5 px-4 rounded-full bg-[#7000FF]/10 text-[#7000FF] font-bold text-xs tracking-widest uppercase mb-6 border border-[#7000FF]/20">
+                Limitless Compatibility
+              </span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-black leading-[1.1] tracking-tight mb-8">
+                Stream Seamlessly on <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7000FF] to-[#FF00BD]">
+                  Any Device
+                </span>
+              </h2>
+              <p className="text-slate-500 text-lg md:text-xl leading-relaxed w-full">
+                ArgonTV is designed to adapt to your lifestyle. From the biggest screen in your living room to the smartphone in your pocket, enjoy a <Link href="/installation" className="font-semibold text-[#7000FF] hover:text-[#FF00BD] hover:underline transition-colors">premium viewing experience</Link> anywhere.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+              {/* Feature 1 */}
+              <div className="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-[0_10px_30px_rgba(112,0,255,0.1)] hover:border-[#7000FF]/30 transition-all duration-300 group">
+                <div className="bg-slate-50 p-3 rounded-xl w-12 h-12 flex items-center justify-center text-[#7000FF] mb-4 group-hover:bg-[#7000FF]/10 transition-colors">
+                  <Tv size={24} />
+                </div>
+                <h4 className="font-bold text-black mb-1">Smart TVs</h4>
+                <p className="text-slate-500 text-sm">Samsung, LG, Android TV.</p>
+              </div>
+
+              {/* Feature 2 */}
+              <div className="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-[0_10px_30px_rgba(112,0,255,0.1)] hover:border-[#7000FF]/30 transition-all duration-300 group">
+                <div className="bg-slate-50 p-3 rounded-xl w-12 h-12 flex items-center justify-center text-[#7000FF] mb-4 group-hover:bg-[#7000FF]/10 transition-colors">
+                  <Monitor size={24} />
+                </div>
+                <h4 className="font-bold text-black mb-1">Computers</h4>
+                <p className="text-slate-500 text-sm">Windows & Mac Support.</p>
+              </div>
+
+              {/* Feature 3 */}
+              <div className="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-[0_10px_30px_rgba(112,0,255,0.1)] hover:border-[#7000FF]/30 transition-all duration-300 group">
+                <div className="bg-slate-50 p-3 rounded-xl w-12 h-12 flex items-center justify-center text-[#7000FF] mb-4 group-hover:bg-[#7000FF]/10 transition-colors">
+                  <Box size={24} />
+                </div>
+                <h4 className="font-bold text-black mb-1">Set-Top Boxes</h4>
+                <p className="text-slate-500 text-sm">Firestick, MAG & Apple TV.</p>
+              </div>
+
+              {/* Feature 4 */}
+              <div className="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-[0_10px_30px_rgba(112,0,255,0.1)] hover:border-[#7000FF]/30 transition-all duration-300 group">
+                <div className="bg-slate-50 p-3 rounded-xl w-12 h-12 flex items-center justify-center text-[#7000FF] mb-4 group-hover:bg-[#7000FF]/10 transition-colors">
+                  <Smartphone size={24} />
+                </div>
+                <h4 className="font-bold text-black mb-1">Mobile & Tablets</h4>
+                <p className="text-slate-500 text-sm">Watch anywhere on the go.</p>
+              </div>
+            </div>
+
+            <div className="pt-2">
+              <Link 
+                href="/installation" 
+                className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white bg-black rounded-xl hover:bg-[#7000FF] hover:shadow-[0_10px_25px_rgba(112,0,255,0.3)] transition-all duration-300 gap-2"
               >
-                installation guide
+                Get Setup Instructions <span aria-hidden="true">&rarr;</span>
               </Link>
-              .
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div className="relative bg-white rounded-2xl p-8 border-y border-r border-slate-200 border-l-4 border-l-[#FF6B00] shadow-lg hover:shadow-xl hover:border-orange-200 hover:border-l-[#FF6B00] transition-all duration-300 group overflow-hidden">
-            <div className="h-12 w-12 rounded-xl bg-orange-50 text-[#FF6B00] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 relative z-10">
-              <Box className="h-6 w-6 stroke-[2.5]" />
             </div>
-            <h3 className="text-xl font-bold text-black mb-3">
-              MAG Devices & STB Emulators
-            </h3>
-            <p className="text-slate-600 leading-relaxed text-sm">
-              Connect your MAG box or STB emulator instantly. Just provide your MAC address, and we will send you our high-speed IPTV portal for access to thousands of live channels and our{" "}
-              <Link
-                href="/channels"
-                className="text-[#FF6B00] font-semibold hover:text-orange-400 transition-colors"
-              >
-                VOD library
-              </Link>
-              .
-            </p>
-          </div>
-
-          {/* Card 3 */}
-          <div className="relative bg-white rounded-2xl p-8 border-y border-r border-slate-200 border-l-4 border-l-[#FF6B00] shadow-lg hover:shadow-xl hover:border-orange-200 hover:border-l-[#FF6B00] transition-all duration-300 group overflow-hidden">
-            <div className="h-12 w-12 rounded-xl bg-orange-50 text-[#FF6B00] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 relative z-10">
-              <Laptop className="h-6 w-6 stroke-[2.5]" />
-            </div>
-            <h3 className="text-xl font-bold text-black mb-3">
-              Windows & Mac Computers
-            </h3>
-            <p className="text-slate-600 leading-relaxed text-sm">
-              Stream live sports and 4K movies directly on your computer. Whether you use Windows or Mac, you can easily watch our IPTV service using popular{" "}
-              <Link
-                href="/installation"
-                className="text-[#FF6B00] font-semibold hover:text-orange-400 transition-colors"
-              >
-                IPTV players
-              </Link>{" "}
-              like VLC or IPTV Smarters Pro.
-            </p>
           </div>
 
         </div>
-
       </div>
     </section>
   );

@@ -25,27 +25,29 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Value Proposition & Brand Marquee */}
-      <BrandMarquee />
+      {/* Value Proposition */}
       <TopFeatureBar />
       <MovieStrips />
+
+      {/* Sports Tape */}
+      <div className="w-full bg-white pt-12 pb-2 relative z-20">
+        <h3 className="text-center text-sm font-bold tracking-widest text-slate-400 uppercase mb-4">All Major Sports & Leagues Live</h3>
+      </div>
       <BrandMarquee 
-        imagesFolder="channel2" 
+        imagesFolder="dawryate2" 
         images={[
-          "Bundesliga-1-1.webp", "Champions-League-1.webp", "Design-sans-titre-3-1.webp", 
-          "Liga-1.webp", "MLS-1.webp", "Sans-titre-1-1.webp", "Sans-titre-11.webp", 
-          "Sans-titre-2-1-2.webp", "Sans-titre-2-2.webp", "Sans-titre-3-1-2.webp", 
-          "Sans-titre-6-1-2.webp", "Sans-titre-7-2.webp", "Sans-titre-8-2.webp", 
-          "Sans-titre-9-1-2.webp", "Serie-A-1.webp"
+          "Untitled-design-50.webp", "Untitled-design-51.webp", "Untitled-design-52.webp", 
+          "Untitled-design-53.webp", "Untitled-design-54.webp", "Untitled-design-55.webp", 
+          "Untitled-design-56.webp", "Untitled-design-57.webp", "Untitled-design-58.webp"
         ]}
-        cardClassName="flex-shrink-0 w-[140px] h-[200px] md:w-[200px] md:h-[280px] relative rounded-xl overflow-hidden shadow-2xl border border-black/10 bg-white hover:border-[#FF6B00]/60 transition-all duration-300 group"
+        cardClassName="flex-shrink-0 w-[140px] h-[200px] md:w-[200px] md:h-[280px] relative rounded-xl overflow-hidden shadow-2xl border border-black/10 bg-white hover:border-[#7000FF]/60 transition-all duration-300 group"
         imageClassName="object-cover rounded-xl"
       />
 
       {/* Channel & Installation Quick Links */}
       <div className="w-full bg-white py-6 px-4 text-center border-t border-black/5 relative z-20">
         <p className="text-center text-sm md:text-base text-slate-600 max-w-3xl mx-auto">
-          Find the comprehensive <Link prefetch={false} className="font-semibold text-[#FF6B00] hover:text-[#f44336]" href="/channels">IPTV Fiesta Channel List</Link> or navigate to our <Link prefetch={false} className="font-semibold text-[#FF6B00] hover:text-[#f44336]" href="/installation">IPTV Fiesta Installation Guide</Link> for a quick start.
+          Find the comprehensive <Link prefetch={false} className="font-semibold text-[#7000FF] hover:text-[#f44336]" href="/channels">ArgonTV Channel List</Link> or navigate to our <Link prefetch={false} className="font-semibold text-[#7000FF] hover:text-[#f44336]" href="/installation">ArgonTV Installation Guide</Link> for a quick start.
         </p>
       </div>
 
@@ -74,7 +76,7 @@ export default function Home() {
             "Windows-krooz-tv.webp",
             "xbox-live-krooz-tv.webp"
           ]}
-          cardClassName="flex-shrink-0 w-[160px] h-[80px] md:w-[220px] md:h-[100px] relative bg-white border border-slate-200 rounded-2xl p-4 md:p-6 hover:border-orange-300 transition-all duration-300 shadow-md flex items-center justify-center"
+          cardClassName="flex-shrink-0 w-[160px] h-[80px] md:w-[220px] md:h-[100px] relative bg-white border border-slate-200 rounded-2xl p-4 md:p-6 hover:border-primary-300 transition-all duration-300 shadow-md flex items-center justify-center"
           imageClassName="object-contain drop-shadow-sm"
         />
       </div>

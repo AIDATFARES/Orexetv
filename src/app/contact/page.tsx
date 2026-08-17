@@ -4,90 +4,92 @@ import { Mail, MessageCircle, ArrowRight, Clock, Send } from "lucide-react";
 
 export default function Contact() {
   return (
-    <main className="flex-grow pt-32 pb-xl px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full relative z-10">
+    <main className="flex-grow pt-32 pb-24 px-6 md:px-12 max-w-[1440px] mx-auto w-full relative z-10">
       <div className="mx-auto mb-14 max-w-3xl text-center">
-        <span className="inline-flex rounded-full border border-orange-400/35 bg-orange-400/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-orange-300">Contact Support</span>
-        <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
+        <span className="inline-block py-1.5 px-4 rounded-full bg-[#7000FF]/10 text-[#7000FF] font-bold text-xs tracking-widest uppercase mb-6 border border-[#7000FF]/20">
+          Contact Support
+        </span>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
           <span className="block text-black">Get in Touch with</span>
-          <span className="mt-1 block text-[#FF6B00]">Our Support Team.</span>
+          <span className="mt-1 block text-transparent bg-clip-text bg-gradient-to-r from-[#7000FF] to-[#FF00BD]">Our Support Team.</span>
         </h1>
-        <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-slate-600">
+        <p className="mx-auto mt-5 max-w-2xl text-sm md:text-base leading-6 text-slate-500 font-medium">
           We&apos;re here to help you get the best streaming experience. Send us a message and we&apos;ll get back to you quickly.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-lg lg:gap-xl">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         {/* Contact Info Sidebar */}
-        <div className="lg:col-span-4 flex flex-col gap-md">
-          <div className="glass-panel rounded-xl p-lg flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-md">
-              <Mail className="text-primary w-8 h-8" />
+        <div className="lg:col-span-4 flex flex-col gap-6">
+          <div className="bg-white shadow-[0_20px_40px_-15px_rgba(112,0,255,0.15)] border border-slate-100 rounded-[2rem] p-8 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
+            <div className="w-16 h-16 rounded-2xl bg-[#7000FF]/10 flex items-center justify-center mb-6 group-hover:bg-[#7000FF]/20 transition-colors">
+              <Mail className="text-[#7000FF] w-8 h-8" />
             </div>
-            <h3 className="font-title-md text-title-md text-on-surface mb-xs">Email Us</h3>
-            <p className="font-body-sm text-body-sm text-on-surface-variant mb-md">For general inquiries and support.</p>
+            <h3 className="font-bold text-xl text-black mb-2">Email Us</h3>
+            <p className="text-sm text-slate-500 mb-6 font-medium">For general inquiries and support.</p>
             <a
-              className="text-primary font-medium hover:text-primary-fixed transition-colors"
-              href="mailto:support@fiestaiptv.shop"
+              className="text-[#7000FF] font-bold hover:text-[#FF00BD] transition-colors"
+              href="mailto:support@argontv.shop"
             >
-              support@fiestaiptv.shop
+              support@argontv.shop
             </a>
           </div>
 
-          <div className="glass-panel rounded-xl p-lg flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full bg-emerald-500/20 flex items-center justify-center mb-md">
-              <MessageCircle className="text-emerald-400 w-8 h-8" />
+          <div className="bg-white shadow-[0_20px_40px_-15px_rgba(112,0,255,0.15)] border border-slate-100 rounded-[2rem] p-8 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
+            <div className="w-16 h-16 rounded-2xl bg-[#25D366]/10 flex items-center justify-center mb-6 group-hover:bg-[#25D366]/20 transition-colors">
+              <MessageCircle className="text-[#25D366] w-8 h-8" />
             </div>
-            <h3 className="font-title-md text-title-md text-on-surface mb-xs">WhatsApp Support</h3>
-            <p className="font-body-sm text-body-sm text-on-surface-variant mb-md">
+            <h3 className="font-bold text-xl text-black mb-2">WhatsApp Support</h3>
+            <p className="text-sm text-slate-500 mb-6 font-medium">
               Fastest way to reach us for technical issues.
             </p>
             <a
-              className="text-emerald-400 font-medium hover:text-emerald-300 transition-colors flex items-center gap-xs"
-              href="https://wa.me/213552069874?text=Hello,%20I%20need%20support%20for%20IPTV Fiesta."
+              className="text-[#25D366] font-bold hover:text-[#20bd5a] transition-colors flex items-center gap-2"
+              href="https://wa.me/213552069874?text=Hello,%20I%20need%20support%20for%20ArgonTV."
               target="_blank"
               rel="noreferrer"
             >
-              Start Chat <ArrowRight className="w-4 h-4 ml-1" />
+              Start Chat <ArrowRight className="w-4 h-4" />
             </a>
           </div>
 
-          <div className="glass-panel rounded-xl p-lg flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-md">
-              <Clock className="text-on-surface-variant w-8 h-8" />
+          <div className="bg-white shadow-[0_20px_40px_-15px_rgba(112,0,255,0.15)] border border-slate-100 rounded-[2rem] p-8 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
+            <div className="w-16 h-16 rounded-2xl bg-slate-100 flex items-center justify-center mb-6 group-hover:bg-slate-200 transition-colors">
+              <Clock className="text-slate-600 w-8 h-8" />
             </div>
-            <h3 className="font-title-md text-title-md text-on-surface mb-xs">Response Time</h3>
-            <p className="font-body-sm text-body-sm text-on-surface-variant">
-              We typically reply in <strong className="text-on-surface">Under 2 hours</strong> during standard business hours.
+            <h3 className="font-bold text-xl text-black mb-2">Response Time</h3>
+            <p className="text-sm text-slate-500 font-medium">
+              We typically reply in <strong className="text-black">Under 2 hours</strong> during standard business hours.
             </p>
           </div>
         </div>
 
         {/* Contact Form */}
         <div className="lg:col-span-8">
-          <div className="glass-panel rounded-xl p-lg md:p-xl h-full">
-            <h2 className="font-title-md text-title-md text-on-surface mb-lg border-b border-outline-variant pb-sm">
+          <div className="bg-white shadow-[0_20px_50px_-15px_rgba(112,0,255,0.15)] border border-slate-100 rounded-[2.5rem] p-8 md:p-12 h-full">
+            <h2 className="text-2xl font-extrabold text-black mb-8 border-b border-slate-100 pb-6">
               Send a Message
             </h2>
-            <form className="flex flex-col gap-md" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
-                <div className="flex flex-col gap-xs">
-                  <label className="font-label-caps text-label-caps text-on-surface-variant" htmlFor="name">
+            <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex flex-col gap-2">
+                  <label className="text-xs font-bold uppercase tracking-widest text-slate-500" htmlFor="name">
                     Name
                   </label>
                   <input
-                    className="bg-surface-container-lowest/80 border border-black/10 focus:border-primary rounded-lg px-md py-sm text-on-surface placeholder:text-outline focus:outline-none transition-all"
+                    className="bg-slate-50 border border-slate-200 focus:border-[#7000FF] focus:ring-1 focus:ring-[#7000FF] rounded-xl px-5 py-4 text-black placeholder:text-slate-400 focus:outline-none transition-all font-medium"
                     id="name"
                     name="name"
                     placeholder="John Doe"
                     type="text"
                   />
                 </div>
-                <div className="flex flex-col gap-xs">
-                  <label className="font-label-caps text-label-caps text-on-surface-variant" htmlFor="email">
+                <div className="flex flex-col gap-2">
+                  <label className="text-xs font-bold uppercase tracking-widest text-slate-500" htmlFor="email">
                     Email Address
                   </label>
                   <input
-                    className="bg-surface-container-lowest/80 border border-black/10 focus:border-primary rounded-lg px-md py-sm text-on-surface placeholder:text-outline focus:outline-none transition-all"
+                    className="bg-slate-50 border border-slate-200 focus:border-[#7000FF] focus:ring-1 focus:ring-[#7000FF] rounded-xl px-5 py-4 text-black placeholder:text-slate-400 focus:outline-none transition-all font-medium"
                     id="email"
                     name="email"
                     placeholder="john@example.com"
@@ -96,12 +98,12 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-xs">
-                <label className="font-label-caps text-label-caps text-on-surface-variant" htmlFor="subject">
+              <div className="flex flex-col gap-2">
+                <label className="text-xs font-bold uppercase tracking-widest text-slate-500" htmlFor="subject">
                   Subject
                 </label>
                 <input
-                  className="bg-surface-container-lowest/80 border border-black/10 focus:border-primary rounded-lg px-md py-sm text-on-surface placeholder:text-outline focus:outline-none transition-all"
+                  className="bg-slate-50 border border-slate-200 focus:border-[#7000FF] focus:ring-1 focus:ring-[#7000FF] rounded-xl px-5 py-4 text-black placeholder:text-slate-400 focus:outline-none transition-all font-medium"
                   id="subject"
                   name="subject"
                   placeholder="How can we help?"
@@ -109,12 +111,12 @@ export default function Contact() {
                 />
               </div>
 
-              <div className="flex flex-col gap-xs">
-                <label className="font-label-caps text-label-caps text-on-surface-variant" htmlFor="message">
+              <div className="flex flex-col gap-2">
+                <label className="text-xs font-bold uppercase tracking-widest text-slate-500" htmlFor="message">
                   Message
                 </label>
                 <textarea
-                  className="bg-surface-container-lowest/80 border border-black/10 focus:border-primary rounded-lg px-md py-sm text-on-surface placeholder:text-outline focus:outline-none transition-all resize-none"
+                  className="bg-slate-50 border border-slate-200 focus:border-[#7000FF] focus:ring-1 focus:ring-[#7000FF] rounded-xl px-5 py-4 text-black placeholder:text-slate-400 focus:outline-none transition-all resize-none font-medium"
                   id="message"
                   name="message"
                   placeholder="Describe your issue or question in detail..."
@@ -122,9 +124,9 @@ export default function Contact() {
                 ></textarea>
               </div>
 
-              <div className="mt-sm flex justify-end">
+              <div className="mt-4 flex justify-end">
                 <button
-                  className="btn-primary-voltra px-8 py-3.5 text-xs font-bold uppercase tracking-wider flex items-center gap-2 group"
+                  className="btn-primary-voltra px-10 py-4 text-sm font-bold flex items-center gap-2 group shadow-[0_10px_30px_rgba(112,0,255,0.3)] hover:-translate-y-1 transition-all"
                   type="submit"
                 >
                   <span>Send Message</span>

@@ -1,81 +1,109 @@
 import Link from "next/link";
 
 export default function ComparisonSection() {
+  const rows = [
+    { feature: "Monthly Cost", fiesta: "From $4.2/mo", cable: "$80-$200/mo", other: "$10-$30/mo (unreliable)" },
+    { feature: "Live Channels", fiesta: "+50,000 Channels", cable: "200-500", other: "5,000-15,000" },
+    { feature: "4K Streaming", fiesta: "✓ Native 4K", cable: "Limited", other: "Rarely stable" },
+    { feature: "VOD Library", fiesta: "+120,000 Films", cable: "Add-on cost", other: "Varies wildly" },
+    { feature: "Server Uptime", fiesta: "99.9% Guaranteed", cable: "99%", other: "60-85%" },
+    { feature: "Buffering", fiesta: "Zero — Ever", cable: "Rare", other: "Common at peak" },
+    { feature: "Setup Time", fiesta: "5 minutes", cable: "Technician visit", other: "Varies" },
+    { feature: "Contract", fiesta: "No", cable: "12-24 months", other: "Sometimes" },
+    { feature: "Multi-Screen", fiesta: "✓ Included", cable: "Extra cost", other: "Limited" },
+    { feature: "Free Trial", fiesta: "✓ Available", cable: "No", other: "Rare" },
+  ];
+
   return (
-    <section className="bg-white text-black relative z-10 border-b border-black/10 overflow-hidden py-20">
-      <div className="max-w-[1240px] mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#FF6B00] mb-2 block">
-            IPTV VS CABLE TV
+    <section className="bg-slate-50 text-black relative z-10 border-b border-black/10 overflow-hidden py-24">
+      <div className="max-w-[1200px] mx-auto px-6">
+        
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-[#7000FF]/10 text-[#7000FF] font-bold text-xs tracking-widest uppercase mb-6 border border-[#7000FF]/20">
+            IPTV vs Cable TV
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black tracking-tight">
-            Why IPTV Fiesta is the Best Cable TV Alternative
+          <h2 className="text-4xl md:text-5xl font-extrabold text-black tracking-tight leading-[1.1]">
+            Why ArgonTV is the <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7000FF] to-[#FF00BD]">
+              Best Cable Alternative
+            </span>
           </h2>
-          <p className="text-slate-700 text-sm sm:text-base mt-4 leading-relaxed max-w-2xl mx-auto">
-            Discover why thousands of users are cutting the cord. Our premium IPTV service offers more channels, better 4K quality, and reliable anti-freeze technology at a fraction of the cost of traditional cable.
+          <p className="text-slate-500 text-lg md:text-xl mt-6 leading-relaxed max-w-2xl mx-auto">
+            Discover why thousands of users are cutting the cord. Our premium IPTV service offers <Link href="/channels" className="font-semibold text-[#7000FF] hover:text-[#FF00BD] hover:underline transition-colors">more channels</Link>, better 4K quality, and reliable anti-freeze technology at a fraction of the cost.
           </p>
         </div>
 
-        <div className="max-w-[1080px] mx-auto overflow-x-auto pb-4 px-4 sm:px-0">
-          <div className="min-w-[800px] bg-white rounded-2xl shadow-xl border-2 border-[#FF6B00] overflow-hidden relative flex">
+        {/* Desktop Comparison Table */}
+        <div className="hidden md:block relative max-w-5xl mx-auto">
+          <div className="bg-white rounded-[2rem] shadow-[0_20px_60px_-15px_rgba(112,0,255,0.15)] border border-slate-100 p-8 pb-10 relative overflow-hidden">
             
-            {/* Orange Side Design Element (Internal Link) */}
-            <Link 
-              href="/how-it-works"
-              className="w-14 bg-[#FF6B00] hover:bg-[#E66000] transition-colors flex items-center justify-center group cursor-pointer shrink-0 border-r border-orange-700/20 shadow-[inset_-4px_0_10px_rgba(0,0,0,0.1)]"
-              title="Learn How It Works"
-            >
-              <span className="-rotate-90 text-white font-black tracking-[0.2em] uppercase whitespace-nowrap text-xs sm:text-sm group-hover:scale-110 transition-transform">
-                How It Works
-              </span>
-            </Link>
+            {/* Highlight Background for ArgonTV Column */}
+            <div className="absolute top-0 bottom-0 left-[25%] w-[25%] bg-gradient-to-b from-[#7000FF]/5 to-[#FF00BD]/5 border-x border-[#7000FF]/20 shadow-[0_0_50px_rgba(112,0,255,0.05)]"></div>
 
-            <div className="flex-grow">
-              {/* Table Header */}
-              <div className="grid grid-cols-4 bg-slate-50 border-b border-slate-200">
-                <div className="p-6 text-sm font-bold text-slate-500 uppercase tracking-wider">Feature</div>
-                <div className="p-6 text-sm font-black text-[#FF6B00] uppercase tracking-wider text-center border-x border-slate-200 bg-orange-50/50">IPTV Fiesta</div>
-                <div className="p-6 text-sm font-bold text-slate-500 uppercase tracking-wider text-center">Cable / Satellite</div>
-                <div className="p-6 text-sm font-bold text-slate-500 uppercase tracking-wider text-center border-l border-slate-200">Other IPTV</div>
+            {/* Table Header */}
+            <div className="grid grid-cols-4 gap-4 mb-6 relative z-10">
+              <div className="text-left font-bold text-slate-400 uppercase tracking-widest text-sm flex items-end pb-4">Features</div>
+              
+              <div className="flex flex-col items-center justify-center bg-gradient-to-r from-[#7000FF] to-[#FF00BD] text-white rounded-2xl p-5 shadow-[0_10px_30px_rgba(112,0,255,0.3)] transform -translate-y-4 scale-105 border-2 border-white">
+                <span className="text-[10px] uppercase tracking-widest font-bold opacity-80 mb-1">Premium Choice</span>
+                <span className="text-2xl font-black tracking-tight">ArgonTV</span>
               </div>
+              
+              <div className="text-center font-bold text-slate-400 uppercase tracking-widest text-sm flex items-end justify-center pb-4">Cable / Satellite</div>
+              <div className="text-center font-bold text-slate-400 uppercase tracking-widest text-sm flex items-end justify-center pb-4">Other IPTV</div>
+            </div>
 
-              {/* Table Rows */}
-              {[
-                { feature: "Monthly Cost", fiesta: "From $4.2/mo", cable: "$80-$200/mo", other: "$10-$30/mo (unreliable)" },
-                { feature: "Live Channels", fiesta: "50,000+", cable: "200-500", other: "5,000-15,000" },
-                { feature: "4K Streaming", fiesta: "✓ Native 4K", cable: "Limited", other: "Rarely stable" },
-                { feature: "VOD Library", fiesta: "120,000+ titles", cable: "Add-on cost", other: "Varies wildly" },
-                { feature: "Server Uptime", fiesta: "99.9% guaranteed", cable: "99%", other: "60-85%" },
-                { feature: "Buffering", fiesta: "Zero — ever", cable: "Rare", other: "Common at peak hours" },
-                { feature: "Setup", fiesta: "5 minutes", cable: "Technician visit", other: "Varies" },
-                { feature: "Contract", fiesta: "No", cable: "12-24 months", other: "Sometimes" },
-                { feature: "Multi-Screen", fiesta: "✓ Included", cable: "Extra cost", other: "Limited" },
-                { feature: "Free Trial", fiesta: "✓ Available", cable: "No", other: "Rare" },
-              ].map((row, idx) => (
-                <div key={idx} className={`grid grid-cols-4 border-b border-slate-100 hover:bg-slate-50 transition-colors ${idx === 9 ? 'border-b-0' : ''}`}>
-                  <div className="p-5 text-sm font-bold text-slate-800 flex items-center">{row.feature}</div>
-                  <div className="p-5 text-sm font-bold text-black text-center flex items-center justify-center border-x border-slate-100 bg-orange-50/30">
-                    {row.fiesta}
-                  </div>
-                  <div className="p-5 text-sm font-medium text-slate-500 text-center flex items-center justify-center">
-                    {row.cable}
-                  </div>
-                  <div className="p-5 text-sm font-medium text-slate-500 text-center flex items-center justify-center border-l border-slate-100">
-                    {row.other}
-                  </div>
+            {/* Table Rows */}
+            <div className="relative z-10">
+              {rows.map((row, idx) => (
+                <div key={idx} className="grid grid-cols-4 gap-4 py-5 border-b border-slate-100 last:border-0 items-center group hover:bg-slate-50/50 transition-colors rounded-xl px-2 -mx-2">
+                  <div className="font-bold text-slate-700 text-sm sm:text-base">{row.feature}</div>
+                  <div className="font-black text-[#7000FF] text-center text-base sm:text-lg group-hover:scale-105 transition-transform">{row.fiesta}</div>
+                  <div className="font-medium text-slate-500 text-center text-sm">{row.cable}</div>
+                  <div className="font-medium text-slate-500 text-center text-sm">{row.other}</div>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="mt-12 text-center">
-          <a
-            href="#pricing"
-            className="inline-flex items-center justify-center bg-[#FF6B00] text-white font-bold px-10 py-4 rounded-md shadow-[0_4px_14px_rgba(255,107,0,0.3)] hover:bg-[#E66000] hover:shadow-[0_6px_20px_rgba(255,107,0,0.4)] transition-all hover:scale-105"
+        {/* Mobile Comparison (Cards) */}
+        <div className="md:hidden space-y-8">
+          <div className="bg-gradient-to-br from-[#7000FF] to-[#FF00BD] rounded-3xl p-1 relative shadow-xl">
+            <div className="bg-black/20 text-white rounded-[1.35rem] p-6 backdrop-blur-sm">
+              <h3 className="text-2xl font-black mb-6 text-center">ArgonTV</h3>
+              <div className="space-y-4">
+                {rows.map((row, idx) => (
+                  <div key={idx} className="flex justify-between items-center border-b border-white/10 pb-3 last:border-0 last:pb-0">
+                    <span className="text-white/70 text-sm">{row.feature}</span>
+                    <span className="font-bold text-white text-right">{row.fiesta}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-3xl shadow-lg border border-slate-200 p-6">
+            <h3 className="text-xl font-bold mb-6 text-center text-slate-400">Cable / Satellite</h3>
+            <div className="space-y-4">
+              {rows.map((row, idx) => (
+                <div key={idx} className="flex justify-between items-center border-b border-slate-100 pb-3 last:border-0 last:pb-0">
+                  <span className="text-slate-500 text-sm">{row.feature}</span>
+                  <span className="font-medium text-slate-700 text-right">{row.cable}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16 text-center">
+          <Link
+            href="/pricing"
+            className="inline-flex items-center justify-center bg-black text-white font-bold px-10 py-5 rounded-xl hover:bg-[#7000FF] shadow-lg hover:shadow-[0_10px_30px_rgba(112,0,255,0.3)] transition-all hover:-translate-y-1 gap-2"
           >
-            View Plans & Pricing
-          </a>
+            View Plans & Pricing <span aria-hidden="true">&rarr;</span>
+          </Link>
         </div>
       </div>
     </section>

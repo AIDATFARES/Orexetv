@@ -18,7 +18,7 @@
   --color-surface-tint: #a04100;
   --color-primary: #a04100;
   --color-on-primary: #ffffff;
-  --color-primary-container: #ff6b00;
+  --color-primary-container: #7000FF;
   --color-on-primary-container: #572000;
   --color-inverse-primary: #ffb693;
   --color-secondary: #5e5e5e;
@@ -49,11 +49,19 @@
   --color-on-background: #1a1c1c;
   --color-surface-variant: #e2e2e2;
 
-  /* Brand Colors Override */
-  --color-orange-400: #FF8533;
-  --color-orange-500: #FF6B00;
-  --color-orange-600: #E66000;
-  --color-blue-500: #049EFF;
+  /* Brand Colors Override - AI Stitch Palette */
+  --color-primary-300: #a34dff;
+  --color-primary-400: #8a1aff;
+  --color-primary-500: #7000FF;
+  --color-primary-600: #5500cc;
+  
+  --color-secondary-400: #ff4dce;
+  --color-secondary-500: #FF00BD;
+  --color-secondary-600: #cc0097;
+
+  --color-accent-400: #4dffff;
+  --color-accent-500: #00F0FF;
+  --color-accent-600: #00b3cc;
 
   --radius: 0.25rem;
   --radius-lg: 0.5rem;
@@ -125,23 +133,23 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
   .text-glow {
-    text-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
+    text-shadow: 0 0 20px rgba(112, 0, 255, 0.4);
   }
   .btn-glow:hover {
-    box-shadow: 0 0 30px rgba(255, 107, 0, 0.5);
+    box-shadow: 0 0 30px rgba(255, 0, 189, 0.6);
   }
 
   .btn-primary-voltra {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(135deg, #7000FF 0%, #FF00BD 100%);
     color: #ffffff;
     font-weight: 700;
     letter-spacing: 0.04em;
-    border-radius: var(--radius);
-    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.45);
+    border-radius: var(--radius-xl); /* Softer, consistent rounded buttons */
+    box-shadow: 0 4px 20px rgba(112, 0, 255, 0.4);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .btn-primary-voltra:hover {
-    box-shadow: 0 6px 30px rgba(16, 185, 129, 0.75);
+    box-shadow: 0 6px 30px rgba(255, 0, 189, 0.6);
     transform: translateY(-2px);
   }
   .btn-primary-voltra:active {
@@ -149,13 +157,13 @@
   }
 
   .btn-secondary-voltra {
-    background: rgba(30, 32, 32, 0.7);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: #e1e2eb;
+    border: 1px solid rgba(112, 0, 255, 0.2);
+    color: #7000FF;
     font-weight: 600;
-    border-radius: var(--radius);
+    border-radius: var(--radius-xl);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .btn-secondary-voltra:hover {
@@ -187,10 +195,10 @@
   }
   .text-format-marketing mark,
   .text-format-marketing .text-highlight {
-    @apply bg-transparent text-orange-500 font-extrabold;
+    @apply bg-transparent text-primary-500 font-extrabold;
   }
   .text-format-marketing .badge-text {
-    @apply inline-flex items-center gap-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-orange-600;
+    @apply inline-flex items-center gap-1.5 rounded-full border border-primary-500/30 bg-primary-500/10 px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-primary-600;
   }
 
   /* 2. BLOG & EDITORIAL PAGES (Blog listing, Article detail) */
@@ -215,7 +223,7 @@
     @apply italic text-slate-600;
   }
   .text-format-blog a {
-    @apply text-orange-500 font-medium underline underline-offset-4 decoration-orange-500/40 hover:text-orange-600 hover:decoration-orange-500 transition-colors;
+    @apply text-primary-500 font-medium underline underline-offset-4 decoration-primary-500/40 hover:text-primary-600 hover:decoration-primary-500 transition-colors;
   }
 
   /* 3. TECHNICAL GUIDES & INSTALLATION PAGES */
@@ -233,11 +241,11 @@
   }
   .text-format-technical code,
   .text-format-technical pre {
-    @apply font-mono text-orange-600 bg-slate-100 px-2.5 py-1 rounded-md border border-black/10 text-xs sm:text-sm font-medium tracking-wide shadow-inner;
+    @apply font-mono text-primary-600 bg-slate-100 px-2.5 py-1 rounded-md border border-black/10 text-xs sm:text-sm font-medium tracking-wide shadow-inner;
   }
   .text-format-technical strong,
   .text-format-technical b {
-    @apply font-bold text-black underline decoration-emerald-500/50 decoration-2 underline-offset-2;
+    @apply font-bold text-black underline decoration-secondary-500/50 decoration-2 underline-offset-2;
   }
 
   /* 4. LEGAL & POLICY DOCUMENTS */
@@ -245,7 +253,7 @@
     @apply font-black uppercase tracking-tight text-black text-3xl sm:text-4xl lg:text-5xl;
   }
   .text-format-legal h2 {
-    @apply font-bold text-black text-xl sm:text-2xl tracking-normal mt-8 mb-3 border-l-4 border-orange-500 pl-3;
+    @apply font-bold text-black text-xl sm:text-2xl tracking-normal mt-8 mb-3 border-l-4 border-primary-500 pl-3;
   }
   .text-format-legal p {
     @apply text-slate-600 leading-7 font-normal text-sm sm:text-base mb-4 tracking-normal;
@@ -255,7 +263,7 @@
     @apply font-semibold text-black;
   }
   .text-format-legal a {
-    @apply font-semibold text-orange-500 hover:text-orange-600 transition-colors underline underline-offset-2;
+    @apply font-semibold text-primary-500 hover:text-primary-600 transition-colors underline underline-offset-2;
   }
 }
 

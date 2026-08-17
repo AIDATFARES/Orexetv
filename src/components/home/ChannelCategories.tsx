@@ -1,71 +1,123 @@
-import { Check, Monitor, Globe2, Tv, Headphones } from "lucide-react";
-import Link from "next/link";
+import { Monitor, Layers, Film, Zap, Smartphone, Globe2, ShieldCheck } from "lucide-react";
 
 export default function ChannelCategories() {
-  const features = [
+  const topFeatures = [
     {
       icon: Monitor,
-      title: "For all devices",
-      desc: "Our IPTV is 100% compatible with all operating systems, applications, TV boxes and devices available on the market.",
+      title: "4K ULTRA HD STREAMING",
+      desc: "Watch every channel and live event in crisp 4K, Full HD, and HD quality. Our anti-freeze technology ensures smooth streaming on every device.",
+      tags: ["4K UHD", "FULL HD", "ANTI-FREEZE"],
+    },
+    {
+      icon: Layers,
+      title: "50,000+ LIVE CHANNELS",
+      desc: "Access 50,000+ live channels from sports, news, entertainment, kids, and more. Every broadcast is delivered in crystal-clear quality.",
+      tags: ["160+ COUNTRIES", "SPORTS", "NEWS", "KIDS"],
+    },
+    {
+      icon: Film,
+      title: "200,000+ VODS",
+      desc: "Enjoy an on-demand library with movies, series, replays, highlights, and documentaries available any time, on any device.",
+      tags: ["MOVIES", "SERIES", "REPLAYS", "UPDATED DAILY"],
+    },
+  ];
+
+  const bottomFeatures = [
+    {
+      icon: Zap,
+      title: "Instant Activation",
+      desc: "Your subscription is activated within minutes.",
+    },
+    {
+      icon: Smartphone,
+      title: "All Devices Supported",
+      desc: "Smart TV, Android, iOS, Mac, Fire Stick, PC, and more.",
     },
     {
       icon: Globe2,
-      title: "Global Content",
-      desc: "Our IPTV subscription offers thousands of channels, movies, and series with the fastest and most stable server",
+      title: "Works Worldwide",
+      desc: "Enjoy ArgonTV wherever you are, on any connection.",
     },
     {
-      icon: Tv,
-      title: "Best quality FHD/4K",
-      desc: "Enjoy your favorite shows, movies and events with the highest quality and performance.",
-    },
-    {
-      icon: Headphones,
-      title: "24/7 Support",
-      desc: "We offer 24/7 support to help you throughout your subscription, including installation, activation, and technical issues.",
+      icon: ShieldCheck,
+      title: "99.9% Uptime",
+      desc: "Reliable servers with stable, buffer-free streaming.",
     },
   ];
 
   return (
-    <section className="relative z-10 bg-white py-16 text-black sm:py-24">
-      <div className="mx-auto max-w-[1200px] px-5">
+    <section className="relative z-10 bg-white py-16 sm:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         
-        {/* Heading above Red Box */}
-        <div className="mx-auto mb-12 max-w-4xl text-center">
-          <div className="inline-flex items-center justify-center gap-2 mb-4">
-            <span className="h-px w-8 bg-gradient-to-r from-transparent to-[#FF6B00]"></span>
-            <span className="text-[#FF6B00] text-sm font-bold tracking-[0.2em] uppercase">Premium Quality</span>
-            <span className="h-px w-8 bg-gradient-to-l from-transparent to-[#FF6B00]"></span>
-          </div>
-          <h2 className="text-3xl md:text-5xl font-black text-black tracking-tight leading-tight animate-fade-up">
-            We Are Proud to Offer the <br className="hidden md:block" />
-            <span className="text-[#FF6B00]">Premium IPTV Service.</span>
+        {/* Heading */}
+        <div className="mx-auto mb-16 max-w-4xl text-center">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-[#7000FF]/10 text-[#7000FF] font-bold text-xs tracking-widest uppercase mb-6 border border-[#7000FF]/20">
+            Premium Features
+          </span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-black tracking-tight leading-[1.1] animate-fade-up">
+            Everything You Need for the <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7000FF] to-[#FF00BD]">
+              Ultimate Viewing Experience.
+            </span>
           </h2>
         </div>
 
-        {/* Orange Feature Box */}
-        <div 
-          className="bg-[#FF6B00] rounded-2xl md:rounded-3xl p-8 md:p-12 mb-20 shadow-[0_10px_40px_rgba(255,107,0,0.3)] animate-fade-up"
-          style={{ animationDelay: '0.1s', animationFillMode: 'both' }}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
-            {features.map((feature, i) => {
+        {/* Feature Grid */}
+        <div className="flex flex-col gap-6 animate-fade-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
+          
+          {/* Top Row: 3 Large Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {topFeatures.map((feature, idx) => {
               const Icon = feature.icon;
               return (
-                <div key={i} className="flex flex-col items-center">
-                  <div className="mb-6 inline-flex p-4 rounded-full bg-white shadow-sm">
-                    <Icon className="w-8 h-8 text-[#FF6B00]" strokeWidth={2} />
+                <div 
+                  key={idx} 
+                  className="flex flex-col rounded-2xl border border-[#7000FF] bg-white p-6 sm:p-8 shadow-[0_0_35px_rgba(112,0,255,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(112,0,255,0.35)]"
+                >
+                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-[#7000FF]/10 text-[#7000FF] ring-1 ring-[#7000FF]/20">
+                    <Icon className="h-7 w-7" strokeWidth={2} />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-orange-50 text-[15px] leading-relaxed max-w-[280px] mx-auto font-medium">
+                  <h3 className="mb-3 text-xl font-black uppercase text-black">{feature.title}</h3>
+                  <p className="mb-8 flex-grow text-[15px] leading-relaxed text-slate-500 font-medium">
+                    {feature.desc}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {feature.tags.map((tag, tagIdx) => (
+                      <span 
+                        key={tagIdx} 
+                        className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-600"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Bottom Row: 4 Small Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {bottomFeatures.map((feature, idx) => {
+              const Icon = feature.icon;
+              return (
+                <div 
+                  key={idx} 
+                  className="flex flex-col rounded-2xl border border-[#7000FF] bg-white p-6 shadow-[0_0_35px_rgba(112,0,255,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(112,0,255,0.35)]"
+                >
+                  <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-orange-50 text-[#E66000] ring-1 ring-orange-200">
+                    <Icon className="h-6 w-6" strokeWidth={2} />
+                  </div>
+                  <h4 className="mb-2 text-[17px] font-bold text-black">{feature.title}</h4>
+                  <p className="text-sm leading-relaxed text-slate-500 font-medium">
                     {feature.desc}
                   </p>
                 </div>
               );
             })}
           </div>
+
         </div>
-
-
 
       </div>
     </section>
