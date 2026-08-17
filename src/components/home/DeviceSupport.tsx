@@ -20,7 +20,7 @@ export default function DeviceSupport() {
             <div className="relative rounded-[2rem] overflow-hidden border-2 border-white bg-white/50 backdrop-blur-md p-4 shadow-[0_20px_50px_rgba(112,0,255,0.1)] transition-transform duration-700 group-hover:-translate-y-2 group-hover:rotate-1">
               <div className="relative rounded-2xl overflow-hidden shadow-inner">
                 <Image
-                  src="/devices-banner-neon.png"
+                  src="/devices-banner-neon.webp"
                   alt="Supported IPTV Devices"
                   width={800}
                   height={500}

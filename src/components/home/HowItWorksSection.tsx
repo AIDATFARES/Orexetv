@@ -73,7 +73,7 @@ export default function HowItWorksSection() {
               <div className="overflow-hidden rounded-2xl bg-black/5 border border-black/10 shadow-xl"
               >
                 <Image
-                  src="/step-1-neon.png"
+                  src="/step-1-neon.webp"
                   alt="Place your order online"
                   width={600}
                   height={380}
@@ -97,7 +97,7 @@ export default function HowItWorksSection() {
               <div className="overflow-hidden rounded-2xl bg-black/5 border border-black/10 shadow-xl order-2 md:order-1"
               >
                 <Image
-                  src="/step-2-neon.png"
+                  src="/step-2-neon.webp"
                   alt="Instant installation"
                   width={600}
                   height={380}
@@ -167,7 +167,7 @@ export default function HowItWorksSection() {
               <div className="overflow-hidden rounded-2xl bg-black/5 border border-black/10 shadow-xl"
               >
                 <Image
-                  src="/step-3-neon.png"
+                  src="/step-3-neon.webp"
                   alt="Watch and enjoy live TV"
                   width={600}
                   height={380}

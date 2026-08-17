@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "ArgonTV",
     images: [
       {
-        url: "/og-image-argontv.png",
+        url: "/og-image-argontv.webp",
         width: 1200,
         height: 630,
         alt: "ArgonTV Premium IPTV Service",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ArgonTV - Premium 4K Streaming",
     description: "Ultimate 4K IPTV Experience. Access +50,000 Channels, +120,000 Films & Series, and 200,000+ VODs.",
-    images: ["/og-image-argontv.png"],
+    images: ["/og-image-argontv.webp"],
   },
 };
 

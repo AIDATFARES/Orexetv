@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     date: "August 17, 2026",
     author: "ARGONTV Team",
     category: "Setup Guide",
-    coverImage: "/blog/how-to-set-up-iptv-on-android-tv/image-1.png",
+    coverImage: "/blog/how-to-set-up-iptv-on-android-tv/image-1.webp",
     content: `
 Android TV has become one of the easiest ways to turn a television into a flexible streaming device. With the right IPTV player, a stable internet connection, and valid playlist credentials from a legitimate provider, you can organize live television, on-demand content, and electronic program guides from one interface.
 
@@ -58,7 +58,7 @@ If your television or Android TV box supports Ethernet, a wired connection can p
 
 After connecting, test the connection before installing anything. A stable connection is more important than simply having a high advertised download speed.
 
-![Connecting Android TV to Network](/blog/how-to-set-up-iptv-on-android-tv/image-2.png)
+![Connecting Android TV to Network](/blog/how-to-set-up-iptv-on-android-tv/image-2.webp)
 
 ## Step 2: Install an IPTV Player
 
@@ -112,7 +112,7 @@ Select Xtream Codes API and enter each field exactly as provided.
 
 Check capitalization, numbers, punctuation, and the server address carefully. One incorrect character can prevent the account from loading.
 
-![Adding IPTV Playlist and Xtream Codes](/blog/how-to-set-up-iptv-on-android-tv/image-3.png)
+![Adding IPTV Playlist and Xtream Codes](/blog/how-to-set-up-iptv-on-android-tv/image-3.webp)
 
 ## Step 4: Wait for Your Channels to Load
 
@@ -196,7 +196,7 @@ Older software can sometimes cause compatibility or playback issues.
 
 A simple restart can clear temporary memory and resolve minor playback problems.
 
-![Optimizing IPTV Playback and Network Connection](/blog/how-to-set-up-iptv-on-android-tv/image-4.png)
+![Optimizing IPTV Playback and Network Connection](/blog/how-to-set-up-iptv-on-android-tv/image-4.webp)
 
 ## Common IPTV Problems on Android TV
 
@@ -243,7 +243,7 @@ If the problem continues, clear the application's cache from the Android TV appl
 
 Avoid clearing application data unless necessary because doing so may remove your saved playlists and account information.
 
-![High Speed Fiber Optic Connection for Android TV Streaming](/blog/how-to-set-up-iptv-on-android-tv/image-5.png)
+![High Speed Fiber Optic Connection for Android TV Streaming](/blog/how-to-set-up-iptv-on-android-tv/image-5.webp)
 
 ## Is IPTV Legal on Android TV?
 
@@ -317,7 +317,7 @@ A properly configured Android TV device can provide a convenient way to access a
     date: "August 17, 2026",
     author: "ARGONTV Team",
     category: "Guides",
-    coverImage: "/blog/how-to-set-up-iptv-on-smart-tv/image-1.png",
+    coverImage: "/blog/how-to-set-up-iptv-on-smart-tv/image-1.webp",
     content: `
 Smart TVs have made internet-based television much easier to access without requiring an additional streaming box. Depending on the television you own, you may be able to install an IPTV player directly from the TV's application store and connect it to a compatible playlist or account.
 
@@ -325,7 +325,7 @@ The exact process varies between Samsung, LG, Android TV, Google TV and other Sm
 
 In this complete 2026 guide, you'll learn how to prepare your Smart TV, install a compatible IPTV player, add an M3U playlist or Xtream Codes account, configure the EPG and troubleshoot the most common problems.
 
-![How to Set Up IPTV on Smart TV](/blog/how-to-set-up-iptv-on-smart-tv/image-1.png)
+![How to Set Up IPTV on Smart TV](/blog/how-to-set-up-iptv-on-smart-tv/image-1.webp)
 
 ## What You Need Before Setting Up IPTV
 
@@ -407,7 +407,7 @@ Common formats include:
 
 An IPTV player normally does not provide television channels by itself. It is software used to organize and play content from a compatible source.
 
-![Smart TV App Store Interface](/blog/how-to-set-up-iptv-on-smart-tv/image-2.png)
+![Smart TV App Store Interface](/blog/how-to-set-up-iptv-on-smart-tv/image-2.webp)
 
 ## Step 4: Install the IPTV Player
 
@@ -466,7 +466,7 @@ Then select Login or Add User.
 
 If the information is correct and the service is available, the application should begin loading the available content.
 
-![Entering Xtream Codes on Smart TV](/blog/how-to-set-up-iptv-on-smart-tv/image-3.png)
+![Entering Xtream Codes on Smart TV](/blog/how-to-set-up-iptv-on-smart-tv/image-3.webp)
 
 ## Step 7: Load Your Channels and Categories
 
@@ -561,7 +561,7 @@ If your TV cannot install a compatible IPTV application, you can consider using 
 
 This can provide access to a larger selection of IPTV-compatible applications.
 
-![Smart TV IPTV Playback Optimization](/blog/how-to-set-up-iptv-on-smart-tv/image-4.png)
+![Smart TV IPTV Playback Optimization](/blog/how-to-set-up-iptv-on-smart-tv/image-4.webp)
 
 ## How to Improve IPTV Streaming Quality on Smart TV
 
@@ -651,7 +651,7 @@ This can indicate:
 
 Try another compatible IPTV player if your TV supports one.
 
-![Smart TV IPTV Troubleshooting Guide](/blog/how-to-set-up-iptv-on-smart-tv/image-5.png)
+![Smart TV IPTV Troubleshooting Guide](/blog/how-to-set-up-iptv-on-smart-tv/image-5.webp)
 
 ## What Internet Speed Do You Need for IPTV?
 

@@ -8,7 +8,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/hero-interface-neon.png"
+          src="/hero-interface-neon.webp"
           alt="ArgonTV Interface"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover opacity-80"
