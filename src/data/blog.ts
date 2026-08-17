@@ -1093,6 +1093,6 @@ If the problem affects every device, investigate the possibility of a service-si
 Following these ten checks in order can save time and help you identify the real cause before making unnecessary changes. 
 
 For the most reliable viewing experience, explore our [ArgonTV Pricing](/pricing) to get started with our premium, high-uptime streaming solutions today.
-\`
+`
   }
 ]
