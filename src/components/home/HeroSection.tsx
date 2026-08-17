@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Monitor, Laptop, Smartphone, Tablet, List } from "lucide-react";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -7,11 +8,14 @@ export default function HeroSection() {
 
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src="/hero-interface-neon.webp"
           alt="ArgonTV Interface"
-          fetchPriority="high"
-          className="absolute inset-0 w-full h-full object-cover opacity-80"
+          priority
+          fill
+          quality={75}
+          sizes="100vw"
+          className="object-cover opacity-80"
         />
         <div className="absolute inset-0 bg-black/70" />
       </div>
