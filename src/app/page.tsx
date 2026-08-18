@@ -15,7 +15,6 @@ import ComparisonSection from "@/components/home/ComparisonSection";
 import HowItWorksSection from "@/components/home/HowItWorksSection";
 import PricingSection from "@/components/home/PricingSection";
 import FAQSection from "@/components/home/FAQSection";
-import LatestArticlesSection from "@/components/home/LatestArticlesSection";
 import SupportCtaSection from "@/components/home/SupportCtaSection";
 
 export default function Home() {
@@ -82,7 +81,6 @@ export default function Home() {
 
       {/* Info & Articles */}
       <FAQSection />
-      <LatestArticlesSection />
 
       {/* Social Proof & Conversion */}
       <SupportCtaSection />
