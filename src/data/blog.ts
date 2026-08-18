@@ -353,7 +353,7 @@ For 4K streaming, make sure both your network and hardware are capable of handli
 Most importantly, change one setting at a time. This makes it much easier to identify what actually improves your streaming experience.
 
 Ready to test your newly optimized setup on a premium service? Check out our flexible [Pricing plans](/pricing) today.
-\`
+`
   },
   {
     id: "iptv-audio-out-of-sync",
