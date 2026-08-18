@@ -1,9 +1,9 @@
 import ResellerPageContent from "@/components/reseller/ResellerPageContent";
 
 export const metadata = {
-  title: "Become an IPTV Reseller | Start Your IPTV Business - ArgonTV",
+  title: "Become an IPTV Reseller | Start Your IPTV Business - Orexetv",
   description:
-    "Join the ArgonTV Reseller Program. High-margin IPTV reseller panel, custom credit packages, sub-reseller management, and 24/7 dedicated support.",
+    "Join the Orexetv Reseller Program. High-margin IPTV reseller panel, custom credit packages, sub-reseller management, and 24/7 dedicated support.",
   alternates: {
     canonical: "/reseller",
   },

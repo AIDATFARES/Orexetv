@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://www.argontv.shop/sitemap.xml',
+    sitemap: 'https://www.orexetv.shop/sitemap.xml',
   };
 }

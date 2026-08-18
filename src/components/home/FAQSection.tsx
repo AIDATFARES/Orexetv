@@ -1,23 +1,34 @@
-import Link from "next/link";
-import { ArrowRight, HelpCircle } from "lucide-react";
+"use client";
 
-const faqs = [
+import { useState } from "react";
+import Link from "next/link";
+import { ArrowRight, Plus, Minus } from "lucide-react";
+
+type FAQ = {
+  id: number;
+  category: string;
+  question: string;
+  answer: React.ReactNode;
+};
+
+const faqs: FAQ[] = [
   {
     id: 1,
-    question: "1. What is ArgonTV?",
+    category: "General",
+    question: "What is Orexetv?",
     answer: (
       <>
-        ArgonTV is a premium IPTV service that offers live TV, VOD movies, TV series, and sports channels in high-quality streaming, including 4K. Check out our{" "}
+        Orexetv is a premium IPTV service that offers live TV, VOD movies, TV series, and sports channels in high-quality streaming, including 4K. Check out our{" "}
         <Link
           href="/channels-list"
-          className="text-[#7000FF] font-semibold hover:text-[#FF00BD] transition-colors"
+          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
         >
           live TV channels
         </Link>{" "}
         and{" "}
         <a
           href="#pricing"
-          className="text-primary-500 font-semibold hover:text-primary-400 transition-colors"
+          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
         >
           IPTV subscription plans
         </a>
@@ -27,22 +38,23 @@ const faqs = [
   },
   {
     id: 2,
-    question: "2. Do I need a subscription to use ArgonTV?",
+    category: "General",
+    question: "Do I need a subscription to use Orexetv?",
     answer: (
       <>
         Yes, a subscription is required. However, we offer a{" "}
         <a
-          href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20argontv%20IPTV."
+          href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20orexetv%20IPTV."
           target="_blank"
           rel="noreferrer"
-          className="text-primary-500 font-semibold hover:text-primary-400 transition-colors"
+          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
         >
           free trial
         </a>{" "}
         so you can test the service before committing to our{" "}
         <a
           href="#pricing"
-          className="text-primary-500 font-semibold hover:text-primary-400 transition-colors"
+          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
         >
           subscription plans
         </a>
@@ -52,13 +64,14 @@ const faqs = [
   },
   {
     id: 3,
-    question: "3. What devices are compatible with ArgonTV?",
+    category: "Technical",
+    question: "What devices are compatible with Orexetv?",
     answer: (
       <>
-        ArgonTV works on Android TV, Firestick, Smart TVs, Android phones, tablets, and apps like Tivimate. Follow our step-by-step{" "}
+        Orexetv works on Android TV, Firestick, Smart TVs, Android phones, tablets, and apps like Tivimate. Follow our step-by-step{" "}
         <Link
           href="/installation"
-          className="text-primary-500 font-semibold hover:text-primary-400 transition-colors"
+          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
         >
           installation guides
         </Link>{" "}
@@ -68,13 +81,14 @@ const faqs = [
   },
   {
     id: 4,
-    question: "4. Can I watch on multiple devices at the same time?",
+    category: "Technical",
+    question: "Can I watch on multiple devices at the same time?",
     answer: (
       <>
         Yes, we offer multi-device support. You can choose an{" "}
         <a
           href="#pricing"
-          className="text-primary-500 font-semibold hover:text-primary-400 transition-colors"
+          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
         >
           IPTV subscription plan
         </a>{" "}
@@ -84,13 +98,14 @@ const faqs = [
   },
   {
     id: 5,
-    question: "5. Can I watch sports on ArgonTV?",
+    category: "General",
+    question: "Can I watch sports on Orexetv?",
     answer: (
       <>
         Absolutely. We offer a wide selection of live sports channels, including major leagues and international events. Explore our full{" "}
         <Link
           href="/channels-list"
-          className="text-[#7000FF] font-semibold hover:text-[#FF00BD] transition-colors"
+          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
         >
           channels catalog
         </Link>
@@ -100,13 +115,14 @@ const faqs = [
   },
   {
     id: 6,
-    question: "6. What payment methods do you accept?",
+    category: "Billing",
+    question: "What payment methods do you accept?",
     answer: (
       <>
         We accept PayPal, cryptocurrency (such as Bitcoin), credit cards, and instant bank transfers for quick and secure payments. Contact our{" "}
         <Link
           href="/contact"
-          className="text-primary-500 font-semibold hover:text-primary-400 transition-colors"
+          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
         >
           support team
         </Link>{" "}
@@ -116,13 +132,14 @@ const faqs = [
   },
   {
     id: 7,
-    question: "7. What kind of content is included?",
+    category: "General",
+    question: "What kind of content is included?",
     answer: (
       <>
         The service includes live TV channels, sports, movies, TV series, kids&apos; content, international channels, and more – all in HD or 4K quality. Learn more in our{" "}
         <Link
           href="/blog"
-          className="text-primary-500 font-semibold hover:text-primary-400 transition-colors"
+          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
         >
           IPTV articles & guides
         </Link>
@@ -132,13 +149,14 @@ const faqs = [
   },
   {
     id: 8,
-    question: "8. Do I need a VPN?",
+    category: "Technical",
+    question: "Do I need a VPN?",
     answer: (
       <>
         A VPN is not required but is recommended in some regions to ensure unrestricted access and added privacy. Read our{" "}
         <Link
           href="/faq"
-          className="text-primary-500 font-semibold hover:text-primary-400 transition-colors"
+          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
         >
           FAQ knowledge base
         </Link>{" "}
@@ -148,75 +166,126 @@ const faqs = [
   },
 ];
 
+const categories = ["General", "Technical", "Billing"];
+
 export default function FAQSection() {
+  const [activeCategory, setActiveCategory] = useState("General");
+  const [expandedId, setExpandedId] = useState<number | null>(null);
+
+  const filteredFaqs = faqs.filter((faq) => faq.category === activeCategory);
+
+  const toggleFaq = (id: number) => {
+    setExpandedId(expandedId === id ? null : id);
+  };
+
   return (
-    <section className="py-20 bg-white text-black relative z-10 border-t border-black/10 overflow-hidden">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+    <section className="py-20 bg-[#141414] text-white relative z-10 border-t border-white/10 overflow-hidden">
+      <div className="max-w-[1000px] mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-[#7000FF]/10 text-[#7000FF] font-bold text-xs tracking-widest uppercase mb-6 border border-[#7000FF]/20 animate-fade-up">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-[#E50914]/10 text-[#E50914] font-bold text-xs tracking-widest uppercase mb-6 border border-[#E50914]/20 animate-fade-up">
             SUPPORT & HELP
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-black tracking-tight leading-[1.1] animate-fade-up">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.1] animate-fade-up">
             Frequently Asked <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7000FF] to-[#FF00BD]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E50914] to-[#B3000B]">
               Questions (FAQ)
             </span>
           </h2>
-          <p className="text-slate-700 text-sm sm:text-base mt-5 leading-relaxed max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
-            Find answers to common questions about our IPTV service, including{" "}
-            <Link
-              href="/pricing"
-              className="text-[#7000FF] font-semibold hover:text-[#FF00BD] transition-colors"
-            >
-              subscriptions
-            </Link>
-            ,{" "}
-            <Link
-              href="/channels"
-              className="text-[#7000FF] font-semibold hover:text-[#FF00BD] transition-colors"
-            >
-              channels
-            </Link>
-            , streaming quality, payments, and more. If you need further help, our{" "}
+          <p className="text-gray-300 text-sm sm:text-base mt-5 leading-relaxed max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
+            Find answers to common questions about our IPTV service. If you need further help, our{" "}
             <Link
               href="/contact"
-              className="text-[#7000FF] font-semibold hover:text-[#FF00BD] transition-colors"
+              className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
             >
               Contact Support
-            </Link>
+            </Link>{" "}
+            team is available 24/7.
           </p>
         </div>
 
-        {/* 2-Column FAQ Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6 max-w-[1140px] mx-auto">
-          {faqs.map((faq, index) => (
-            <div
-              key={faq.id}
-              className="flex flex-col rounded-2xl overflow-hidden border border-black/10 bg-white shadow-xl hover:border-primary-500/40 transition-colors animate-fade-up"
-              style={{ animationDelay: `${0.2 + (index * 0.05)}s`, animationFillMode: 'both' }}
-            >
-              {/* Header Banner */}
-              <div className="bg-slate-100 border-b border-black/10 px-5 py-4 flex items-center gap-3">
-                <HelpCircle className="w-5 h-5 text-primary-500 shrink-0" />
-                <h3 className="text-base sm:text-lg font-bold text-black leading-snug">
-                  {faq.question}
-                </h3>
-              </div>
-
-              {/* Answer Content */}
-              <div className="p-5 sm:p-6 text-sm sm:text-base text-slate-700 leading-relaxed flex-1 bg-white">
-                <p>{faq.answer}</p>
-              </div>
+        {/* Tabbed FAQ Layout */}
+        <div className="flex flex-col md:flex-row gap-8 animate-fade-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
+          
+          {/* Left Column: Categories */}
+          <div className="w-full md:w-64 shrink-0 bg-[#262626] rounded-xl p-6 h-fit border border-white/5">
+            <h3 className="text-xl font-bold text-white mb-6">Categories</h3>
+            <div className="flex flex-col gap-2">
+              {categories.map((cat) => {
+                const isActive = activeCategory === cat;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => {
+                      setActiveCategory(cat);
+                      setExpandedId(null);
+                    }}
+                    className={`text-left px-4 py-3 rounded-md text-sm font-bold transition-all flex items-center ${
+                      isActive 
+                        ? "bg-[#1e1e1e] border-l-2 border-[#E50914] text-[#E50914]" 
+                        : "text-gray-300 hover:bg-[#1e1e1e]/50 hover:text-white"
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                );
+              })}
             </div>
-          ))}
+          </div>
+
+          {/* Right Column: Questions */}
+          <div className="flex-1">
+            <h3 className="text-2xl font-bold text-white mb-6 border-b border-white/10 pb-4">
+              {activeCategory} Questions
+            </h3>
+            
+            <div className="flex flex-col gap-3">
+              {filteredFaqs.map((faq) => {
+                const isExpanded = expandedId === faq.id;
+                
+                return (
+                  <div 
+                    key={faq.id} 
+                    className="bg-[#1e1e1e] rounded-md border border-white/5 overflow-hidden transition-all duration-300 hover:border-white/10"
+                  >
+                    <button
+                      onClick={() => toggleFaq(faq.id)}
+                      className="w-full flex justify-between items-center p-5 text-left font-semibold text-white focus:outline-none"
+                    >
+                      <span>{faq.question}</span>
+                      <span className="text-gray-400 shrink-0 ml-4">
+                        {isExpanded ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
+                      </span>
+                    </button>
+                    
+                    <div 
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                        isExpanded ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <div className="p-5 pt-0 text-sm leading-relaxed text-gray-400">
+                        {faq.answer}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+              
+              {filteredFaqs.length === 0 && (
+                <div className="text-gray-400 text-sm p-4 text-center">
+                  No questions found for this category.
+                </div>
+              )}
+            </div>
+          </div>
+          
         </div>
 
         {/* Bottom CTA to Knowledge Base */}
-        <div className="mt-12 text-center animate-fade-up" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
+        <div className="mt-16 text-center animate-fade-up" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
           <Link
             href="/faq"
-            className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-[#7000FF] text-white font-bold text-xs sm:text-sm hover:bg-[#5500cc] transition-all duration-300 shadow-lg"
+            className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-[#E50914] text-white font-bold text-xs sm:text-sm hover:bg-[#B3000B] transition-all duration-300 shadow-lg"
           >
             <span>View Complete FAQ Knowledge Base</span>
             <ArrowRight className="w-4 h-4" />

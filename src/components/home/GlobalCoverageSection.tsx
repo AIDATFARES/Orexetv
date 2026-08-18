@@ -81,9 +81,9 @@ export default function GlobalCoverageSection() {
   const marqueeCountries = [...ALL_COUNTRIES, ...ALL_COUNTRIES];
 
   return (
-    <section className="py-16 md:py-24 relative z-10 bg-white overflow-hidden border-y border-black/5">
+    <section className="py-16 md:py-24 relative z-10 bg-[#141414] overflow-hidden border-y border-white/5">
       {/* Top Infinite Marquee */}
-      <div className="relative w-full border-b border-black/5 bg-white overflow-hidden py-3 mb-16">
+      <div className="relative w-full border-b border-white/5 bg-[#141414] overflow-hidden py-3 mb-16">
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
@@ -99,7 +99,7 @@ export default function GlobalCoverageSection() {
                 height={13}
                 className="w-4 h-3 rounded-[2px] object-cover shadow-sm"
               />
-              <span className="text-[11px] font-bold text-slate-600 uppercase tracking-widest whitespace-nowrap">
+              <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest whitespace-nowrap">
                 {country.name}
               </span>
               <span className="text-slate-300 px-2">•</span>
@@ -118,7 +118,7 @@ export default function GlobalCoverageSection() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center space-x-2 py-1.5 px-4 rounded-full border border-primary-500/30 bg-slate-50 mb-6 shadow-[0_0_15px_rgba(6,182,212,0.15)]"
+            className="inline-flex items-center space-x-2 py-1.5 px-4 rounded-full border border-primary-500/30 bg-[#141414] mb-6 shadow-[0_0_15px_rgba(6,182,212,0.15)]"
           >
             <Globe className="w-3.5 h-3.5 text-primary-400" />
             <span className="text-[10px] font-bold text-primary-300 uppercase tracking-widest">
@@ -133,7 +133,7 @@ export default function GlobalCoverageSection() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-extrabold font-sans uppercase tracking-tight mb-4"
           >
-            <span className="text-black block mb-1">AVAILABLE IN</span>
+            <span className="text-white block mb-1">AVAILABLE IN</span>
             <span className="bg-gradient-to-r from-primary-400 via-purple-400 to-primary-400 text-transparent bg-clip-text block">
               150+ COUNTRIES
             </span>
@@ -159,7 +159,7 @@ export default function GlobalCoverageSection() {
               className={`px-5 py-2 rounded-full text-[10px] md:text-xs font-bold tracking-widest uppercase transition-all duration-300 border ${
                 activeRegion === region
                   ? "bg-primary-600/30 text-orange-200 border-primary-400/60 shadow-[0_0_20px_rgba(79,70,229,0.3)]"
-                  : "bg-white text-slate-600 border-black/10 hover:border-black/20 hover:text-slate-800"
+                  : "bg-[#141414] text-gray-400 border-white/10 hover:border-black/20 hover:text-gray-200"
               }`}
             >
               {region === "ALL" && activeRegion === "ALL" && (
@@ -181,7 +181,7 @@ export default function GlobalCoverageSection() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.2 }}
-                className="bg-slate-50/90 border border-black/10 hover:border-primary-500/40 hover:bg-white rounded-xl px-3.5 py-2.5 flex items-center gap-3 transition-all cursor-default group shadow-sm"
+                className="bg-[#141414]/90 border border-white/10 hover:border-primary-500/40 hover:bg-[#141414] rounded-xl px-3.5 py-2.5 flex items-center gap-3 transition-all cursor-default group shadow-sm"
               >
                 <img
                   src={`https://flagcdn.com/w40/${country.code}.webp`}
@@ -192,7 +192,7 @@ export default function GlobalCoverageSection() {
                   height={15}
                   className="w-5 h-auto rounded-[2px] object-cover shadow-sm group-hover:scale-110 transition-transform"
                 />
-                <span className="text-xs font-semibold text-slate-800 group-hover:text-black truncate">
+                <span className="text-xs font-semibold text-gray-200 group-hover:text-white truncate">
                   {country.name}
                 </span>
               </motion.div>
@@ -205,7 +205,7 @@ export default function GlobalCoverageSection() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex justify-center mt-8">
             <button
               onClick={() => setIsExpanded(true)}
-              className="flex items-center space-x-2 px-6 py-2.5 rounded-full border border-black/15 bg-slate-50 text-xs font-bold text-slate-700 hover:text-black hover:border-primary-500/40 transition-colors shadow-md"
+              className="flex items-center space-x-2 px-6 py-2.5 rounded-full border border-black/15 bg-[#141414] text-xs font-bold text-gray-300 hover:text-white hover:border-primary-500/40 transition-colors shadow-md"
             >
               <span>SHOW ALL COUNTRIES</span>
               <ChevronDown className="w-4 h-4 text-primary-400" />
@@ -215,7 +215,7 @@ export default function GlobalCoverageSection() {
       </div>
 
       {/* Bottom Infinite Marquee */}
-      <div className="relative w-full border-t border-black/5 bg-white overflow-hidden py-3">
+      <div className="relative w-full border-t border-white/5 bg-[#141414] overflow-hidden py-3">
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
@@ -231,7 +231,7 @@ export default function GlobalCoverageSection() {
                 height={13}
                 className="w-4 h-3 rounded-[2px] object-cover shadow-sm"
               />
-              <span className="text-[11px] font-bold text-slate-600 uppercase tracking-widest whitespace-nowrap">
+              <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest whitespace-nowrap">
                 {country.name}
               </span>
               <span className="text-slate-300 px-2">•</span>

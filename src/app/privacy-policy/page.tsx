@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | ArgonTV",
-  description: "Learn how ArgonTV collects, uses, and protects personal information.",
+  title: "Privacy Policy | Orexetv",
+  description: "Learn how Orexetv collects, uses, and protects personal information.",
   alternates: {
     canonical: "/privacy-policy",
   },
@@ -81,27 +81,27 @@ export default function PrivacyPolicyPage() {
   return (
     <main className="flex-grow px-5 pb-20 pt-12 sm:px-8 md:pt-16 text-format-legal">
       <article className="mx-auto max-w-4xl">
-        <header className="border-b border-black/10 pb-10 text-center mx-auto max-w-3xl">
+        <header className="border-b border-white/10 pb-10 text-center mx-auto max-w-3xl">
           <span className="inline-flex rounded-full border border-primary-400/35 bg-primary-400/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-primary-300">Legal information</span>
           <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
-            <span className="block text-black">Privacy &amp; Data Protection</span>
-            <span className="mt-1 block text-[#7000FF]">Official Policy.</span>
+            <span className="block text-white">Privacy &amp; Data Protection</span>
+            <span className="mt-1 block text-[#E50914]">Official Policy.</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-slate-600">Last adjusted: September 14, 2025</p>
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-gray-400">Last adjusted: September 14, 2025</p>
         </header>
 
         <div className="mt-10 space-y-10 text-base leading-7 text-on-surface-variant">
-          <p>Welcome to ArgonTV. We are committed to protecting your personal information and respecting your privacy. If you have questions or concerns about this policy or our data practices, please <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/contact">contact our support team</Link>.</p>
+          <p>Welcome to Orexetv. We are committed to protecting your personal information and respecting your privacy. If you have questions or concerns about this policy or our data practices, please <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/contact">contact our support team</Link>.</p>
           {sections.map((section) => (
             <section key={section.title}>
-              <h2 className="text-2xl font-bold text-black">{section.title}</h2>
+              <h2 className="text-2xl font-bold text-white">{section.title}</h2>
               {section.content.map((paragraph, index) => <p className="mt-4" key={index}>{paragraph}</p>)}
               {section.items && <ul className="mt-4 list-disc space-y-2 pl-6 marker:text-tertiary">{section.items.map((item, index) => <li key={index}>{item}</li>)}</ul>}
               {section.after && <p className="mt-4">{section.after}</p>}
             </section>
           ))}
           <section>
-            <h2 className="text-2xl font-bold text-black">10. Contact Us</h2>
+            <h2 className="text-2xl font-bold text-white">10. Contact Us</h2>
             <p className="mt-4">If you would like to discuss this policy or our handling of your personal information, please contact our <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/contact">support team</Link>.</p>
           </section>
         </div>

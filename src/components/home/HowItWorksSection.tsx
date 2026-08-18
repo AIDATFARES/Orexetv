@@ -3,24 +3,24 @@ import Link from "next/link";
 
 export default function HowItWorksSection() {
   return (
-    <section className="py-20 bg-white text-black relative z-10 border-b border-black/10 overflow-hidden">
+    <section className="py-20 bg-[#141414] text-white relative z-10 border-b border-white/10 overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-6">
 
         {/* ========================================================================= */}
-        {/* PART 1: How does it work? ArgonTV Timeline */}
+        {/* PART 1: How does it work? Orexetv Timeline */}
         {/* ========================================================================= */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-[#7000FF]/10 text-[#7000FF] font-bold text-xs tracking-widest uppercase mb-6 border border-[#7000FF]/20">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-[#E50914]/10 text-[#E50914] font-bold text-xs tracking-widest uppercase mb-6 border border-[#E50914]/20">
             EASY IPTV SETUP
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-black tracking-tight leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.1]">
             How to Start Your <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7000FF] to-[#FF00BD]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E50914] to-[#B3000B]">
               Premium IPTV Subscription
             </span>
           </h2>
-          <p className="text-slate-700 text-sm sm:text-base mt-4 leading-relaxed max-w-2xl mx-auto">
-            Setting up your ArgonTV account is quick and simple. Follow our 3-step process to get instant access to <Link href="/channels" className="font-semibold text-[#7000FF] hover:text-[#FF00BD] transition-colors">live TV, movies, and series</Link>.
+          <p className="text-gray-300 text-sm sm:text-base mt-4 leading-relaxed max-w-2xl mx-auto">
+            Setting up your Orexetv account is quick and simple. Follow our 3-step process to get instant access to <Link href="/channels" className="font-semibold text-[#E50914] hover:text-[#B3000B] transition-colors">live TV, movies, and series</Link>.
           </p>
         </div>
 
@@ -33,16 +33,16 @@ export default function HowItWorksSection() {
           <div className="relative mb-16 md:mb-20">
             {/* Step Badge */}
             <div className="md:absolute md:left-1/2 md:-translate-x-1/2 md:-top-4 z-20 flex justify-center mb-6 md:mb-0">
-              <span className="bg-[#7000FF] text-black font-extrabold text-xs uppercase tracking-wider px-5 py-1.5 rounded-full shadow-[0_0_15px_rgba(255,107,0,0.6)]">
+              <span className="bg-[#E50914] text-white font-extrabold text-xs uppercase tracking-wider px-5 py-1.5 rounded-full shadow-[0_0_15px_rgba(255,107,0,0.6)]">
                 Step One
               </span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-6">
               {/* Left Card */}
-              <div className="bg-white text-slate-100 p-8 rounded-2xl shadow-xl relative border border-stone-200"
+              <div className="bg-[#141414] text-slate-100 p-8 rounded-2xl shadow-xl relative border border-stone-200"
               >
-                <h3 className="text-xl font-extrabold text-[#7000FF] mb-3">
+                <h3 className="text-xl font-extrabold text-[#E50914] mb-3">
                   <a
                     href="#pricing"
                     className="hover:text-orange-700 transition-colors"
@@ -54,14 +54,14 @@ export default function HowItWorksSection() {
                   Select the best IPTV subscription package for your needs from our{" "}
                   <a
                     href="#pricing"
-                    className="text-[#7000FF] font-semibold hover:text-orange-700 transition-colors"
+                    className="text-[#E50914] font-semibold hover:text-orange-700 transition-colors"
                   >
                     pricing plans
                   </a>
                   . Once you complete the payment, we will email or{" "}
                   <Link
                     href="/contact"
-                    className="text-[#7000FF] font-semibold hover:text-orange-700 transition-colors"
+                    className="text-[#E50914] font-semibold hover:text-orange-700 transition-colors"
                   >
                     WhatsApp
                   </Link>{" "}
@@ -70,10 +70,10 @@ export default function HowItWorksSection() {
               </div>
 
               {/* Right Image */}
-              <div className="overflow-hidden rounded-2xl bg-black/5 border border-black/10 shadow-xl"
+              <div className="overflow-hidden rounded-2xl bg-black/5 border border-white/10 shadow-xl"
               >
                 <Image
-                  src="/step-1-neon.webp"
+                  src="/step-1-nano.webp"
                   alt="Place your order online"
                   width={600}
                   height={380}
@@ -87,17 +87,17 @@ export default function HowItWorksSection() {
           <div className="relative mb-16 md:mb-20">
             {/* Step Badge */}
             <div className="md:absolute md:left-1/2 md:-translate-x-1/2 md:-top-4 z-20 flex justify-center mb-6 md:mb-0">
-              <span className="bg-[#7000FF] text-black font-extrabold text-xs uppercase tracking-wider px-5 py-1.5 rounded-full shadow-[0_0_15px_rgba(255,107,0,0.6)]">
+              <span className="bg-[#E50914] text-white font-extrabold text-xs uppercase tracking-wider px-5 py-1.5 rounded-full shadow-[0_0_15px_rgba(255,107,0,0.6)]">
                 Step Two
               </span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-6">
               {/* Left Image */}
-              <div className="overflow-hidden rounded-2xl bg-black/5 border border-black/10 shadow-xl order-2 md:order-1"
+              <div className="overflow-hidden rounded-2xl bg-black/5 border border-white/10 shadow-xl order-2 md:order-1"
               >
                 <Image
-                  src="/step-2-neon.webp"
+                  src="/step-2-nano.webp"
                   alt="Instant installation"
                   width={600}
                   height={380}
@@ -106,9 +106,9 @@ export default function HowItWorksSection() {
               </div>
 
               {/* Right Card */}
-              <div className="bg-white text-slate-100 p-8 rounded-2xl shadow-xl relative border border-stone-200 order-1 md:order-2"
+              <div className="bg-[#141414] text-slate-100 p-8 rounded-2xl shadow-xl relative border border-stone-200 order-1 md:order-2"
               >
-                <h3 className="text-xl font-extrabold text-[#7000FF] mb-3">
+                <h3 className="text-xl font-extrabold text-[#E50914] mb-3">
                   <Link
                     href="/installation"
                     className="hover:text-orange-700 transition-colors"
@@ -120,7 +120,7 @@ export default function HowItWorksSection() {
                   Use our step-by-step{" "}
                   <Link
                     href="/installation"
-                    className="text-[#7000FF] font-semibold hover:text-orange-700 transition-colors"
+                    className="text-[#E50914] font-semibold hover:text-orange-700 transition-colors"
                   >
                     IPTV installation guides
                   </Link>{" "}
@@ -134,16 +134,16 @@ export default function HowItWorksSection() {
           <div className="relative">
             {/* Step Badge */}
             <div className="md:absolute md:left-1/2 md:-translate-x-1/2 md:-top-4 z-20 flex justify-center mb-6 md:mb-0">
-              <span className="bg-[#7000FF] text-black font-extrabold text-xs uppercase tracking-wider px-5 py-1.5 rounded-full shadow-[0_0_15px_rgba(255,107,0,0.6)]">
+              <span className="bg-[#E50914] text-white font-extrabold text-xs uppercase tracking-wider px-5 py-1.5 rounded-full shadow-[0_0_15px_rgba(255,107,0,0.6)]">
                 Step Three
               </span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-6">
               {/* Left Card */}
-              <div className="bg-white text-slate-100 p-8 rounded-2xl shadow-xl relative border border-stone-200"
+              <div className="bg-[#141414] text-slate-100 p-8 rounded-2xl shadow-xl relative border border-stone-200"
               >
-                <h3 className="text-xl font-extrabold text-[#7000FF] mb-3">
+                <h3 className="text-xl font-extrabold text-[#E50914] mb-3">
                   <Link
                     href="/channels"
                     className="hover:text-orange-700 transition-colors"
@@ -155,7 +155,7 @@ export default function HowItWorksSection() {
                   Start streaming! Enjoy <strong>+50,000 Channels</strong>, plus a massive Video on Demand (VOD) library of movies and series from our{" "}
                   <Link
                     href="/channels"
-                    className="text-[#7000FF] font-semibold hover:text-orange-700 transition-colors"
+                    className="text-[#E50914] font-semibold hover:text-orange-700 transition-colors"
                   >
                     channels catalog
                   </Link>
@@ -164,10 +164,10 @@ export default function HowItWorksSection() {
               </div>
 
               {/* Right Image */}
-              <div className="overflow-hidden rounded-2xl bg-black/5 border border-black/10 shadow-xl"
+              <div className="overflow-hidden rounded-2xl bg-black/5 border border-white/10 shadow-xl"
               >
                 <Image
-                  src="/step-3-neon.webp"
+                  src="/step-3-nano.webp"
                   alt="Watch and enjoy live TV"
                   width={600}
                   height={380}

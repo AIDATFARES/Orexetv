@@ -15,39 +15,39 @@ export default function ComparisonSection() {
   ];
 
   return (
-    <section className="bg-slate-50 text-black relative z-10 border-b border-black/10 overflow-hidden py-24">
+    <section className="bg-[#141414] text-white relative z-10 border-b border-white/10 overflow-hidden py-24">
       <div className="max-w-[1200px] mx-auto px-6">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-[#7000FF]/10 text-[#7000FF] font-bold text-xs tracking-widest uppercase mb-6 border border-[#7000FF]/20">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-[#E50914]/10 text-[#E50914] font-bold text-xs tracking-widest uppercase mb-6 border border-[#E50914]/20">
             IPTV vs Cable TV
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-black tracking-tight leading-[1.1]">
-            Why ArgonTV is the <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7000FF] to-[#FF00BD]">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.1]">
+            Why Orexetv is the <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E50914] to-[#B3000B]">
               Best Cable Alternative
             </span>
           </h2>
-          <p className="text-slate-500 text-lg md:text-xl mt-6 leading-relaxed max-w-2xl mx-auto">
-            Discover why thousands of users are cutting the cord. Our premium IPTV service offers <Link href="/channels" className="font-semibold text-[#7000FF] hover:text-[#FF00BD] hover:underline transition-colors">more channels</Link>, better 4K quality, and reliable anti-freeze technology at a fraction of the cost.
+          <p className="text-gray-400 text-lg md:text-xl mt-6 leading-relaxed max-w-2xl mx-auto">
+            Discover why thousands of users are cutting the cord. Our premium IPTV service offers <Link href="/channels" className="font-semibold text-[#E50914] hover:text-[#B3000B] hover:underline transition-colors">more channels</Link>, better 4K quality, and reliable anti-freeze technology at a fraction of the cost.
           </p>
         </div>
 
         {/* Desktop Comparison Table */}
         <div className="hidden md:block relative max-w-5xl mx-auto">
-          <div className="bg-white rounded-[2rem] shadow-[0_20px_60px_-15px_rgba(112,0,255,0.15)] border border-slate-100 p-8 pb-10 relative overflow-hidden">
+          <div className="bg-[#141414] rounded-[2rem] shadow-[0_20px_60px_-15px_rgba(112,0,255,0.15)] border border-white/5 p-8 pb-10 relative overflow-hidden">
             
-            {/* Highlight Background for ArgonTV Column */}
-            <div className="absolute top-0 bottom-0 left-[25%] w-[25%] bg-gradient-to-b from-[#7000FF]/5 to-[#FF00BD]/5 border-x border-[#7000FF]/20 shadow-[0_0_50px_rgba(112,0,255,0.05)]"></div>
+            {/* Highlight Background for Orexetv Column */}
+            <div className="absolute top-0 bottom-0 left-[25%] w-[25%] bg-gradient-to-b from-[#E50914]/5 to-[#B3000B]/5 border-x border-[#E50914]/20 shadow-[0_0_50px_rgba(112,0,255,0.05)]"></div>
 
             {/* Table Header */}
             <div className="grid grid-cols-4 gap-4 mb-6 relative z-10">
               <div className="text-left font-bold text-slate-400 uppercase tracking-widest text-sm flex items-end pb-4">Features</div>
               
-              <div className="flex flex-col items-center justify-center bg-gradient-to-r from-[#7000FF] to-[#FF00BD] text-white rounded-2xl p-5 shadow-[0_10px_30px_rgba(112,0,255,0.3)] transform -translate-y-4 scale-105 border-2 border-white">
+              <div className="flex flex-col items-center justify-center bg-gradient-to-r from-[#E50914] to-[#B3000B] text-white rounded-2xl p-5 shadow-[0_10px_30px_rgba(112,0,255,0.3)] transform -translate-y-4 scale-105 border-2 border-white">
                 <span className="text-[10px] uppercase tracking-widest font-bold opacity-80 mb-1">Premium Choice</span>
-                <span className="text-2xl font-black tracking-tight">ArgonTV</span>
+                <span className="text-2xl font-black tracking-tight">Orexetv</span>
               </div>
               
               <div className="text-center font-bold text-slate-400 uppercase tracking-widest text-sm flex items-end justify-center pb-4">Cable / Satellite</div>
@@ -57,11 +57,11 @@ export default function ComparisonSection() {
             {/* Table Rows */}
             <div className="relative z-10">
               {rows.map((row, idx) => (
-                <div key={idx} className="grid grid-cols-4 gap-4 py-5 border-b border-slate-100 last:border-0 items-center group hover:bg-slate-50/50 transition-colors rounded-xl px-2 -mx-2">
-                  <div className="font-bold text-slate-700 text-sm sm:text-base">{row.feature}</div>
-                  <div className="font-black text-[#7000FF] text-center text-base sm:text-lg group-hover:scale-105 transition-transform">{row.fiesta}</div>
-                  <div className="font-medium text-slate-500 text-center text-sm">{row.cable}</div>
-                  <div className="font-medium text-slate-500 text-center text-sm">{row.other}</div>
+                <div key={idx} className="grid grid-cols-4 gap-4 py-5 border-b border-white/5 last:border-0 items-center group hover:bg-[#141414]/50 transition-colors rounded-xl px-2 -mx-2">
+                  <div className="font-bold text-gray-300 text-sm sm:text-base">{row.feature}</div>
+                  <div className="font-black text-[#E50914] text-center text-base sm:text-lg group-hover:scale-105 transition-transform">{row.fiesta}</div>
+                  <div className="font-medium text-gray-400 text-center text-sm">{row.cable}</div>
+                  <div className="font-medium text-gray-400 text-center text-sm">{row.other}</div>
                 </div>
               ))}
             </div>
@@ -70,9 +70,9 @@ export default function ComparisonSection() {
 
         {/* Mobile Comparison (Cards) */}
         <div className="md:hidden space-y-8">
-          <div className="bg-gradient-to-br from-[#7000FF] to-[#FF00BD] rounded-3xl p-1 relative shadow-xl">
+          <div className="bg-gradient-to-br from-[#E50914] to-[#B3000B] rounded-3xl p-1 relative shadow-xl">
             <div className="bg-black/20 text-white rounded-[1.35rem] p-6 backdrop-blur-sm">
-              <h3 className="text-2xl font-black mb-6 text-center">ArgonTV</h3>
+              <h3 className="text-2xl font-black mb-6 text-center">Orexetv</h3>
               <div className="space-y-4">
                 {rows.map((row, idx) => (
                   <div key={idx} className="flex justify-between items-center border-b border-white/10 pb-3 last:border-0 last:pb-0">
@@ -84,13 +84,13 @@ export default function ComparisonSection() {
             </div>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-lg border border-slate-200 p-6">
+          <div className="bg-[#141414] rounded-3xl shadow-lg border border-white/10 p-6">
             <h3 className="text-xl font-bold mb-6 text-center text-slate-400">Cable / Satellite</h3>
             <div className="space-y-4">
               {rows.map((row, idx) => (
-                <div key={idx} className="flex justify-between items-center border-b border-slate-100 pb-3 last:border-0 last:pb-0">
-                  <span className="text-slate-500 text-sm">{row.feature}</span>
-                  <span className="font-medium text-slate-700 text-right">{row.cable}</span>
+                <div key={idx} className="flex justify-between items-center border-b border-white/5 pb-3 last:border-0 last:pb-0">
+                  <span className="text-gray-400 text-sm">{row.feature}</span>
+                  <span className="font-medium text-gray-300 text-right">{row.cable}</span>
                 </div>
               ))}
             </div>
@@ -100,7 +100,7 @@ export default function ComparisonSection() {
         <div className="mt-16 text-center">
           <Link
             href="/pricing"
-            className="inline-flex items-center justify-center bg-black text-white font-bold px-10 py-5 rounded-xl hover:bg-[#7000FF] shadow-lg hover:shadow-[0_10px_30px_rgba(112,0,255,0.3)] transition-all hover:-translate-y-1 gap-2"
+            className="inline-flex items-center justify-center bg-black text-white font-bold px-10 py-5 rounded-xl hover:bg-[#E50914] shadow-lg hover:shadow-[0_10px_30px_rgba(112,0,255,0.3)] transition-all hover:-translate-y-1 gap-2"
           >
             View Plans & Pricing <span aria-hidden="true">&rarr;</span>
           </Link>

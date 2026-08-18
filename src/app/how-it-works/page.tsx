@@ -3,8 +3,8 @@ import Link from "next/link";
 import { PlayCircle, ShieldCheck, Zap, Phone, MonitorSmartphone, Globe2, CheckCircle2 } from "lucide-react";
 
 export const metadata = {
-  title: "How It Works | ArgonTV",
-  description: "Learn how easy it is to set up and start streaming with ArgonTV. Our 3-step process gets you watching premium live TV and VOD in minutes.",
+  title: "How It Works | Orexetv",
+  description: "Learn how easy it is to set up and start streaming with Orexetv. Our 3-step process gets you watching premium live TV and VOD in minutes.",
 };
 
 export default function HowItWorksPage() {
@@ -13,16 +13,16 @@ export default function HowItWorksPage() {
       
       {/* Page Hero Header */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#7000FF]/15 to-transparent z-0"></div>
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#7000FF]/20 blur-[120px] rounded-full z-0 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#E50914]/15 to-transparent z-0"></div>
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#E50914]/20 blur-[120px] rounded-full z-0 pointer-events-none"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-[#7000FF]/20 text-[#FF00BD] font-bold text-xs tracking-widest uppercase mb-6 border border-[#FF00BD]/30">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-[#E50914]/20 text-[#B3000B] font-bold text-xs tracking-widest uppercase mb-6 border border-[#B3000B]/30">
             Simple Setup Guide
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-white tracking-tight leading-[1.1] mb-6">
             Start Streaming in <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7000FF] to-[#FF00BD]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E50914] to-[#B3000B]">
               Under 5 Minutes
             </span>
           </h1>
@@ -33,53 +33,53 @@ export default function HowItWorksPage() {
       </section>
 
       {/* The Core Timeline Section (Reused from Homepage) */}
-      <div className="bg-white">
+      <div className="bg-[#141414]">
         <HowItWorksSection />
       </div>
 
-      {/* Why Choose ArgonTV - Pill Grid */}
-      <section className="py-20 bg-white text-black relative z-10 border-t border-black/10">
+      {/* Why Choose Orexetv - Pill Grid */}
+      <section className="py-20 bg-[#141414] text-white relative z-10 border-t border-white/10">
         <div className="max-w-[1000px] mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight mb-10 uppercase">
-            Why Choose <span className="text-[#7000FF]">ArgonTV</span>?
+            Why Choose <span className="text-[#E50914]">Orexetv</span>?
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
             
             {/* Pill 1 */}
-            <div className="flex items-center gap-3 p-4 rounded-xl border border-slate-200 hover:border-[#7000FF]/40 hover:shadow-md transition-all bg-white">
-              <ShieldCheck className="text-[#7000FF] shrink-0" size={20} />
-              <span className="text-sm font-bold text-slate-700">Secure & encrypted payments</span>
+            <div className="flex items-center gap-3 p-4 rounded-xl border border-white/10 hover:border-[#E50914]/40 hover:shadow-md transition-all bg-[#141414]">
+              <ShieldCheck className="text-[#E50914] shrink-0" size={20} />
+              <span className="text-sm font-bold text-gray-300">Secure & encrypted payments</span>
             </div>
 
             {/* Pill 2 */}
-            <div className="flex items-center gap-3 p-4 rounded-xl border border-slate-200 hover:border-[#7000FF]/40 hover:shadow-md transition-all bg-white">
-              <Zap className="text-[#7000FF] shrink-0" size={20} />
-              <span className="text-sm font-bold text-slate-700">Instant delivery within 5 mins</span>
+            <div className="flex items-center gap-3 p-4 rounded-xl border border-white/10 hover:border-[#E50914]/40 hover:shadow-md transition-all bg-[#141414]">
+              <Zap className="text-[#E50914] shrink-0" size={20} />
+              <span className="text-sm font-bold text-gray-300">Instant delivery within 5 mins</span>
             </div>
 
             {/* Pill 3 */}
-            <div className="flex items-center gap-3 p-4 rounded-xl border border-slate-200 hover:border-[#7000FF]/40 hover:shadow-md transition-all bg-white">
-              <Phone className="text-[#7000FF] shrink-0" size={20} />
-              <span className="text-sm font-bold text-slate-700">24/7 dedicated support</span>
+            <div className="flex items-center gap-3 p-4 rounded-xl border border-white/10 hover:border-[#E50914]/40 hover:shadow-md transition-all bg-[#141414]">
+              <Phone className="text-[#E50914] shrink-0" size={20} />
+              <span className="text-sm font-bold text-gray-300">24/7 dedicated support</span>
             </div>
 
             {/* Pill 4 */}
-            <div className="flex items-center gap-3 p-4 rounded-xl border border-slate-200 hover:border-[#7000FF]/40 hover:shadow-md transition-all bg-white">
-              <MonitorSmartphone className="text-[#7000FF] shrink-0" size={20} />
-              <span className="text-sm font-bold text-slate-700">Works on all devices</span>
+            <div className="flex items-center gap-3 p-4 rounded-xl border border-white/10 hover:border-[#E50914]/40 hover:shadow-md transition-all bg-[#141414]">
+              <MonitorSmartphone className="text-[#E50914] shrink-0" size={20} />
+              <span className="text-sm font-bold text-gray-300">Works on all devices</span>
             </div>
 
             {/* Pill 5 */}
-            <div className="flex items-center gap-3 p-4 rounded-xl border border-slate-200 hover:border-[#7000FF]/40 hover:shadow-md transition-all bg-white">
-              <Globe2 className="text-[#7000FF] shrink-0" size={20} />
-              <span className="text-sm font-bold text-slate-700">150+ countries covered</span>
+            <div className="flex items-center gap-3 p-4 rounded-xl border border-white/10 hover:border-[#E50914]/40 hover:shadow-md transition-all bg-[#141414]">
+              <Globe2 className="text-[#E50914] shrink-0" size={20} />
+              <span className="text-sm font-bold text-gray-300">150+ countries covered</span>
             </div>
 
             {/* Pill 6 */}
-            <div className="flex items-center gap-3 p-4 rounded-xl border border-slate-200 hover:border-[#7000FF]/40 hover:shadow-md transition-all bg-white">
-              <CheckCircle2 className="text-[#7000FF] shrink-0" size={20} />
-              <span className="text-sm font-bold text-slate-700">No contracts or hidden fees</span>
+            <div className="flex items-center gap-3 p-4 rounded-xl border border-white/10 hover:border-[#E50914]/40 hover:shadow-md transition-all bg-[#141414]">
+              <CheckCircle2 className="text-[#E50914] shrink-0" size={20} />
+              <span className="text-sm font-bold text-gray-300">No contracts or hidden fees</span>
             </div>
 
           </div>
@@ -87,7 +87,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Large Solid CTA Block */}
-      <section className="py-24 bg-gradient-to-r from-[#7000FF] to-[#FF00BD] text-center relative z-10 shadow-[0_-10px_40px_rgba(112,0,255,0.2)]">
+      <section className="py-24 bg-gradient-to-r from-[#E50914] to-[#B3000B] text-center relative z-10 shadow-[0_-10px_40px_rgba(112,0,255,0.2)]">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-3xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight drop-shadow-lg">
             Ready to Start Streaming?
@@ -98,15 +98,15 @@ export default function HowItWorksPage() {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link 
-              href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20argontv%20IPTV." 
+              href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20orexetv%20IPTV." 
               target="_blank"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-[#7000FF] bg-white rounded-xl shadow-xl hover:scale-105 hover:bg-slate-50 transition-all duration-300"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-[#E50914] bg-[#141414] rounded-xl shadow-xl hover:scale-105 hover:bg-[#141414] transition-all duration-300"
             >
               Get Free Trial &rarr;
             </Link>
             <Link 
               href="/#pricing" 
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-transparent border-2 border-white rounded-xl hover:bg-white/10 transition-all duration-300"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-transparent border-2 border-white rounded-xl hover:bg-[#141414]/10 transition-all duration-300"
             >
               View All Plans
             </Link>

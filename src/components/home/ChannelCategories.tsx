@@ -36,7 +36,7 @@ export default function ChannelCategories() {
     {
       icon: Globe2,
       title: "Works Worldwide",
-      desc: "Enjoy ArgonTV wherever you are, on any connection.",
+      desc: "Enjoy Orexetv wherever you are, on any connection.",
     },
     {
       icon: ShieldCheck,
@@ -46,17 +46,17 @@ export default function ChannelCategories() {
   ];
 
   return (
-    <section className="relative z-10 bg-white py-16 sm:py-24">
+    <section className="relative z-10 bg-[#141414] py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         
         {/* Heading */}
         <div className="mx-auto mb-16 max-w-4xl text-center">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-[#7000FF]/10 text-[#7000FF] font-bold text-xs tracking-widest uppercase mb-6 border border-[#7000FF]/20">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-[#E50914]/10 text-[#E50914] font-bold text-xs tracking-widest uppercase mb-6 border border-[#E50914]/20">
             Premium Features
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-black tracking-tight leading-[1.1] animate-fade-up">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.1] animate-fade-up">
             Everything You Need for the <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7000FF] to-[#FF00BD]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E50914] to-[#B3000B]">
               Ultimate Viewing Experience.
             </span>
           </h2>
@@ -72,20 +72,20 @@ export default function ChannelCategories() {
               return (
                 <div 
                   key={idx} 
-                  className="flex flex-col rounded-2xl border border-[#7000FF] bg-white p-6 sm:p-8 shadow-[0_0_35px_rgba(112,0,255,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(112,0,255,0.35)]"
+                  className="flex flex-col rounded-2xl border border-[#E50914] bg-[#141414] p-6 sm:p-8 shadow-[0_0_35px_rgba(112,0,255,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(112,0,255,0.35)]"
                 >
-                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-[#7000FF]/10 text-[#7000FF] ring-1 ring-[#7000FF]/20">
+                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-[#E50914]/10 text-[#E50914] ring-1 ring-[#E50914]/20">
                     <Icon className="h-7 w-7" strokeWidth={2} />
                   </div>
-                  <h3 className="mb-3 text-xl font-black uppercase text-black">{feature.title}</h3>
-                  <p className="mb-8 flex-grow text-[15px] leading-relaxed text-slate-500 font-medium">
+                  <h3 className="mb-3 text-xl font-black uppercase text-white">{feature.title}</h3>
+                  <p className="mb-8 flex-grow text-[15px] leading-relaxed text-gray-400 font-medium">
                     {feature.desc}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {feature.tags.map((tag, tagIdx) => (
                       <span 
                         key={tagIdx} 
-                        className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-600"
+                        className="rounded-full border border-white/10 bg-[#141414] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-400"
                       >
                         {tag}
                       </span>
@@ -103,13 +103,13 @@ export default function ChannelCategories() {
               return (
                 <div 
                   key={idx} 
-                  className="flex flex-col rounded-2xl border border-[#7000FF] bg-white p-6 shadow-[0_0_35px_rgba(112,0,255,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(112,0,255,0.35)]"
+                  className="flex flex-col rounded-2xl border border-[#E50914] bg-[#141414] p-6 shadow-[0_0_35px_rgba(112,0,255,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(112,0,255,0.35)]"
                 >
                   <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-orange-50 text-[#E66000] ring-1 ring-orange-200">
                     <Icon className="h-6 w-6" strokeWidth={2} />
                   </div>
-                  <h4 className="mb-2 text-[17px] font-bold text-black">{feature.title}</h4>
-                  <p className="text-sm leading-relaxed text-slate-500 font-medium">
+                  <h4 className="mb-2 text-[17px] font-bold text-white">{feature.title}</h4>
+                  <p className="text-sm leading-relaxed text-gray-400 font-medium">
                     {feature.desc}
                   </p>
                 </div>

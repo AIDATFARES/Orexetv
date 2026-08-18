@@ -19,23 +19,23 @@ export default function MovieStrips() {
   ];
 
   return (
-    <section className="w-full overflow-hidden bg-white py-16 relative flex flex-col gap-6">
+    <section className="w-full overflow-hidden bg-[#141414] py-16 relative flex flex-col gap-6">
       {/* Section Header */}
       <div className="text-center mb-8 px-4 z-20">
-        <span className="inline-block py-1 px-4 rounded-full bg-[#7000FF]/10 border border-[#7000FF]/30 text-[#7000FF] text-xs font-bold tracking-widest uppercase mb-4">
+        <span className="inline-block py-1 px-4 rounded-full bg-[#E50914]/10 border border-[#E50914]/30 text-[#E50914] text-xs font-bold tracking-widest uppercase mb-4">
           Endless Entertainment
         </span>
-        <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-4 tracking-tight">
-          THE ULTIMATE <span className="text-[#7000FF]">CINEMATIC</span> EXPERIENCE
+        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
+          THE ULTIMATE <span className="text-[#E50914]">CINEMATIC</span> EXPERIENCE
         </h2>
         <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base mb-8">
           Explore a massive library of 200,000+ Films & Series. From the latest blockbuster hits to timeless classics, all available instantly in crystal-clear 4K Ultra HD.
         </p>
         <Link 
           href="/channels"
-          className="inline-flex items-center justify-center px-8 py-3 rounded-full border border-[#7000FF] text-black text-sm md:text-base font-medium bg-black/20 hover:bg-[#7000FF]/10 transition-colors duration-300 gap-2"
+          className="inline-flex items-center justify-center px-8 py-3 rounded-full border border-[#E50914] text-white text-sm md:text-base font-medium bg-black/20 hover:bg-[#E50914]/10 transition-colors duration-300 gap-2"
         >
-          View ArgonTV Channel List <span aria-hidden="true">&rarr;</span>
+          View Orexetv Channel List <span aria-hidden="true">&rarr;</span>
         </Link>
       </div>
 
@@ -52,7 +52,7 @@ export default function MovieStrips() {
       <div className="relative flex w-max items-center">
         <div className="flex gap-4 md:gap-6 px-2 md:px-3 animate-marquee" style={{ animationDuration: '30s' }}>
           {[...movieImages, ...movieImages, ...movieImages].map((img, i) => (
-            <div key={i} className="flex-shrink-0 w-[240px] h-[135px] md:w-[340px] md:h-[190px] relative rounded-xl overflow-hidden shadow-xl border border-slate-200 hover:scale-105 hover:border-[#7000FF]/50 hover:shadow-2xl hover:z-10 transition-all duration-300">
+            <div key={i} className="flex-shrink-0 w-[240px] h-[135px] md:w-[340px] md:h-[190px] relative rounded-xl overflow-hidden shadow-xl border border-white/10 hover:scale-105 hover:border-[#E50914]/50 hover:shadow-2xl hover:z-10 transition-all duration-300">
               <Image src={`/fillem/${img}`} alt="Media Thumbnail" fill sizes="(max-width: 640px) 240px, 340px" className="object-cover" />
             </div>
           ))}
@@ -61,9 +61,7 @@ export default function MovieStrips() {
 
 
       
-      {/* Gradient Masks */}
-      <div className="absolute left-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+      {/* Gradient Masks removed per user request */}
     </section>
   );
 }

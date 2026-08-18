@@ -14,7 +14,7 @@ export default function Blog() {
       <header className="mb-16 text-center md:text-left">
         <h1 className="font-display-lg text-display-lg text-on-surface mb-4">Latest News &amp; Streaming Tips</h1>
         <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-          Stay updated with the latest in 4K streaming technology, new channel additions, and guides to optimize your argontv experience.
+          Stay updated with the latest in 4K streaming technology, new channel additions, and guides to optimize your orexetv experience.
         </p>
       </header>
 
@@ -22,7 +22,7 @@ export default function Blog() {
       {featuredPost && (
         <section className="mb-24">
           <Link href={`/blog/${featuredPost.slug}`}>
-            <div className="bg-white border border-black/10 rounded-2xl overflow-hidden flex flex-col md:flex-row group cursor-pointer transition-all duration-500">
+            <div className="bg-[#141414] border border-white/10 rounded-2xl overflow-hidden flex flex-col md:flex-row group cursor-pointer transition-all duration-500">
               <div className="md:w-3/5 h-64 md:h-96 relative overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -56,7 +56,7 @@ export default function Blog() {
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
         {gridPosts.map((post) => (
           <Link href={`/blog/${post.slug}`} key={post.id}>
-            <article className="bg-white border border-black/10 rounded-xl overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-2 transition-transform duration-300 h-full">
+            <article className="bg-[#141414] border border-white/10 rounded-xl overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-2 transition-transform duration-300 h-full">
               <div className="h-48 relative overflow-hidden shrink-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -65,7 +65,7 @@ export default function Blog() {
                   src={post.coverImage || ""}
                 />
                 <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
-                <span className="absolute top-4 left-4 px-2 py-1 bg-surface-container/80 backdrop-blur-md text-on-surface rounded font-label-caps text-label-caps border border-black/10">
+                <span className="absolute top-4 left-4 px-2 py-1 bg-surface-container/80 backdrop-blur-md text-on-surface rounded font-label-caps text-label-caps border border-white/10">
                   {post.category}
                 </span>
               </div>
@@ -86,7 +86,7 @@ export default function Blog() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="bg-white border border-black/10 rounded-2xl p-8 md:p-16 text-center relative overflow-hidden">
+      <section className="bg-[#141414] border border-white/10 rounded-2xl p-8 md:p-16 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-50 pointer-events-none"></div>
         <div className="relative z-10 max-w-2xl mx-auto">
           <Mail className="w-10 h-10 text-tertiary mb-4 mx-auto" />
@@ -101,7 +101,7 @@ export default function Blog() {
               type="email"
             />
             <button
-              className="bg-gradient-to-r from-primary-container to-secondary-container text-black font-title-md text-title-md px-8 py-3 rounded-lg whitespace-nowrap hover:opacity-90 transition-opacity"
+              className="bg-gradient-to-r from-primary-container to-secondary-container text-white font-title-md text-title-md px-8 py-3 rounded-lg whitespace-nowrap hover:opacity-90 transition-opacity"
               type="submit"
             >
               Subscribe

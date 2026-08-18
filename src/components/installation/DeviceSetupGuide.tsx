@@ -17,7 +17,7 @@ const faqs = [
   { question: "1. How do I install IPTV on a Smart TV?", answer: "Install a compatible player such as Smart IPTV or IPTV Smarters from your TV's app store, then add the M3U URL or Xtream credentials from your welcome email." },
   { question: "2. Where do I find my M3U URL?", answer: "Your M3U URL is included in the welcome email sent after activation. Contact support if you need it resent." },
   { question: "3. How can I reduce buffering?", answer: "Use a stable internet connection, restart your device and router, and select an appropriate quality setting for your connection." },
-  { question: "4. How do I set up ArgonTV using Xtream Codes API?", answer: "Choose Xtream Codes API in your player and enter the server URL, username, and password from your welcome email." },
+  { question: "4. How do I set up Orexetv using Xtream Codes API?", answer: "Choose Xtream Codes API in your player and enter the server URL, username, and password from your welcome email." },
   { question: "5. Can I connect using a MAC address (Portal URL)?", answer: "Yes. MAG and compatible portal devices can be activated using their MAC address. Send it to our support team for assistance." },
 ];
 
@@ -29,8 +29,8 @@ export default function DeviceSetupGuide() {
   return (
     <section className="mb-16 md:mb-[100px]">
       <header className="mx-auto mb-9 max-w-2xl text-center">
-        <h2 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">Device Setup Instructions</h2>
-        <p className="mt-3 text-base text-slate-600">Select your device to receive clear setup instructions.</p>
+        <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Device Setup Instructions</h2>
+        <p className="mt-3 text-base text-gray-400">Select your device to receive clear setup instructions.</p>
       </header>
 
       <div className="mb-7 flex flex-wrap justify-center gap-2">
@@ -39,7 +39,7 @@ export default function DeviceSetupGuide() {
           const active = item.id === activeDevice;
           return (
             <button 
-              className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${active ? "border-primary-600 bg-[#7000FF] text-white shadow-lg shadow-primary-600/30" : "border-black/15 bg-white text-slate-600 hover:border-primary-500/60 hover:text-black hover:bg-orange-50"}`} 
+              className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${active ? "border-primary-600 bg-[#E50914] text-white shadow-lg shadow-primary-600/30" : "border-black/15 bg-[#141414] text-gray-400 hover:border-primary-500/60 hover:text-white hover:bg-orange-50"}`} 
               key={item.id} 
               onClick={() => setActiveDevice(item.id)} 
               type="button"
@@ -50,26 +50,26 @@ export default function DeviceSetupGuide() {
         })}
       </div>
 
-      <article className="mx-auto max-w-[1000px] rounded-3xl border-2 border-[#7000FF] bg-white p-6 sm:p-10 shadow-2xl overflow-hidden">
+      <article className="mx-auto max-w-[1000px] rounded-3xl border-2 border-[#E50914] bg-[#141414] p-6 sm:p-10 shadow-2xl overflow-hidden">
         
         {/* Device Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 border-b border-slate-100 pb-6 mb-8">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 border-b border-white/5 pb-6 mb-8">
           <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-50 shrink-0">
-            <DeviceIcon className="h-8 w-8 text-[#7000FF]" />
+            <DeviceIcon className="h-8 w-8 text-[#E50914]" />
           </div>
           <div>
-            <h3 className="text-2xl font-black text-black sm:text-3xl">{device.title}</h3>
-            <p className="mt-1 text-slate-500 font-medium">Follow these steps to configure your {device.label} for ArgonTV.</p>
+            <h3 className="text-2xl font-black text-white sm:text-3xl">{device.title}</h3>
+            <p className="mt-1 text-gray-400 font-medium">Follow these steps to configure your {device.label} for Orexetv.</p>
           </div>
         </div>
         
         {/* Important Note */}
         {device.note && (
           <div className="mb-8 rounded-2xl border border-orange-200 bg-orange-50/50 p-5 flex items-start gap-4">
-            <HelpCircle className="h-6 w-6 text-[#7000FF] shrink-0" />
+            <HelpCircle className="h-6 w-6 text-[#E50914] shrink-0" />
             <div>
-              <h4 className="font-bold text-black mb-1">Important Note</h4>
-              <p className="text-sm leading-relaxed text-slate-700">{device.note}</p>
+              <h4 className="font-bold text-white mb-1">Important Note</h4>
+              <p className="text-sm leading-relaxed text-gray-300">{device.note}</p>
             </div>
           </div>
         )}
@@ -103,17 +103,17 @@ export default function DeviceSetupGuide() {
       </article>
 
       <div className="mx-auto mt-20 max-w-[1000px]">
-        <h2 className="mb-8 text-center text-3xl font-extrabold tracking-tight text-black sm:text-4xl">Installation FAQ</h2>
+        <h2 className="mb-8 text-center text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Installation FAQ</h2>
         <div className="grid gap-5 md:grid-cols-2">
           {faqs.map((faq) => (
-            <div className="flex flex-col rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:border-orange-200 transition-colors" key={faq.question}>
-              <div className="bg-slate-50 border-b border-slate-100 px-5 py-4 flex items-center gap-3">
-                <HelpCircle className="w-5 h-5 text-[#7000FF] shrink-0" />
-                <h3 className="text-base sm:text-lg font-bold text-black leading-snug">
+            <div className="flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-[#141414] shadow-sm hover:border-orange-200 transition-colors" key={faq.question}>
+              <div className="bg-[#141414] border-b border-white/5 px-5 py-4 flex items-center gap-3">
+                <HelpCircle className="w-5 h-5 text-[#E50914] shrink-0" />
+                <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
                   {faq.question}
                 </h3>
               </div>
-              <div className="p-5 text-sm text-slate-700 leading-relaxed bg-white flex-1">
+              <div className="p-5 text-sm text-gray-300 leading-relaxed bg-[#141414] flex-1">
                 <p>{faq.answer}</p>
               </div>
             </div>
@@ -126,16 +126,16 @@ export default function DeviceSetupGuide() {
 
 function SetupStep({ children, number, title }: { children: React.ReactNode; number: string; title: string }) {
   return (
-    <div className="flex flex-col sm:flex-row gap-6 bg-white border border-slate-200 p-6 sm:p-8 rounded-2xl shadow-sm hover:border-primary-300 transition-colors">
+    <div className="flex flex-col sm:flex-row gap-6 bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl shadow-sm hover:border-primary-300 transition-colors">
       
       {/* Content */}
       <div className="flex flex-1 gap-5 items-start">
-         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#7000FF] text-lg font-extrabold text-white shadow-md">
+         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#E50914] text-lg font-extrabold text-white shadow-md">
            {number}
          </span>
          <div className="flex-1 mt-1">
-           <h4 className="text-lg font-bold text-black sm:text-xl">{title}</h4>
-           <div className="mt-3 text-sm leading-relaxed text-slate-600">
+           <h4 className="text-lg font-bold text-white sm:text-xl">{title}</h4>
+           <div className="mt-3 text-sm leading-relaxed text-gray-400">
              {children}
            </div>
          </div>
@@ -147,8 +147,8 @@ function SetupStep({ children, number, title }: { children: React.ReactNode; num
 
 function CodeLine({ label, text }: { label: string; text: string }) {
   return (
-    <div className="rounded-xl bg-slate-50 border border-slate-200 px-4 py-3 font-mono text-xs text-slate-700 break-all">
-      <span className="font-bold text-[#7000FF] mr-2">{label}:</span> 
+    <div className="rounded-xl bg-[#141414] border border-white/10 px-4 py-3 font-mono text-xs text-gray-300 break-all">
+      <span className="font-bold text-[#E50914] mr-2">{label}:</span> 
       {text}
     </div>
   );

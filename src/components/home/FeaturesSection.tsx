@@ -61,7 +61,7 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
             className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-semibold text-on-background mb-sm"
           >
-            ArgonTV for Flawless Streaming
+            Orexetv for Flawless Streaming
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -83,7 +83,7 @@ export default function FeaturesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="glass-panel rounded-xl p-lg border border-black/10 hover:border-primary/50 transition-all duration-300 group"
+                className="glass-panel rounded-xl p-lg border border-white/10 hover:border-primary/50 transition-all duration-300 group"
               >
                 <div className="p-md rounded-xl bg-surface-container-high w-fit mb-md group-hover:scale-110 transition-transform">
                   <Icon className={`w-7 h-7 ${feature.color}`} />

@@ -40,7 +40,7 @@ files.forEach(file => {
   });
 
   // Also replace any specific hex codes if they are hardcoded
-  updated = updated.replace(/#FF6B00/gi, '#7000FF');
+  updated = updated.replace(/#FF6B00/gi, '#E50914');
   updated = updated.replace(/#FF8533/gi, '#9b4dff');
 
   if (original !== updated) {

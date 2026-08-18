@@ -7,7 +7,6 @@ export const metadata = {
   },
 };
 
-import TopFeatureBar from "@/components/home/TopFeatureBar";
 import BrandMarquee from "@/components/home/BrandMarquee";
 import MovieStrips from "@/components/home/MovieStrips";
 import ChannelCategories from "@/components/home/ChannelCategories";
@@ -25,29 +24,27 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Value Proposition */}
-      <TopFeatureBar />
       <MovieStrips />
 
       {/* Sports Tape */}
-      <div className="w-full bg-white pt-12 pb-2 relative z-20">
+      <div className="w-full bg-[#141414] pt-12 pb-2 relative z-20">
         <h3 className="text-center text-sm font-bold tracking-widest text-slate-400 uppercase mb-4">All Major Sports & Leagues Live</h3>
       </div>
-      <BrandMarquee 
-        imagesFolder="dawryate2" 
+      <BrandMarquee
+        imagesFolder="dawryate2"
         images={[
-          "Untitled-design-50.webp", "Untitled-design-51.webp", "Untitled-design-52.webp", 
-          "Untitled-design-53.webp", "Untitled-design-54.webp", "Untitled-design-55.webp", 
+          "Untitled-design-50.webp", "Untitled-design-51.webp", "Untitled-design-52.webp",
+          "Untitled-design-53.webp", "Untitled-design-54.webp", "Untitled-design-55.webp",
           "Untitled-design-56.webp", "Untitled-design-57.webp", "Untitled-design-58.webp"
         ]}
-        cardClassName="flex-shrink-0 w-[140px] h-[200px] md:w-[200px] md:h-[280px] relative rounded-xl overflow-hidden shadow-2xl border border-black/10 bg-white hover:border-[#7000FF]/60 transition-all duration-300 group"
+        cardClassName="flex-shrink-0 w-[140px] h-[200px] md:w-[200px] md:h-[280px] relative rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-[#141414] hover:border-[#E50914]/60 transition-all duration-300 group"
         imageClassName="object-cover rounded-xl"
       />
 
       {/* Channel & Installation Quick Links */}
-      <div className="w-full bg-white py-6 px-4 text-center border-t border-black/5 relative z-20">
-        <p className="text-center text-sm md:text-base text-slate-600 max-w-3xl mx-auto">
-          Find the comprehensive <Link prefetch={false} className="font-semibold text-[#7000FF] hover:text-[#f44336]" href="/channels">ArgonTV Channel List</Link> or navigate to our <Link prefetch={false} className="font-semibold text-[#7000FF] hover:text-[#f44336]" href="/installation">ArgonTV Installation Guide</Link> for a quick start.
+      <div className="w-full bg-[#141414] py-6 px-4 text-center border-t border-white/5 relative z-20">
+        <p className="text-center text-sm md:text-base text-gray-400 max-w-3xl mx-auto">
+          Find the comprehensive <Link prefetch={false} className="font-semibold text-[#E50914] hover:text-[#f44336]" href="/channels">Orexetv Channel List</Link> or navigate to our <Link prefetch={false} className="font-semibold text-[#E50914] hover:text-[#f44336]" href="/installation">Orexetv Installation Guide</Link> for a quick start.
         </p>
       </div>
 
@@ -57,12 +54,12 @@ export default function Home() {
       {/* Device Support & How It Works */}
       <ComparisonSection />
       <DeviceSupport />
-      
+
       {/* Device Logos Marquee */}
-      <div className="w-full bg-white border-t border-black/[0.05] pt-12 pb-6 relative z-10">
+      <div className="w-full bg-[#141414] border-t border-black/[0.05] pt-12 pb-6 relative z-10">
         <h3 className="text-center text-sm font-bold tracking-widest text-slate-400 uppercase mb-8">Supported on all your favorite devices</h3>
-        <BrandMarquee 
-          imagesFolder="devices" 
+        <BrandMarquee
+          imagesFolder="devices"
           images={[
             "Amazon-Fire-tv-stick-krooz-tv.webp",
             "Apple-TV-krooz-tv.webp",
@@ -76,7 +73,7 @@ export default function Home() {
             "Windows-krooz-tv.webp",
             "xbox-live-krooz-tv.webp"
           ]}
-          cardClassName="flex-shrink-0 w-[160px] h-[80px] md:w-[220px] md:h-[100px] relative bg-white border border-slate-200 rounded-2xl p-4 md:p-6 hover:border-primary-300 transition-all duration-300 shadow-md flex items-center justify-center"
+          cardClassName="flex-shrink-0 w-[160px] h-[80px] md:w-[220px] md:h-[100px] relative bg-white border border-black/10 rounded-2xl p-4 md:p-6 hover:bg-slate-50 hover:border-primary-300 transition-all duration-300 shadow-md flex items-center justify-center"
           imageClassName="object-contain drop-shadow-sm"
         />
       </div>

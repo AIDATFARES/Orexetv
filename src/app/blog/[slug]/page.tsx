@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = blogPosts.find((p) => p.slug === resolvedParams.slug);
 
   if (!post) {
-    return { title: 'Post Not Found | ArgonTV' };
+    return { title: 'Post Not Found | Orexetv' };
   }
 
   return {
@@ -122,7 +122,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         Back to Blog
       </Link>
 
-      <article className="bg-white border border-black/10 rounded-2xl p-6 md:p-12">
+      <article className="bg-[#141414] border border-white/10 rounded-2xl p-6 md:p-12">
         <header className="mb-10 text-center">
           <span className="inline-block px-3 py-1 bg-tertiary/20 text-tertiary rounded-full font-label-caps text-label-caps mb-4 w-max border border-tertiary/30">
             {post.category}
@@ -190,7 +190,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {relatedPosts.map((relPost) => (
                 <Link href={`/blog/${relPost.slug}`} key={relPost.id}>
-                  <article className="glass-panel rounded-xl overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-1 transition-transform duration-300 h-full border border-black/10 hover:border-primary/50">
+                  <article className="glass-panel rounded-xl overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-1 transition-transform duration-300 h-full border border-white/10 hover:border-primary/50">
                     <div className="h-40 relative overflow-hidden shrink-0">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
