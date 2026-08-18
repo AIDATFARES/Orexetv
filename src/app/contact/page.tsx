@@ -29,9 +29,9 @@ export default function Contact() {
             <p className="text-sm text-gray-400 mb-6 font-medium">For general inquiries and support.</p>
             <a
               className="text-[#E50914] font-bold hover:text-[#B3000B] transition-colors"
-              href="mailto:support@orexetv.shop"
+              href="mailto:support@orexetv.vip"
             >
-              support@orexetv.shop
+              support@orexetv.vip
             </a>
           </div>
 

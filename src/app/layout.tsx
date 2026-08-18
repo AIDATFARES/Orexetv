@@ -24,14 +24,14 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: "Orexetv - Premium 4K Streaming Services",
   description: "Ultimate 4K IPTV Experience. Access +50,000 Channels, +120,000 Films & Series, and 200,000+ VODs.",
-  metadataBase: new URL("https://www.orexetv.shop"),
+  metadataBase: new URL("https://www.orexetv.vip"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Orexetv - Premium 4K Streaming",
     description: "Ultimate 4K IPTV Experience. Access +50,000 Channels, +120,000 Films & Series, and 200,000+ VODs.",
-    url: "https://www.orexetv.shop",
+    url: "https://www.orexetv.vip",
     siteName: "Orexetv",
     images: [
       {
