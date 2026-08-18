@@ -1469,7 +1469,7 @@ The available channels can then appear inside the player.
 
 One advantage of this approach is compatibility. M3U playlists are supported by many different media and IPTV applications.
 
-When the IPTV player parses the M3U text file, it reads lines starting with `#EXTM3U` and `#EXTINF` tags. These tags tell the player the channel name, the category group (like Sports, News, or Movies), and the URL where the actual stream resides. The player then populates the user interface with these channels. When you click a channel, the player makes an HTTP request to the streaming URL, initiating the playback.
+When the IPTV player parses the M3U text file, it reads lines starting with \`#EXTM3U\` and \`#EXTINF\` tags. These tags tell the player the channel name, the category group (like Sports, News, or Movies), and the URL where the actual stream resides. The player then populates the user interface with these channels. When you click a channel, the player makes an HTTP request to the streaming URL, initiating the playback.
 
 Because the M3U URL fetches the playlist in one single request, your device has to download and parse the entire file. For smaller playlists, this takes less than a second. However, for massive playlists containing tens of thousands of channels, movies, and series, the download size can be large, and parsing the file can consume a significant amount of your device's memory.
 
@@ -1516,7 +1516,7 @@ The basic process looks like this:
 
 For many beginners, this setup can feel simpler than manually handling a long M3U URL.
 
-Behind the scenes, when you enter your Xtream Codes credentials, the player makes an initial API call to the server URL (e.g., `http://example.com:8080/player_api.php?username=YOUR_USER&password=YOUR_PASSWORD`). The server responds with JSON data that authenticates your subscription, checks the expiration date, and returns the categories for Live TV, Movies, and Series. 
+Behind the scenes, when you enter your Xtream Codes credentials, the player makes an initial API call to the server URL (e.g., \`http://example.com:8080/player_api.php?username=YOUR_USER&password=YOUR_PASSWORD\`). The server responds with JSON data that authenticates your subscription, checks the expiration date, and returns the categories for Live TV, Movies, and Series. 
 
 As you navigate the app, the player continues to query the server in real-time. For instance, when you click on the "Sports" category, the player asks the server for only the sports channels. This on-demand querying helps conserve device memory and speeds up loading times, as the player only downloads stream links for the sections you are actively viewing.
 
@@ -1585,7 +1585,7 @@ If you use several compatible applications, you can often use the same M3U playl
 
 This can make testing different players easier.
 
-Additionally, because the playlist is contained in a text format, advanced users can download the `.m3u` file to their computer and open it in a text editor like Notepad. This allows you to manually rearrange channels, delete sections you do not watch, or add custom streams before loading the file into your player.
+Additionally, because the playlist is contained in a text format, advanced users can download the \`.m3u\` file to their computer and open it in a text editor like Notepad. This allows you to manually rearrange channels, delete sections you do not watch, or add custom streams before loading the file into your player.
 
 ## Disadvantages of M3U
 
@@ -1609,7 +1609,7 @@ Password
 
 For beginners, this can be easier to understand.
 
-Typing a simple server URL (like `http://orexetv.com:8080`) along with a short username and password is significantly easier than typing a complex M3U URL containing long security tokens.
+Typing a simple server URL (like \`http://orexetv.com:8080\`) along with a short username and password is significantly easier than typing a complex M3U URL containing long security tokens.
 
 ### Better Organization in Many Players
 
@@ -1768,7 +1768,7 @@ If Xtream Codes login fails:
 - Check whether the server is reachable.
 - Try another compatible player.
 
-A frequent mistake with Xtream Codes is omitting the port number in the server URL (for example, typing `http://example.com` instead of `http://example.com:8080`). Double-check the registration details sent by your provider to ensure the port is included.
+A frequent mistake with Xtream Codes is omitting the port number in the server URL (for example, typing \`http://example.com\` instead of \`http://example.com:8080\`). Double-check the registration details sent by your provider to ensure the port is included.
 
 If you encounter buffering after successfully logging in, the problem may be unrelated to your login method.
 
