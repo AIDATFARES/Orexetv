@@ -35,7 +35,7 @@ export default function LatestArticlesSection() {
                     alt={post.title}
                     src={post.coverImage || "/blog/high-quality-iptv-service.webp"}
                   />
-                  <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent"></div>
+                  <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-[#141414] to-transparent"></div>
                   <span className="absolute top-4 left-4 px-3 py-1 bg-[#141414] backdrop-blur-md text-white rounded-full text-xs font-bold border border-white/10">
                     {post.category}
                   </span>
