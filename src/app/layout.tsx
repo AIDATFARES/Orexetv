@@ -22,15 +22,15 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Orexetv - Premium 4K Streaming Services",
-  description: "Ultimate 4K IPTV Experience. Access +50,000 Channels, +120,000 Films & Series, and 200,000+ VODs.",
+  title: "Orexetv | #1 Premium 4K IPTV Subscription Service 2026",
+  description: "Experience the ultimate 4K IPTV service with Orexetv. Access 50,000+ live channels, live sports, and 120,000+ VODs. Enjoy anti-freeze technology, zero buffering, and instant activation. Start streaming today!",
   metadataBase: new URL("https://www.orexetv.vip"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Orexetv - Premium 4K Streaming",
-    description: "Ultimate 4K IPTV Experience. Access +50,000 Channels, +120,000 Films & Series, and 200,000+ VODs.",
+    title: "Orexetv | #1 Premium 4K IPTV Subscription Service 2026",
+    description: "Experience the ultimate 4K IPTV service with Orexetv. Access 50,000+ live channels, live sports, and 120,000+ VODs. Enjoy anti-freeze technology, zero buffering, and instant activation. Start streaming today!",
     url: "https://www.orexetv.vip",
     siteName: "Orexetv",
     images: [
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Orexetv - Premium 4K Streaming",
-    description: "Ultimate 4K IPTV Experience. Access +50,000 Channels, +120,000 Films & Series, and 200,000+ VODs.",
+    title: "Orexetv | #1 Premium 4K IPTV Subscription Service 2026",
+    description: "Experience the ultimate 4K IPTV service with Orexetv. Access 50,000+ live channels, live sports, and 120,000+ VODs. Enjoy anti-freeze technology, zero buffering, and instant activation. Start streaming today!",
     images: ["/og-image-orexetv-v2.webp"],
   },
 };
