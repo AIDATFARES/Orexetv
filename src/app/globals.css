@@ -1,82 +1,62 @@
 @import "tailwindcss";
 
 @theme {
-  --color-surface: #141414;
-  --color-surface-dim: #dadada;
-  --color-surface-bright: #f9f9f9;
-  --color-surface-container-lowest: #ffffff;
-  --color-surface-container-low: #f3f3f4;
-  --color-surface-container: #F4F4F4;
-  --color-surface-container-high: #E5E5E5;
-  --color-surface-container-highest: #e2e2e2;
-  --color-on-surface: #ffffff;
-  --color-on-surface-variant: #5a4136;
-  --color-inverse-surface: #2f3131;
-  --color-inverse-on-surface: #f0f1f1;
-  --color-outline: #D1D1D1;
-  --color-outline-variant: #e2bfb0;
-  --color-surface-tint: #a04100;
-  --color-primary: #a04100;
-  --color-on-primary: #ffffff;
-  --color-primary-container: #E50914;
-  --color-on-primary-container: #572000;
-  --color-inverse-primary: #ffb693;
-  --color-secondary: #5e5e5e;
-  --color-on-secondary: #ffffff;
-  --color-secondary-container: #e2e2e2;
-  --color-on-secondary-container: #646464;
-  --color-tertiary: #0062a1;
-  --color-on-tertiary: #ffffff;
-  --color-tertiary-container: #059eff;
-  --color-on-tertiary-container: #003357;
-  --color-error: #DE3730;
-  --color-on-error: #ffffff;
-  --color-error-container: #ffdad6;
-  --color-on-error-container: #93000a;
-  --color-primary-fixed: #ffdbcc;
-  --color-primary-fixed-dim: #ffb693;
-  --color-on-primary-fixed: #351000;
-  --color-on-primary-fixed-variant: #7a3000;
-  --color-secondary-fixed: #e2e2e2;
-  --color-secondary-fixed-dim: #c6c6c6;
-  --color-on-secondary-fixed: #1b1b1b;
-  --color-on-secondary-fixed-variant: #474747;
-  --color-tertiary-fixed: #d0e4ff;
-  --color-tertiary-fixed-dim: #9ccaff;
-  --color-on-tertiary-fixed: #001d35;
-  --color-on-tertiary-fixed-variant: #00497b;
-  --color-background: #141414;
-  --color-on-background: #ffffff;
-  --color-surface-variant: #e2e2e2;
+  --color-surface: #0B0714;
+  --color-surface-dim: #080511;
+  --color-surface-bright: #150E24;
+  --color-surface-container-lowest: #06040F;
+  --color-surface-container-low: #0A0617;
+  --color-surface-container: #10091B;
+  --color-surface-container-high: #190E2C;
+  --color-surface-container-highest: #23143D;
+  --color-on-surface: #FFFFFF;
+  --color-on-surface-variant: #B6B0C2;
+  --color-inverse-surface: #F8FAFC;
+  --color-inverse-on-surface: #0B0714;
+  --color-outline: rgba(255, 255, 255, 0.12);
+  --color-outline-variant: rgba(139, 92, 246, 0.2);
+  --color-surface-tint: #8B5CF6;
+  --color-primary: #7C3AED;
+  --color-on-primary: #FFFFFF;
+  --color-primary-container: #8B5CF6;
+  --color-on-primary-container: #FFFFFF;
+  --color-inverse-primary: #C084FC;
+  --color-secondary: #4F46E5;
+  --color-on-secondary: #FFFFFF;
+  --color-secondary-container: #6366F1;
+  --color-on-secondary-container: #FFFFFF;
+  --color-tertiary: #06B6D4;
+  --color-on-tertiary: #FFFFFF;
+  --color-tertiary-container: #22D3EE;
+  --color-on-tertiary-container: #083344;
+  --color-error: #EF4444;
+  --color-on-error: #FFFFFF;
+  --color-error-container: rgba(239, 68, 68, 0.2);
+  --color-on-error-container: #FCA5A5;
+  --color-background: #06040F;
+  --color-on-background: #FFFFFF;
+  --color-surface-variant: #160D27;
 
-  /* Brand Colors Override - Cinematic Red Palette */
-  --color-primary-300: #ff6666;
-  --color-primary-400: #ff3333;
-  --color-primary-500: #E50914;
-  --color-primary-600: #b3000b;
+  /* Brand Colors - ArgonTV-Inspired Premium Purple & Indigo Palette */
+  --color-primary-300: #C084FC;
+  --color-primary-400: #A855F7;
+  --color-primary-500: #8B5CF6;
+  --color-primary-600: #7C3AED;
   
-  --color-secondary-400: #ff9999;
-  --color-secondary-500: #B3000B;
-  --color-secondary-600: #990000;
+  --color-secondary-400: #818CF8;
+  --color-secondary-500: #6366F1;
+  --color-secondary-600: #4F46E5;
 
-  --color-accent-400: #ff4d4d;
-  --color-accent-500: #FF3333;
-  --color-accent-600: #cc0000;
+  --color-accent-400: #67E8F9;
+  --color-accent-500: #22D3EE;
+  --color-accent-600: #06B6D4;
 
-  --radius: 0.25rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
+  --radius: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+  --radius-3xl: 1.5rem;
   --radius-full: 9999px;
-
-  --spacing-margin-desktop: 64px;
-  --spacing-unit: 4px;
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-lg: 24px;
-  --spacing-md: 16px;
-  --spacing-xl: 32px;
-  --spacing-gutter: 24px;
-  --spacing-margin-mobile: 16px;
 
   --font-title-md: var(--font-inter);
   --font-headline-lg-mobile: var(--font-inter);
@@ -85,92 +65,134 @@
   --font-label-caps: var(--font-geist);
   --font-body-sm: var(--font-inter);
   --font-display-lg: var(--font-inter);
-
-  /* Note: FontSize configuration inside Tailwind CSS v4 */
-  --text-title-md: 20px;
-  --text-title-md--line-height: 28px;
-  --text-title-md--font-weight: 500;
-
-  --text-headline-lg-mobile: 24px;
-  --text-headline-lg-mobile--line-height: 32px;
-  --text-headline-lg-mobile--font-weight: 600;
-
-  --text-body-lg: 16px;
-  --text-body-lg--line-height: 24px;
-  --text-body-lg--font-weight: 400;
-
-  --text-headline-lg: 32px;
-  --text-headline-lg--line-height: 40px;
-  --text-headline-lg--letter-spacing: -0.01em;
-  --text-headline-lg--font-weight: 600;
-
-  --text-label-caps: 12px;
-  --text-label-caps--line-height: 16px;
-  --text-label-caps--letter-spacing: 0.05em;
-  --text-label-caps--font-weight: 600;
-
-  --text-body-sm: 14px;
-  --text-body-sm--line-height: 20px;
-  --text-body-sm--font-weight: 400;
-
-  --text-display-lg: 48px;
-  --text-display-lg--line-height: 56px;
-  --text-display-lg--letter-spacing: -0.02em;
-  --text-display-lg--font-weight: 700;
 }
 
 @layer base {
   body {
-    @apply bg-background text-on-background font-body-lg min-h-screen flex flex-col antialiased;
+    background-color: #06040F;
+    color: #FFFFFF;
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
   }
 }
 
+/* Subtle Geometric Background Grid */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(139, 92, 246, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Glassmorphism Classes */
 @layer components {
   .glass-panel {
-    background: rgba(30, 32, 32, 0.6);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  .text-glow {
-    text-shadow: 0 0 20px rgba(229, 9, 20, 0.4);
-  }
-  .btn-glow:hover {
-    box-shadow: 0 0 30px rgba(179, 0, 11, 0.6);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .glass-card-hover:hover {
+    transform: translateY(-6px);
+    border-color: rgba(139, 92, 246, 0.45);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(124, 58, 237, 0.2);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 24px rgba(139, 92, 246, 0.5);
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 20px rgba(34, 211, 238, 0.45);
+  }
+
+  /* ArgonTV-style Pill Badge */
+  .badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #C084FC;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Live Blinking Green Status Dot */
+  .dot-blink {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #4CFF91;
+    box-shadow: 0 0 8px #4CFF91;
+    animation: dotPulse 1.5s ease-in-out infinite;
+  }
+
+  /* Buttons */
   .btn-primary-voltra {
-    background: linear-gradient(135deg, #E50914 0%, #B3000B 100%);
-    color: #ffffff;
-    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #7C3AED 0%, #4F46E5 100%);
+    color: #FFFFFF;
+    font-weight: 800;
     letter-spacing: 0.04em;
-    border-radius: var(--radius-xl); /* Softer, consistent rounded buttons */
-    box-shadow: 0 4px 20px rgba(229, 9, 20, 0.4);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: buttonPulseScale 2s infinite ease-in-out;
+    border-radius: 9999px;
+    padding: 14px 28px;
+    box-shadow: 0 8px 32px rgba(124, 58, 237, 0.4);
+    transition: all 0.25s ease-in-out;
   }
+
   .btn-primary-voltra:hover {
-    box-shadow: 0 6px 30px rgba(179, 0, 11, 0.6);
-    transform: translateY(-2px);
-    animation-play-state: paused;
+    background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%);
+    box-shadow: 0 12px 40px rgba(124, 58, 237, 0.6);
+    transform: translateY(-2px) scale(1.01);
   }
+
   .btn-primary-voltra:active {
-    transform: translateY(0);
+    transform: translateY(0) scale(0.99);
   }
 
   .btn-secondary-voltra {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(229, 9, 20, 0.2);
-    color: #E50914;
-    font-weight: 600;
-    border-radius: var(--radius-xl);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #FFFFFF;
+    font-weight: 700;
+    border-radius: 9999px;
+    padding: 14px 28px;
+    transition: all 0.25s ease-in-out;
   }
+
   .btn-secondary-voltra:hover {
-    border-color: rgba(255, 255, 255, 0.35);
-    color: #ffffff;
+    border-color: rgba(192, 132, 252, 0.5);
+    background: rgba(139, 92, 246, 0.1);
+    color: #C084FC;
     transform: translateY(-2px);
   }
 
@@ -178,7 +200,7 @@
      Page-Type Specific Typography & Text Formatting System
      ------------------------------------------------------------- */
   
-  /* 1. MARKETING / SALES PAGES (Home, Pricing, Reseller, Channels) */
+  /* 1. MARKETING / SALES PAGES */
   .text-format-marketing h1 {
     @apply font-black uppercase tracking-tight text-white leading-tight text-3xl sm:text-5xl lg:text-6xl;
   }
@@ -189,7 +211,7 @@
     @apply font-extrabold uppercase tracking-wide text-white text-lg sm:text-xl;
   }
   .text-format-marketing p {
-    @apply text-gray-400 leading-relaxed text-sm sm:text-base font-normal;
+    @apply text-slate-300 leading-relaxed text-sm sm:text-base font-normal;
   }
   .text-format-marketing strong, 
   .text-format-marketing b {
@@ -197,13 +219,13 @@
   }
   .text-format-marketing mark,
   .text-format-marketing .text-highlight {
-    @apply bg-transparent text-primary-500 font-extrabold;
+    @apply bg-transparent text-[#C084FC] font-extrabold;
   }
   .text-format-marketing .badge-text {
-    @apply inline-flex items-center gap-1.5 rounded-full border border-primary-500/30 bg-primary-500/10 px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-primary-600;
+    @apply inline-flex items-center gap-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#C084FC];
   }
 
-  /* 2. BLOG & EDITORIAL PAGES (Blog listing, Article detail) */
+  /* 2. BLOG & EDITORIAL PAGES */
   .text-format-blog h1 {
     @apply font-bold tracking-tight text-white leading-snug text-3xl sm:text-4xl md:text-5xl capitalize;
   }
@@ -214,18 +236,18 @@
     @apply font-semibold text-white tracking-normal mt-7 mb-3 text-lg sm:text-xl;
   }
   .text-format-blog p {
-    @apply text-gray-300 leading-8 text-base sm:text-lg mb-6 font-normal tracking-wide;
+    @apply text-slate-300 leading-8 text-base sm:text-lg mb-6 font-normal tracking-wide;
   }
   .text-format-blog strong, 
   .text-format-blog b {
-    @apply font-bold text-white bg-black/[0.04] px-1 py-0.5 rounded;
+    @apply font-bold text-white bg-white/[0.06] px-1 py-0.5 rounded;
   }
   .text-format-blog em,
   .text-format-blog i {
-    @apply italic text-gray-400;
+    @apply italic text-slate-400;
   }
   .text-format-blog a {
-    @apply text-primary-500 font-medium underline underline-offset-4 decoration-primary-500/40 hover:text-primary-600 hover:decoration-primary-500 transition-colors;
+    @apply text-[#C084FC] font-medium underline underline-offset-4 decoration-purple-500/40 hover:text-white hover:decoration-purple-400 transition-colors;
   }
 
   /* 3. TECHNICAL GUIDES & INSTALLATION PAGES */
@@ -239,15 +261,15 @@
     @apply font-bold text-white text-lg sm:text-xl mt-6 mb-2;
   }
   .text-format-technical p {
-    @apply text-gray-400 leading-7 text-sm sm:text-base mb-4 font-normal;
+    @apply text-slate-300 leading-7 text-sm sm:text-base mb-4 font-normal;
   }
   .text-format-technical code,
   .text-format-technical pre {
-    @apply font-mono text-primary-600 bg-[#1a1a1a] px-2.5 py-1 rounded-md border border-white/10 text-xs sm:text-sm font-medium tracking-wide shadow-inner;
+    @apply font-mono text-purple-300 bg-[#120B20] px-2.5 py-1 rounded-md border border-purple-500/20 text-xs sm:text-sm font-medium tracking-wide shadow-inner;
   }
   .text-format-technical strong,
   .text-format-technical b {
-    @apply font-bold text-white underline decoration-secondary-500/50 decoration-2 underline-offset-2;
+    @apply font-bold text-white underline decoration-purple-400/50 decoration-2 underline-offset-2;
   }
 
   /* 4. LEGAL & POLICY DOCUMENTS */
@@ -255,18 +277,24 @@
     @apply font-black uppercase tracking-tight text-white text-3xl sm:text-4xl lg:text-5xl;
   }
   .text-format-legal h2 {
-    @apply font-bold text-white text-xl sm:text-2xl tracking-normal mt-8 mb-3 border-l-4 border-primary-500 pl-3;
+    @apply font-bold text-white text-xl sm:text-2xl tracking-normal mt-8 mb-3 border-l-4 border-purple-500 pl-3;
   }
   .text-format-legal p {
-    @apply text-gray-400 leading-7 font-normal text-sm sm:text-base mb-4 tracking-normal;
+    @apply text-slate-300 leading-7 font-normal text-sm sm:text-base mb-4 tracking-normal;
   }
   .text-format-legal strong,
   .text-format-legal b {
     @apply font-semibold text-white;
   }
   .text-format-legal a {
-    @apply font-semibold text-primary-500 hover:text-primary-600 transition-colors underline underline-offset-2;
+    @apply font-semibold text-[#C084FC] hover:text-white transition-colors underline underline-offset-2;
   }
+}
+
+/* Animations */
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.85); }
 }
 
 @keyframes marquee {
@@ -284,7 +312,7 @@
 }
 
 .animate-marquee-fast {
-  animation: marquee 24s linear infinite;
+  animation: marquee 22s linear infinite;
 }
 
 .animate-marquee-reverse {
@@ -294,7 +322,7 @@
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(28px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
@@ -311,7 +339,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-16px);
+    transform: translateY(-12px);
   }
 }
 
@@ -320,26 +348,25 @@
 }
 
 @keyframes buttonPulseScale {
-  0% { box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7); }
-  70% { box-shadow: 0 0 0 10px rgba(229, 9, 20, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(229, 9, 20, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.6); }
+  70% { box-shadow: 0 0 0 12px rgba(124, 58, 237, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0); }
 }
 
 .animate-button-pulse {
-  animation: buttonPulseScale 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: buttonPulseScale 2.2s infinite cubic-bezier(0.66, 0, 0, 1);
 }
 
 @keyframes buttonPulseWhite {
-  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5); }
+  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
   70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
   100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
 }
 
 .animate-button-pulse-white {
-  animation: buttonPulseWhite 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: buttonPulseWhite 2.2s infinite cubic-bezier(0.66, 0, 0, 1);
 }
 
 .animate-button-pulse:hover, .animate-button-pulse-white:hover {
   animation-play-state: paused;
 }
-

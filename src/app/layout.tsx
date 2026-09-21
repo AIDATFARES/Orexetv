@@ -22,15 +22,15 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Orexetv | #1 Premium 4K IPTV Subscription Service 2026",
-  description: "Experience the ultimate 4K IPTV service with Orexetv. Access 50,000+ live channels, live sports, and 120,000+ VODs. Enjoy anti-freeze technology, zero buffering, and instant activation. Start streaming today!",
+  title: "Orexetv — The Best IPTV Service | 4K Sports & 50K+ Channels",
+  description: "Join Orexetv, the best IPTV service in 2026. Stream 50,000+ live channels & 200K VODs in 4K 60FPS with Anti-Freeze tech. Instant activation from just $4.20/mo!",
   metadataBase: new URL("https://www.orexetv.vip"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Orexetv | #1 Premium 4K IPTV Subscription Service 2026",
-    description: "Experience the ultimate 4K IPTV service with Orexetv. Access 50,000+ live channels, live sports, and 120,000+ VODs. Enjoy anti-freeze technology, zero buffering, and instant activation. Start streaming today!",
+    title: "Orexetv — The Best IPTV Service | 4K Sports & 50K+ Channels",
+    description: "Join Orexetv, the best IPTV service in 2026. Stream 50,000+ live channels & 200K VODs in 4K 60FPS with Anti-Freeze tech. Instant activation from just $4.20/mo!",
     url: "https://www.orexetv.vip",
     siteName: "Orexetv",
     images: [
@@ -46,9 +46,18 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Orexetv | #1 Premium 4K IPTV Subscription Service 2026",
-    description: "Experience the ultimate 4K IPTV service with Orexetv. Access 50,000+ live channels, live sports, and 120,000+ VODs. Enjoy anti-freeze technology, zero buffering, and instant activation. Start streaming today!",
+    title: "Orexetv — The Best IPTV Service | 4K Sports & 50K+ Channels",
+    description: "Join Orexetv, the best IPTV service in 2026. Stream 50,000+ live channels & 200K VODs in 4K 60FPS with Anti-Freeze tech. Instant activation from just $4.20/mo!",
     images: ["/og-image-orexetv-v2.webp"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
 };
 
@@ -58,22 +67,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`light ${inter.variable} ${geist.variable}`}>
+    <html lang="en" className={`dark ${inter.variable} ${geist.variable}`}>
       <head>
       </head>
-      <body className="bg-background text-on-background font-body-lg min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container">
+      <body className="bg-[#06040F] text-slate-100 min-h-screen flex flex-col antialiased selection:bg-[#7C3AED] selection:text-white bg-grid-pattern">
         {/* Navbar Component */}
         <Navbar />
 
         <div className="flex-grow pt-[124px] flex flex-col">{children}</div>
 
         {/* Footer */}
-        <footer className="w-full mt-auto border-t border-white/10 bg-[#141414]">
-          <div className="grid max-w-[1400px] grid-cols-2 gap-x-4 gap-y-12 px-6 py-16 sm:grid-cols-4 sm:gap-x-8 sm:px-10 xl:grid-cols-[1.8fr_1fr_1fr_1fr_1fr] xl:gap-10 xl:px-12 mx-auto">
+        <footer className="w-full mt-auto border-t border-white/10 bg-[#06040F] relative overflow-hidden">
+          {/* Ambient Purple Background Glow */}
+          <div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-purple-900/10 blur-[130px] rounded-full" />
+
+          <div className="relative z-10 grid max-w-[1400px] grid-cols-2 gap-x-4 gap-y-12 px-6 py-16 sm:grid-cols-4 sm:gap-x-8 sm:px-10 xl:grid-cols-[1.8fr_1fr_1fr_1fr_1fr] xl:gap-10 xl:px-12 mx-auto">
             <div className="col-span-2 sm:col-span-4 xl:col-span-1 min-w-0 max-w-[310px] space-y-4">
               <Link href="/"><BrandLogo /></Link>
-              <p className="max-w-[285px] whitespace-normal break-normal text-sm leading-6 text-gray-300">
-                © 2024 orexetv. Premium 4K IPTV Streaming Services. All rights reserved.
+              <p className="max-w-[285px] whitespace-normal break-normal text-sm leading-6 text-slate-400">
+                © 2026 Orexetv. Premium 4K IPTV Streaming Services. All rights reserved.
               </p>
               <a href="https://wa.me/213552069874" target="_blank" rel="noreferrer" className="flex max-w-[270px] items-center gap-3 rounded-2xl border border-[#25D366]/30 bg-[#25D366]/[0.08] p-3.5 transition-colors hover:bg-[#25D366]/[0.15] group">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#25D366] text-white shadow-lg shadow-[#25D366]/20 transition-transform group-hover:scale-105">
@@ -86,55 +98,65 @@ export default function RootLayout({
                   <span className="block whitespace-nowrap text-base font-bold text-white">WhatsApp</span>
                 </span>
               </a>
-              <p className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-wider text-gray-400"><span className="h-2 w-2 rounded-full bg-[#25D366] animate-pulse" /> All servers online · 99.9% uptime</p>
+              <p className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+                <span className="h-2 w-2 rounded-full bg-[#4CFF91] shadow-[0_0_8px_#4CFF91] animate-pulse" /> All servers online · 99.9% uptime
+              </p>
             </div>
             
             <div className="col-span-1 min-w-0 space-y-6">
-              <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-gray-300"><span className="border-b-2 border-[#E50914] pb-1.5">NAVIGATION</span></p>
+              <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-slate-300">
+                <span className="border-b-2 border-[#8B5CF6] pb-1.5">NAVIGATION</span>
+              </p>
               <ul className="space-y-3 font-body-sm text-sm">
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/">Home</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/pricing">Pricing</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/how-it-works">How It Works</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/channels">Channels</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/reseller">Reseller</Link></li>
+                <li><Link prefetch={false} className="text-slate-400 transition-colors hover:text-[#C084FC]" href="/">Home</Link></li>
+                <li><Link prefetch={false} className="text-slate-400 transition-colors hover:text-[#C084FC]" href="/pricing">Pricing</Link></li>
+                <li><Link prefetch={false} className="text-slate-400 transition-colors hover:text-[#C084FC]" href="/how-it-works">How It Works</Link></li>
+                <li><Link prefetch={false} className="text-slate-400 transition-colors hover:text-[#C084FC]" href="/channels">Channels</Link></li>
+                <li><Link prefetch={false} className="text-slate-400 transition-colors hover:text-[#C084FC]" href="/reseller">Reseller</Link></li>
               </ul>
             </div>
             
             <div className="col-span-1 min-w-0 space-y-6">
-              <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-gray-300"><span className="border-b-2 border-[#E50914] pb-1.5">SERVICE</span></p>
+              <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-slate-300">
+                <span className="border-b-2 border-[#8B5CF6] pb-1.5">SERVICE</span>
+              </p>
               <ul className="space-y-3 font-body-sm text-sm">
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/pricing">Get Started</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/contact">Contact Support</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/faq">FAQ</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/blog">Blog</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/installation">Setup Guide</Link></li>
+                <li><Link prefetch={false} className="text-slate-400 transition-colors hover:text-[#C084FC]" href="/pricing">Get Started</Link></li>
+                <li><Link prefetch={false} className="text-slate-400 transition-colors hover:text-[#C084FC]" href="/contact">Contact Support</Link></li>
+                <li><Link prefetch={false} className="text-slate-400 transition-colors hover:text-[#C084FC]" href="/faq">FAQ</Link></li>
+                <li><Link prefetch={false} className="text-slate-400 transition-colors hover:text-[#C084FC]" href="/blog">Blog</Link></li>
+                <li><Link prefetch={false} className="text-slate-400 transition-colors hover:text-[#C084FC]" href="/installation">Setup Guide</Link></li>
               </ul>
             </div>
             
             <div className="col-span-1 min-w-0 space-y-6">
-              <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-gray-300"><span className="border-b-2 border-primary-500 pb-1.5">LEGAL</span></p>
+              <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-slate-300">
+                <span className="border-b-2 border-[#8B5CF6] pb-1.5">LEGAL</span>
+              </p>
               <ul className="space-y-3 text-sm">
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/privacy-policy">Privacy Policy</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/refund-policy">Refund Policy</Link></li>
-                <li><Link prefetch={false} className="text-gray-400 transition-colors hover:text-[#E50914]" href="/dmca">DMCA</Link></li>
+                <li><Link prefetch={false} className="text-slate-400 transition-colors hover:text-[#C084FC]" href="/privacy-policy">Privacy Policy</Link></li>
+                <li><Link prefetch={false} className="text-slate-400 transition-colors hover:text-[#C084FC]" href="/refund-policy">Refund Policy</Link></li>
+                <li><Link prefetch={false} className="text-slate-400 transition-colors hover:text-[#C084FC]" href="/dmca">DMCA</Link></li>
               </ul>
             </div>
             
             <div className="col-span-1 min-w-0 space-y-6">
-              <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-gray-300"><span className="border-b-2 border-primary-500 pb-1.5">PAYMENT</span></p>
-              <ul className="space-y-3 text-sm text-gray-400">
-                <li>PayPal</li>
-                <li>Credit Card</li>
-                <li>Bitcoin</li>
-                <li>USDT / Crypto</li>
+              <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-slate-300">
+                <span className="border-b-2 border-[#8B5CF6] pb-1.5">PAYMENT</span>
+              </p>
+              <ul className="space-y-3 text-sm text-slate-400">
+                <li className="flex items-center gap-2"><span>💳</span> PayPal</li>
+                <li className="flex items-center gap-2"><span>💳</span> Credit Card</li>
+                <li className="flex items-center gap-2"><span>₿</span> Bitcoin</li>
+                <li className="flex items-center gap-2"><span>₮</span> USDT / Crypto</li>
               </ul>
             </div>
             
-            <div className="col-span-2 mt-8 flex flex-col gap-6 border-t border-white/10 pt-8 text-xs text-gray-400 sm:col-span-4 md:flex-row md:items-center md:justify-between xl:col-span-5">
+            <div className="col-span-2 mt-8 flex flex-col gap-6 border-t border-white/10 pt-8 text-xs text-slate-400 sm:col-span-4 md:flex-row md:items-center md:justify-between xl:col-span-5">
               <div className="flex flex-wrap gap-3">
-                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-[#E50914]/10 hover:text-[#E50914] hover:border-[#E50914]/20" href="/privacy-policy">Privacy Policy</Link>
-                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-[#E50914]/10 hover:text-[#E50914] hover:border-[#E50914]/20" href="/refund-policy">Refund Policy</Link>
-                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-[#E50914]/10 hover:text-[#E50914] hover:border-[#E50914]/20" href="/dmca">DMCA</Link>
+                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-purple-600/15 hover:text-[#C084FC] hover:border-purple-500/30" href="/privacy-policy">Privacy Policy</Link>
+                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-purple-600/15 hover:text-[#C084FC] hover:border-purple-500/30" href="/refund-policy">Refund Policy</Link>
+                <Link className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:bg-purple-600/15 hover:text-[#C084FC] hover:border-purple-500/30" href="/dmca">DMCA</Link>
               </div>
             </div>
           </div>

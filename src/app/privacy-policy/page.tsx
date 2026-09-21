@@ -13,7 +13,7 @@ const sections = [
   {
     title: "1. Data We Collect",
     content: [
-      <>We collect personal data that you voluntarily provide when you subscribe to our IPTV service, request information about our products or services, or <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/contact">contact us</Link>. The personal data we collect may include the following:</>,
+      <>We collect personal data that you voluntarily provide when you subscribe to our IPTV service, request information about our products or services, or <Link className="font-bold text-[#C084FC] hover:underline" href="/contact">contact us</Link>. The personal data we collect may include the following:</>,
     ],
     items: [
       "Contact information: Your email address, which we use for account creation and communication.",
@@ -69,7 +69,7 @@ const sections = [
       "Request erasure of your personal information in certain circumstances.",
       "Opt out of marketing and promotional communications at any time.",
     ],
-    after: <>To exercise any of these rights, please <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/contact">contact our support team</Link>.</>,
+    after: <>To exercise any of these rights, please <Link className="font-bold text-[#C084FC] hover:underline" href="/contact">contact our support team</Link>.</>,
   },
   {
     title: "9. Children's Privacy",
@@ -79,31 +79,40 @@ const sections = [
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="flex-grow px-5 pb-20 pt-12 sm:px-8 md:pt-16 text-format-legal">
-      <article className="mx-auto max-w-4xl">
-        <header className="border-b border-white/10 pb-10 text-center mx-auto max-w-3xl">
-          <span className="inline-flex rounded-full border border-primary-400/35 bg-primary-400/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-primary-300">Legal information</span>
-          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
-            <span className="block text-white">Privacy &amp; Data Protection</span>
-            <span className="mt-1 block text-[#E50914]">Official Policy.</span>
+    <main className="min-h-screen bg-[#06040F] text-white pt-28 pb-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full relative z-10 bg-grid-pattern overflow-hidden">
+      {/* Ambient Lighting Orbs */}
+      <div className="pointer-events-none absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[radial-gradient(circle,rgba(124,58,237,0.15)_0%,transparent_70%)]" />
+
+      <article className="relative z-10">
+        <header className="mb-14 text-center mx-auto max-w-3xl">
+          <div className="badge-pill mb-4 inline-flex items-center gap-2">
+            <span className="dot-blink" /> Legal Information
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.08] tracking-tight uppercase">
+            <span className="block text-white">Orexetv IPTV Privacy &amp; Data</span>
+            <span className="mt-2 block bg-gradient-to-r from-[#C084FC] via-[#818CF8] to-[#22D3EE] bg-clip-text text-transparent">
+              Protection Policy
+            </span>
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-gray-400">Last adjusted: September 14, 2025</p>
+          <p className="mx-auto mt-4 max-w-2xl text-xs sm:text-sm text-slate-400">Last updated: September 14, 2025</p>
         </header>
 
-        <div className="mt-10 space-y-10 text-base leading-7 text-on-surface-variant">
-          <p>Welcome to Orexetv. We are committed to protecting your personal information and respecting your privacy. If you have questions or concerns about this policy or our data practices, please <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/contact">contact our support team</Link>.</p>
+        <div className="rounded-3xl border border-white/10 bg-[#0B0714] p-8 sm:p-12 shadow-2xl backdrop-blur-xl space-y-10 text-slate-300 leading-relaxed text-sm sm:text-base">
+          <p className="border-b border-white/10 pb-6 text-base text-slate-200 font-medium">
+            Welcome to Orexetv. We are committed to protecting your personal information and respecting your privacy. If you have questions or concerns about this policy or our data practices, please <Link className="font-bold text-[#C084FC] hover:underline" href="/contact">contact our support team</Link>.
+          </p>
           {sections.map((section) => (
-            <section key={section.title}>
-              <h2 className="text-2xl font-bold text-white">{section.title}</h2>
-              {section.content.map((paragraph, index) => <p className="mt-4" key={index}>{paragraph}</p>)}
-              {section.items && <ul className="mt-4 list-disc space-y-2 pl-6 marker:text-tertiary">{section.items.map((item, index) => <li key={index}>{item}</li>)}</ul>}
-              {section.after && <p className="mt-4">{section.after}</p>}
+            <section key={section.title} className="space-y-4">
+              <h2 className="text-xl sm:text-2xl font-black text-white uppercase tracking-tight">{section.title}</h2>
+              {section.content.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+              {section.items && (
+                <ul className="list-disc space-y-2 pl-6 marker:text-[#C084FC]">
+                  {section.items.map((item, index) => <li key={index}>{item}</li>)}
+                </ul>
+              )}
+              {section.after && <p>{section.after}</p>}
             </section>
           ))}
-          <section>
-            <h2 className="text-2xl font-bold text-white">10. Contact Us</h2>
-            <p className="mt-4">If you would like to discuss this policy or our handling of your personal information, please contact our <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/contact">support team</Link>.</p>
-          </section>
         </div>
       </article>
     </main>

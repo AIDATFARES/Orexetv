@@ -1,15 +1,70 @@
-import Image from "next/image";
+"use client";
 
-export default function BrandLogo({ compact = false }: { compact?: boolean }) {
+interface BrandLogoProps {
+  compact?: boolean;
+  className?: string;
+}
+
+export default function BrandLogo({ compact = false, className = "" }: BrandLogoProps) {
   return (
-    <Image
-      alt="Orexetv"
-      className={`block shrink-0 object-contain object-left drop-shadow-[0_2px_10px_rgba(229,9,20,0.3)] transition-all ${compact ? "h-20 w-56" : "h-28 w-80"}`}
-      src="/orexetv-logo-v2.webp"
-      width={320}
-      height={112}
-      sizes="(max-width: 768px) 224px, 320px"
-      priority
-    />
+    <div
+      className={`inline-flex items-center gap-3 select-none group transition-all duration-200 ${
+        compact ? "scale-90 origin-left" : ""
+      } ${className}`}
+      aria-label="Orexetv - Premium 4K IPTV"
+    >
+      {/* SQUIRCLE APP ICON */}
+      <div className="relative shrink-0 flex items-center justify-center">
+        {/* Soft Outer Ambient Glow on hover */}
+        <div className="absolute -inset-1 rounded-[16px] bg-gradient-to-r from-[#8B5CF6] via-[#A855F7] to-[#EC4899] opacity-40 blur-md transition-opacity duration-300 group-hover:opacity-75" />
+
+        {/* Squircle Icon Body */}
+        <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-[15px] sm:rounded-[16px] bg-gradient-to-br from-[#7C3AED] via-[#9333EA] to-[#EC4899] flex items-center justify-center shadow-lg border border-white/20 overflow-hidden">
+          {/* Subtle glossy top diagonal reflection */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/25 via-transparent to-transparent opacity-60 pointer-events-none" />
+
+          {/* Double Play Arrow (>>) in Crisp White */}
+          <svg
+            className="w-5 h-5 sm:w-6 sm:h-6 text-white fill-current drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] translate-x-[1px]"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M4 5.5v13a1 1 0 001.55.83l9-6.5a1 1 0 000-1.66l-9-6.5a1 1 0 00-1.55.83z" />
+            <path d="M12 5.5v13a1 1 0 001.55.83l9-6.5a1 1 0 000-1.66l-9-6.5a1 1 0 00-1.55.83z" opacity="0.95" />
+          </svg>
+        </div>
+
+        {/* Top-Right Neon Cyan Notification Dot */}
+        <div className="absolute -top-1 -right-1 z-10 flex h-3.5 w-3.5 sm:h-4 sm:w-4 items-center justify-center pointer-events-none">
+          <span className="absolute inline-flex h-full w-full rounded-full bg-[#00F0FF] opacity-60 animate-ping" />
+          <span className="relative inline-flex h-3 w-3 sm:h-3.5 sm:w-3.5 rounded-full bg-[#00F0FF] border-2 border-[#06040F] shadow-[0_0_8px_#00F0FF]" />
+        </div>
+      </div>
+
+      {/* TYPOGRAPHY & SUB-TITLE */}
+      <div className="flex flex-col justify-center text-left">
+        {/* Primary Wordmark */}
+        <div className="flex items-baseline font-black tracking-tight leading-none text-[22px] sm:text-[25px] uppercase">
+          <span className="text-white drop-shadow-[0_2px_8px_rgba(255,255,255,0.12)]">
+            OREXE
+          </span>
+          <span className="bg-gradient-to-r from-[#9333EA] via-[#A855F7] to-[#EC4899] bg-clip-text text-transparent ml-1.5 drop-shadow-[0_2px_10px_rgba(168,85,247,0.35)]">
+            TV
+          </span>
+        </div>
+
+        {/* Sub-row: [IPTV] 4K ULTRA */}
+        <div className="flex items-center gap-1.5 mt-1">
+          {/* Black Capsule with Neon Cyan Text */}
+          <span className="inline-flex items-center justify-center px-1.5 py-0.5 rounded bg-black/90 border border-[#00F0FF]/50 text-[9px] sm:text-[9.5px] font-black tracking-wider text-[#00F0FF] leading-none shadow-[0_0_6px_rgba(0,240,255,0.25)]">
+            IPTV
+          </span>
+          {/* 4K ULTRA muted tracking text */}
+          <span className="text-[9px] sm:text-[9.5px] font-extrabold tracking-[0.16em] text-slate-400 uppercase leading-none">
+            4K ULTRA
+          </span>
+        </div>
+      </div>
+    </div>
   );
 }

@@ -1,8 +1,23 @@
 import PricingPageContent from "@/components/pricing/PricingPageContent";
 
 export const metadata = {
+  title: "IPTV Subscription Plans & Pricing from $4.20/mo | Orexetv",
+  description:
+    "Choose the perfect streaming plan with Orexetv. Access 50,000+ live channels, VIP 4K sports & 200K movies. Instant automated setup with a 3-day guarantee.",
   alternates: {
     canonical: "/pricing",
+  },
+  openGraph: {
+    title: "IPTV Subscription Plans & Pricing from $4.20/mo | Orexetv",
+    description:
+      "Choose the perfect streaming plan with Orexetv. Access 50,000+ live channels, VIP 4K sports & 200K movies. Instant automated setup with a 3-day guarantee.",
+    url: "https://www.orexetv.vip/pricing",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IPTV Subscription Plans & Pricing from $4.20/mo | Orexetv",
+    description:
+      "Choose the perfect streaming plan with Orexetv. Access 50,000+ live channels, VIP 4K sports & 200K movies. Instant automated setup with a 3-day guarantee.",
   },
 };
 

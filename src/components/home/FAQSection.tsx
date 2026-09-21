@@ -20,15 +20,15 @@ const faqs: FAQ[] = [
       <>
         Orexetv is a premium IPTV service that offers live TV, VOD movies, TV series, and sports channels in high-quality streaming, including 4K. Check out our{" "}
         <Link
-          href="/channels-list"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          href="/channels"
+          className="text-[#C084FC] font-semibold hover:underline"
         >
           live TV channels
         </Link>{" "}
         and{" "}
         <a
           href="#pricing"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#C084FC] font-semibold hover:underline"
         >
           IPTV subscription plans
         </a>
@@ -47,14 +47,14 @@ const faqs: FAQ[] = [
           href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20orexetv%20IPTV."
           target="_blank"
           rel="noreferrer"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#C084FC] font-semibold hover:underline"
         >
-          free trial
+          free 24-hour trial
         </a>{" "}
         so you can test the service before committing to our{" "}
         <a
           href="#pricing"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#C084FC] font-semibold hover:underline"
         >
           subscription plans
         </a>
@@ -68,10 +68,10 @@ const faqs: FAQ[] = [
     question: "What devices are compatible with Orexetv?",
     answer: (
       <>
-        Orexetv works on Android TV, Firestick, Smart TVs, Android phones, tablets, and apps like Tivimate. Follow our step-by-step{" "}
+        Orexetv works on Android TV, Firestick, Smart TVs (Samsung, LG), Android phones, tablets, Apple TV, and apps like Tivimate. Follow our step-by-step{" "}
         <Link
           href="/installation"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#C084FC] font-semibold hover:underline"
         >
           installation guides
         </Link>{" "}
@@ -88,11 +88,11 @@ const faqs: FAQ[] = [
         Yes, we offer multi-device support. You can choose an{" "}
         <a
           href="#pricing"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#C084FC] font-semibold hover:underline"
         >
           IPTV subscription plan
         </a>{" "}
-        that allows streaming on more than one device simultaneously. Perfect for families or shared accounts.
+        that allows streaming on up to 3 devices simultaneously. Perfect for families or shared living rooms.
       </>
     ),
   },
@@ -102,10 +102,10 @@ const faqs: FAQ[] = [
     question: "Can I watch sports on Orexetv?",
     answer: (
       <>
-        Absolutely. We offer a wide selection of live sports channels, including major leagues and international events. Explore our full{" "}
+        Absolutely. We offer a wide selection of live sports channels, including Premier League, Champions League, UFC, F1, NBA, and PPV broadcasts in 4K 60FPS. Explore our full{" "}
         <Link
-          href="/channels-list"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          href="/channels"
+          className="text-[#C084FC] font-semibold hover:underline"
         >
           channels catalog
         </Link>
@@ -119,10 +119,10 @@ const faqs: FAQ[] = [
     question: "What payment methods do you accept?",
     answer: (
       <>
-        We accept PayPal, cryptocurrency (such as Bitcoin), credit cards, and instant bank transfers for quick and secure payments. Contact our{" "}
+        We accept PayPal, cryptocurrency (such as Bitcoin, USDT), credit cards, and instant transfers for quick and secure payments. Contact our{" "}
         <Link
           href="/contact"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#C084FC] font-semibold hover:underline"
         >
           support team
         </Link>{" "}
@@ -136,12 +136,12 @@ const faqs: FAQ[] = [
     question: "What kind of content is included?",
     answer: (
       <>
-        The service includes live TV channels, sports, movies, TV series, kids&apos; content, international channels, and more – all in HD or 4K quality. Learn more in our{" "}
+        The service includes 50,000+ live TV channels, sports, 120,000+ movies, TV series, kids&apos; content, international channels, and more – all in HD or 4K quality. Learn more in our{" "}
         <Link
           href="/blog"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#C084FC] font-semibold hover:underline"
         >
-          IPTV articles & guides
+          IPTV articles &amp; guides
         </Link>
         .
       </>
@@ -153,10 +153,10 @@ const faqs: FAQ[] = [
     question: "Do I need a VPN?",
     answer: (
       <>
-        A VPN is not required but is recommended in some regions to ensure unrestricted access and added privacy. Read our{" "}
+        A VPN is not required because Orexetv includes built-in anti-freeze server protection. However, if your ISP limits streaming speeds, a VPN can be used without restrictions. Read our{" "}
         <Link
           href="/faq"
-          className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
+          className="text-[#C084FC] font-semibold hover:underline"
         >
           FAQ knowledge base
         </Link>{" "}
@@ -170,7 +170,7 @@ const categories = ["General", "Technical", "Billing"];
 
 export default function FAQSection() {
   const [activeCategory, setActiveCategory] = useState("General");
-  const [expandedId, setExpandedId] = useState<number | null>(null);
+  const [expandedId, setExpandedId] = useState<number | null>(1);
 
   const filteredFaqs = faqs.filter((faq) => faq.category === activeCategory);
 
@@ -179,37 +179,39 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-20 bg-[#141414] text-white relative z-10 border-t border-white/10 overflow-hidden">
-      <div className="max-w-[1000px] mx-auto px-4 sm:px-6">
+    <section className="py-24 bg-[#080511] text-white relative z-10 border-t border-white/5 overflow-hidden bg-grid-pattern">
+      {/* Background glow */}
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-purple-900/10 blur-[130px] rounded-full" />
+
+      <div className="relative z-10 max-w-[1050px] mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-[#E50914]/10 text-[#E50914] font-bold text-xs tracking-widest uppercase mb-6 border border-[#E50914]/20 animate-fade-up">
-            SUPPORT & HELP
-          </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.1] animate-fade-up">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="badge-pill mb-4">
+            <span className="dot-blink" /> Support &amp; FAQ
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-[1.1] uppercase">
             Frequently Asked <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E50914] to-[#B3000B]">
-              Questions (FAQ)
+            <span className="bg-gradient-to-r from-[#C084FC] via-[#818CF8] to-[#22D3EE] bg-clip-text text-transparent">
+              Questions &amp; Answers
             </span>
           </h2>
-          <p className="text-gray-300 text-sm sm:text-base mt-5 leading-relaxed max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
-            Find answers to common questions about our IPTV service. If you need further help, our{" "}
-            <Link
-              href="/contact"
-              className="text-[#E50914] font-semibold hover:text-[#B3000B] transition-colors"
-            >
-              Contact Support
+          <p className="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed max-w-2xl mx-auto">
+            Find answers to common questions about our IPTV service. If you need immediate help, our{" "}
+            <Link href="/contact" className="text-[#C084FC] font-semibold hover:underline">
+              support team
             </Link>{" "}
-            team is available 24/7.
+            is available 24/7 on WhatsApp.
           </p>
         </div>
 
         {/* Tabbed FAQ Layout */}
-        <div className="flex flex-col md:flex-row gap-8 animate-fade-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
+        <div className="flex flex-col md:flex-row gap-8">
           
           {/* Left Column: Categories */}
-          <div className="w-full md:w-64 shrink-0 bg-[#262626] rounded-xl p-6 h-fit border border-white/5">
-            <h3 className="text-xl font-bold text-white mb-6">Categories</h3>
+          <div className="w-full md:w-64 shrink-0 bg-[#0B0714] rounded-2xl p-5 h-fit border border-white/10 shadow-lg">
+            <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-4 px-2">
+              Browse Categories
+            </p>
             <div className="flex flex-col gap-2">
               {categories.map((cat) => {
                 const isActive = activeCategory === cat;
@@ -220,13 +222,14 @@ export default function FAQSection() {
                       setActiveCategory(cat);
                       setExpandedId(null);
                     }}
-                    className={`text-left px-4 py-3 rounded-md text-sm font-bold transition-all flex items-center ${
+                    className={`text-left px-4 py-3 rounded-xl text-xs sm:text-sm font-extrabold transition-all duration-200 flex items-center justify-between ${
                       isActive 
-                        ? "bg-[#1e1e1e] border-l-2 border-[#E50914] text-[#E50914]" 
-                        : "text-gray-300 hover:bg-[#1e1e1e]/50 hover:text-white"
+                        ? "bg-gradient-to-r from-[#7C3AED]/20 to-[#4F46E5]/20 border border-purple-500/40 text-[#C084FC] shadow-sm" 
+                        : "text-slate-400 hover:bg-white/5 hover:text-white"
                     }`}
                   >
-                    {cat}
+                    <span>{cat}</span>
+                    {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#C084FC] shadow-[0_0_6px_#C084FC]" />}
                   </button>
                 );
               })}
@@ -235,26 +238,34 @@ export default function FAQSection() {
 
           {/* Right Column: Questions */}
           <div className="flex-1">
-            <h3 className="text-2xl font-bold text-white mb-6 border-b border-white/10 pb-4">
+            <p className="text-xl font-black text-white mb-6 border-b border-white/10 pb-4 tracking-tight">
               {activeCategory} Questions
-            </h3>
+            </p>
             
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3.5">
               {filteredFaqs.map((faq) => {
                 const isExpanded = expandedId === faq.id;
                 
                 return (
                   <div 
                     key={faq.id} 
-                    className="bg-[#1e1e1e] rounded-md border border-white/5 overflow-hidden transition-all duration-300 hover:border-white/10"
+                    className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
+                      isExpanded
+                        ? "bg-[#0B0714] border-purple-500/50 shadow-[0_4px_25px_rgba(124,58,237,0.15)]"
+                        : "bg-[#0B0714]/70 border-white/10 hover:border-white/20"
+                    }`}
                   >
                     <button
                       onClick={() => toggleFaq(faq.id)}
-                      className="w-full flex justify-between items-center p-5 text-left font-semibold text-white focus:outline-none"
+                      className="w-full flex justify-between items-center p-5 text-left font-bold text-white focus:outline-none gap-4"
                     >
-                      <span>{faq.question}</span>
-                      <span className="text-gray-400 shrink-0 ml-4">
-                        {isExpanded ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
+                      <h3 className="text-sm sm:text-base leading-snug font-bold">{faq.question}</h3>
+                      <span className={`shrink-0 p-1 rounded-full border transition-all ${
+                        isExpanded 
+                          ? "bg-purple-500/20 border-purple-500/40 text-[#C084FC]" 
+                          : "bg-white/5 border-white/10 text-slate-400"
+                      }`}>
+                        {isExpanded ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                       </span>
                     </button>
                     
@@ -263,29 +274,23 @@ export default function FAQSection() {
                         isExpanded ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                       }`}
                     >
-                      <div className="p-5 pt-0 text-sm leading-relaxed text-gray-400">
+                      <div className="p-5 pt-0 text-xs sm:text-sm leading-relaxed text-slate-300 border-t border-white/5 mt-1 pt-4">
                         {faq.answer}
                       </div>
                     </div>
                   </div>
                 );
               })}
-              
-              {filteredFaqs.length === 0 && (
-                <div className="text-gray-400 text-sm p-4 text-center">
-                  No questions found for this category.
-                </div>
-              )}
             </div>
           </div>
           
         </div>
 
         {/* Bottom CTA to Knowledge Base */}
-        <div className="mt-16 text-center animate-fade-up" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
+        <div className="mt-16 text-center">
           <Link
             href="/faq"
-            className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-[#E50914] text-white font-bold text-xs sm:text-sm hover:bg-[#B3000B] transition-all duration-300 shadow-lg"
+            className="btn-secondary-voltra px-7 py-3 text-xs sm:text-sm font-extrabold uppercase tracking-wider inline-flex items-center gap-2"
           >
             <span>View Complete FAQ Knowledge Base</span>
             <ArrowRight className="w-4 h-4" />

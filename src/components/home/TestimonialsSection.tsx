@@ -15,44 +15,46 @@ const reviewImages = [
 
 const metrics = [
   { icon: Star, value: "4.9 / 5.0", label: "Average rating", tone: "text-amber-300" },
-  { icon: Users, value: "14K+", label: "Happy customers", tone: "text-blue-300" },
-  { icon: Tv, value: "50K+", label: "Live channels", tone: "text-primary-300" },
-  { icon: Globe2, value: "80+", label: "Countries supported", tone: "text-primary-300" },
-  { icon: RefreshCw, value: "94%", label: "Renewal rate", tone: "text-pink-300" },
+  { icon: Users, value: "14K+", label: "Happy customers", tone: "text-[#818CF8]" },
+  { icon: Tv, value: "50K+", label: "Live channels", tone: "text-[#C084FC]" },
+  { icon: Globe2, value: "150+", label: "Countries supported", tone: "text-[#22D3EE]" },
+  { icon: RefreshCw, value: "94%", label: "Renewal rate", tone: "text-[#4CFF91]" },
 ];
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative z-10 overflow-hidden bg-[#141414] py-24 sm:py-28">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_22%_36%,rgba(92,49,153,0.12),transparent_28%),radial-gradient(ellipse_at_76%_52%,rgba(30,94,185,0.09),transparent_28%)]" />
+    <section className="relative z-10 overflow-hidden bg-[#06040F] py-24 sm:py-28 border-b border-white/5 bg-grid-pattern">
+      {/* Ambient Lighting Glows */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_25%_35%,rgba(124,58,237,0.14),transparent_40%),radial-gradient(ellipse_at_75%_55%,rgba(79,70,229,0.12),transparent_40%)]" />
+
       <div className="relative">
         <div className="mx-auto max-w-3xl px-5 text-center">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/40 bg-amber-400/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.15em] text-amber-300">
-            <Trophy className="h-3 w-3" /> TOP RATED IPTV PROVIDER
-          </span>
-          <h2 className="mt-6 text-4xl font-black uppercase leading-[0.98] tracking-tight text-white sm:text-5xl animate-fade-up">
+          <div className="badge-pill mb-4">
+            <Trophy className="h-3.5 w-3.5 text-amber-300" /> TOP RATED IPTV PROVIDER
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-black uppercase leading-[1.05] tracking-tight text-white">
             <span className="block">Trusted by Thousands of</span>
-            <span className="mt-1 block bg-gradient-to-r from-primary-400 via-primary-400 to-primary-400 bg-clip-text text-transparent">
+            <span className="mt-1 block bg-gradient-to-r from-[#C084FC] via-[#818CF8] to-[#22D3EE] bg-clip-text text-transparent">
               Happy Cord-Cutters
             </span>
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-gray-400 animate-fade-up" style={{ animationDelay: '0.1s' }}>
+          <p className="mx-auto mt-4 max-w-2xl text-sm sm:text-base leading-relaxed text-slate-300">
             Read real reviews from our global community. Discover why Orexetv is rated as the most reliable, buffer-free IPTV service for live sports, movies, and international channels.
           </p>
         </div>
 
-        <div className="mx-auto mt-10 grid max-w-[760px] grid-cols-2 gap-3 px-5 sm:grid-cols-5 sm:px-0">
-          {metrics.map((metric, index) => {
+        {/* Metrics Grid */}
+        <div className="mx-auto mt-12 grid max-w-[850px] grid-cols-2 gap-3 px-5 sm:grid-cols-5 sm:px-0">
+          {metrics.map((metric) => {
             const Icon = metric.icon;
             return (
               <div
                 key={metric.label}
-                className="rounded-xl border border-white/10 bg-[#141414]/90 px-3 py-4 text-center shadow-[0_0_20px_rgba(0,0,0,0.18)] animate-fade-up"
-                style={{ animationDelay: `${0.2 + (index * 0.06)}s`, animationFillMode: 'both' }}
+                className="rounded-2xl border border-white/10 bg-[#0B0714] p-4 text-center shadow-lg hover:border-purple-500/40 hover:-translate-y-1 transition-all duration-300"
               >
                 <Icon className={`mx-auto h-4 w-4 ${metric.tone}`} />
-                <span className="mt-2 block text-base font-bold text-white">{metric.value}</span>
-                <small className="mt-0.5 block text-[8px] font-bold uppercase tracking-wide text-gray-400">
+                <span className="mt-2 block text-base font-extrabold text-white">{metric.value}</span>
+                <small className="mt-0.5 block text-[9px] font-bold uppercase tracking-wider text-slate-400">
                   {metric.label}
                 </small>
               </div>
@@ -60,47 +62,48 @@ export default function TestimonialsSection() {
           })}
         </div>
 
-        {/* Infinite Image Carousel of Real Reviews (Without background) */}
-        <div className="mt-11 flex overflow-hidden select-none [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] py-4">
+        {/* Infinite Image Carousel of Real Reviews with Edge Fade Mask */}
+        <div className="mt-12 flex overflow-hidden select-none [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] py-4">
           <div
-            className="flex min-w-full gap-6 px-4 animate-marquee"
+            className="flex min-w-full gap-6 px-4 animate-marquee hover:[animation-play-state:paused]"
             style={{ animationDuration: '40s' }}
           >
             {[...reviewImages, ...reviewImages, ...reviewImages].map((img, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-[220px] sm:w-[280px] h-[340px] sm:h-[420px] relative rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 group drop-shadow-2xl"
+                className="flex-shrink-0 w-[220px] sm:w-[280px] h-[340px] sm:h-[400px] relative rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 group drop-shadow-[0_10px_30px_rgba(0,0,0,0.7)] border border-white/10 hover:border-purple-500/50 bg-[#0B0714]"
               >
                 <Image
                   src={`/reviews/${img}`}
                   alt="Orexetv Customer Review"
                   fill
                   sizes="(max-width: 640px) 220px, 280px"
-                  className="object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="object-contain group-hover:scale-105 transition-transform duration-300 p-2"
                 />
               </div>
             ))}
           </div>
         </div>
 
-        <div className="mt-12 text-center animate-fade-up" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
+        {/* CTA Banner */}
+        <div className="mt-12 text-center">
           <a
             href="https://wa.me/213552069874?text=Hello%2C%20I%20would%20like%20a%20free%20trial%20for%20orexetv%20IPTV."
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-7 py-4 text-sm font-extrabold text-white shadow-[0_0_28px_rgba(255,107,0,0.42)] transition-transform hover:-translate-y-0.5 hover:scale-105"
+            className="btn-primary-voltra px-8 py-4 text-xs sm:text-sm font-black uppercase tracking-wider inline-flex items-center gap-2"
           >
-            <Trophy className="h-4 w-4" /> Get Your Free Trial
+            <Trophy className="h-4 w-4" /> Get Your 24-Hour Free Trial
           </a>
-          <div className="mt-7 flex flex-wrap justify-center gap-x-6 gap-y-2 text-[10px] text-gray-400">
-            <span className="flex items-center gap-1.5">
-              <Headphones className="h-3 w-3 text-[#25D366]" /> Instant WhatsApp delivery
+          <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-slate-400">
+            <span className="flex items-center gap-1.5 font-medium">
+              <Headphones className="h-3.5 w-3.5 text-[#4CFF91]" /> Instant WhatsApp delivery
             </span>
-            <span className="flex items-center gap-1.5">
-              <Tv className="h-3 w-3 text-primary-300" /> Works on all devices
+            <span className="flex items-center gap-1.5 font-medium">
+              <Tv className="h-3.5 w-3.5 text-[#C084FC]" /> Works on all devices
             </span>
-            <span className="flex items-center gap-1.5">
-              <ShieldCheck className="h-3 w-3 text-primary-300" /> 99.9% uptime guaranteed
+            <span className="flex items-center gap-1.5 font-medium">
+              <ShieldCheck className="h-3.5 w-3.5 text-[#818CF8]" /> 99.9% uptime guaranteed
             </span>
           </div>
         </div>

@@ -16,8 +16,41 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/blog/how-to-improve-iptv-streaming-quality",
+        destination: "/blog/improve-iptv-streaming-quality",
+        permanent: true,
+      },
+      {
+        source: "/blog/iptv-audio-out-of-sync-causes-and-fixes",
+        destination: "/blog/iptv-audio-out-of-sync-fixes",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-to-fix-iptv-buffering-smart-tv-firestick-android-tv",
+        destination: "/blog/how-to-fix-iptv-buffering",
+        permanent: true,
+      },
+      {
+        source: "/blog/what-internet-speed-do-you-need-for-iptv",
+        destination: "/blog/internet-speed-for-iptv",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-to-choose-best-iptv-service-2026-buying-guide",
+        destination: "/blog/choose-iptv-service-guide",
+        permanent: true,
+      },
+      {
+        source: "/blog/best-iptv-devices-2026",
+        destination: "/blog/best-iptv-devices",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
-// Force Vercel deployment update for www.dooriptv.shop canonical domain alignment
 

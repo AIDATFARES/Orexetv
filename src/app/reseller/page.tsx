@@ -1,11 +1,23 @@
 import ResellerPageContent from "@/components/reseller/ResellerPageContent";
 
 export const metadata = {
-  title: "Become an IPTV Reseller | Start Your IPTV Business - Orexetv",
+  title: "IPTV Reseller Panel & Wholesale Credits | Orexetv",
   description:
-    "Join the Orexetv Reseller Program. High-margin IPTV reseller panel, custom credit packages, sub-reseller management, and 24/7 dedicated support.",
+    "Start a profitable streaming business with Orexetv. White-label reseller panel, wholesale credits, instant sub-accounts & 24/7 dedicated support.",
   alternates: {
     canonical: "/reseller",
+  },
+  openGraph: {
+    title: "IPTV Reseller Panel & Wholesale Credits | Orexetv",
+    description:
+      "Start a profitable streaming business with Orexetv. White-label reseller panel, wholesale credits, instant sub-accounts & 24/7 dedicated support.",
+    url: "https://www.orexetv.vip/reseller",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IPTV Reseller Panel & Wholesale Credits | Orexetv",
+    description:
+      "Start a profitable streaming business with Orexetv. White-label reseller panel, wholesale credits, instant sub-accounts & 24/7 dedicated support.",
   },
 };
 

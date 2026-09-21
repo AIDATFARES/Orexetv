@@ -80,36 +80,40 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
   const markdownComponents = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    h2: ({ node, ...props }: any) => <h2 className="text-2xl font-bold mt-12 mb-6 text-on-surface" {...props} />,
+    h2: (props: any) => <h2 className="text-2xl sm:text-3xl font-bold mt-12 mb-6 text-white uppercase tracking-tight" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    h3: ({ node, ...props }: any) => <h3 className="text-xl font-semibold mt-8 mb-4 text-on-surface" {...props} />,
+    h3: (props: any) => <h3 className="text-xl font-bold mt-8 mb-4 text-white" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    p: ({ node, ...props }: any) => <p className="mb-6 leading-relaxed" {...props} />,
+    p: (props: any) => <p className="mb-6 leading-relaxed text-slate-300 text-sm sm:text-base" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    ul: ({ node, ...props }: any) => <ul className="list-disc pl-6 mb-6 space-y-2" {...props} />,
+    ul: (props: any) => <ul className="list-disc pl-6 mb-6 space-y-2 text-slate-300 text-sm sm:text-base" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    ol: ({ node, ...props }: any) => <ol className="list-decimal pl-6 mb-6 space-y-2" {...props} />,
+    ol: (props: any) => <ol className="list-decimal pl-6 mb-6 space-y-2 text-slate-300 text-sm sm:text-base" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    a: ({ node, ...props }: any) => <a className="text-primary-500 hover:text-primary-400 no-underline font-semibold transition-colors" {...props} />,
+    a: (props: any) => <a className="text-[#C084FC] hover:underline font-bold transition-colors" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    blockquote: ({ node, ...props }: any) => <blockquote className="border-l-4 border-primary pl-4 py-1 mb-6 italic bg-surface-container/30 rounded-r" {...props} />,
+    blockquote: (props: any) => <blockquote className="border-l-4 border-[#8B5CF6] pl-4 py-2 mb-6 italic bg-purple-950/20 text-slate-200 rounded-r" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    table: ({ node, ...props }: any) => <div className="overflow-x-auto mb-8"><table className="w-full text-left border-collapse" {...props} /></div>,
+    table: (props: any) => <div className="overflow-x-auto mb-8"><table className="w-full text-left border-collapse border border-white/10" {...props} /></div>,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    th: ({ node, ...props }: any) => <th className="border-b border-outline-variant py-3 px-4 font-semibold text-on-surface bg-surface-container" {...props} />,
+    th: (props: any) => <th className="border-b border-white/10 py-3 px-4 font-bold text-white bg-[#06040F]" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    td: ({ node, ...props }: any) => <td className="border-b border-outline-variant/30 py-3 px-4" {...props} />,
+    td: (props: any) => <td className="border-b border-white/5 py-3 px-4 text-slate-300 text-sm" {...props} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    img: ({ node, alt, src, ...props }: any) => (
+    img: ({ alt, src, ...props }: any) => (
       <span className="my-8 flex flex-col items-center">
-        <img src={src} alt={alt} className="rounded-xl max-w-full" {...props} />
-        {alt && <span className="text-sm text-center block mt-2 opacity-70">{alt}</span>}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={src} alt={alt} className="rounded-2xl max-w-full border border-white/10 shadow-2xl" {...props} />
+        {alt && <span className="text-xs text-center block mt-2 text-slate-400">{alt}</span>}
       </span>
     ),
   };
 
   return (
-    <main className="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-[1024px] mx-auto w-full relative z-10 text-format-blog">
+    <main className="min-h-screen bg-[#06040F] text-white pt-28 pb-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full relative z-10 bg-grid-pattern overflow-hidden">
+      {/* Ambient Lighting Orbs */}
+      <div className="pointer-events-none absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[radial-gradient(circle,rgba(124,58,237,0.15)_0%,transparent_70%)]" />
+
       {faqJsonLd && (
         <script
           type="application/ld+json"
@@ -117,20 +121,20 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         />
       )}
 
-      <Link href="/blog" className="inline-flex items-center text-primary hover:text-primary-container mb-8 transition-colors group font-semibold">
-        <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
+      <Link href="/blog" className="inline-flex items-center text-[#C084FC] hover:text-white mb-8 transition-colors group font-bold text-xs uppercase tracking-wider">
+        <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
         Back to Blog
       </Link>
 
-      <article className="bg-[#141414] border border-white/10 rounded-2xl p-6 md:p-12">
+      <article className="rounded-3xl border border-white/10 bg-[#0B0714] p-6 md:p-12 shadow-2xl backdrop-blur-xl">
         <header className="mb-10 text-center">
-          <span className="inline-block px-3 py-1 bg-tertiary/20 text-tertiary rounded-full font-label-caps text-label-caps mb-4 w-max border border-tertiary/30">
+          <span className="inline-block px-3.5 py-1 bg-purple-500/20 text-[#C084FC] rounded-full text-xs font-black uppercase tracking-wider mb-4 border border-purple-500/30">
             {post.category}
           </span>
-          <h1 className="font-display-md md:font-display-lg text-display-md md:text-display-lg text-on-surface mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight leading-tight">
             {post.title}
           </h1>
-          <div className="flex items-center justify-center gap-4 text-on-surface-variant font-label-lg text-label-lg opacity-80">
+          <div className="flex items-center justify-center gap-4 text-xs font-bold text-slate-400 uppercase tracking-wider">
             <span>{post.date}</span>
             <span>•</span>
             <span>{post.author}</span>
@@ -138,7 +142,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         </header>
 
         {post.coverImage && (
-          <div className="mb-12 rounded-xl overflow-hidden relative w-full h-[300px] md:h-[500px]">
+          <div className="mb-12 rounded-2xl overflow-hidden relative w-full h-[280px] md:h-[460px] border border-white/10">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={post.coverImage}
@@ -148,24 +152,14 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </div>
         )}
 
-        <div className="prose prose-lg max-w-none text-on-surface-variant 
-          prose-headings:text-on-surface prose-headings:font-headline-md 
-          prose-a:text-primary hover:prose-a:text-primary-container
-          prose-strong:text-on-surface prose-strong:font-bold
-          prose-code:text-secondary prose-code:bg-surface-container/50 prose-code:px-1 prose-code:rounded
-          prose-pre:bg-surface-container prose-pre:border prose-pre:border-outline-variant
-          prose-blockquote:border-l-primary prose-blockquote:bg-surface-container/30 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:not-italic
-          prose-img:rounded-xl
-          prose-th:text-on-surface prose-th:border-b prose-th:border-outline-variant prose-th:py-2
-          prose-td:border-b prose-td:border-outline-variant/50 prose-td:py-2"
-        >
+        <div className="text-slate-300 leading-relaxed text-base">
           <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
             {beforeFaq}
           </ReactMarkdown>
 
           {faqs.length > 0 && (
             <div className="mt-12 mb-8">
-              <h2 className="text-2xl font-bold mb-6 text-on-surface">Frequently Asked Questions</h2>
+              <h2 className="text-2xl font-black text-white mb-6 uppercase tracking-tight">Frequently Asked Questions</h2>
               <ArticleFAQAccordion faqs={faqs} />
             </div>
           )}
@@ -185,12 +179,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           .slice(0, 3);
         if (relatedPosts.length === 0) return null;
         return (
-          <section className="mt-16 pt-12 border-t border-outline-variant/30">
-            <h2 className="font-headline-lg text-2xl font-bold text-on-surface mb-8">Related Articles</h2>
+          <section className="mt-16 pt-12 border-t border-white/10">
+            <h2 className="text-2xl font-black text-white uppercase tracking-tight mb-8">Related Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {relatedPosts.map((relPost) => (
                 <Link href={`/blog/${relPost.slug}`} key={relPost.id}>
-                  <article className="glass-panel rounded-xl overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-1 transition-transform duration-300 h-full border border-white/10 hover:border-primary/50">
+                  <article className="glass-card-hover rounded-2xl overflow-hidden flex flex-col group cursor-pointer h-full">
                     <div className="h-40 relative overflow-hidden shrink-0">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
@@ -199,12 +193,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                         src={relPost.coverImage || "/blog/high-quality-iptv-service.webp"}
                       />
                     </div>
-                    <div className="p-5 flex flex-col flex-grow bg-surface-container-lowest/50">
-                      <span className="text-xs text-tertiary font-bold mb-2">{relPost.category}</span>
-                      <h3 className="font-title-md text-base font-bold text-on-surface mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                    <div className="p-5 flex flex-col flex-grow">
+                      <span className="text-[10px] text-[#C084FC] font-extrabold uppercase tracking-wider mb-2">{relPost.category}</span>
+                      <h3 className="text-sm font-bold text-white mb-2 line-clamp-2 group-hover:text-[#C084FC] transition-colors leading-snug">
                         {relPost.title}
                       </h3>
-                      <p className="text-xs text-on-surface-variant line-clamp-2 mt-auto opacity-70">
+                      <p className="text-xs text-slate-400 line-clamp-2 mt-auto">
                         {relPost.date}
                       </p>
                     </div>
@@ -218,4 +212,3 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     </main>
   );
 }
-

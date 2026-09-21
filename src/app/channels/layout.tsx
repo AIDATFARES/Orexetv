@@ -1,8 +1,23 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: "50,000+ Live Channels & VOD Lineup | Orexetv TV Guide",
+  description:
+    "Explore the complete Orexetv channel lineup. Watch live sports, international news, cinema networks & over 200,000 on-demand movies with full EPG TV guide.",
   alternates: {
     canonical: "/channels",
+  },
+  openGraph: {
+    title: "50,000+ Live Channels & VOD Lineup | Orexetv TV Guide",
+    description:
+      "Explore the complete Orexetv channel lineup. Watch live sports, international news, cinema networks & over 200,000 on-demand movies with full EPG TV guide.",
+    url: "https://www.orexetv.vip/channels",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "50,000+ Live Channels & VOD Lineup | Orexetv TV Guide",
+    description:
+      "Explore the complete Orexetv channel lineup. Watch live sports, international news, cinema networks & over 200,000 on-demand movies with full EPG TV guide.",
   },
 };
 

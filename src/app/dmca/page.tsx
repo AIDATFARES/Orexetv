@@ -13,7 +13,7 @@ const sections = [
   {
     title: "No Legal Advice",
     content: [
-      "Nothing presented on this website or in our communications serves as legal or compliance counsel. If you have questions about IPTV legality in your jurisdiction, consult a qualified attorney.",
+      <>Nothing presented on this website or in our communications serves as legal or compliance counsel. If you have questions about IPTV legality or terms in your jurisdiction, consult a qualified attorney or explore our <Link className="font-bold text-[#C084FC] hover:underline" href="/faq">frequently asked questions</Link>.</>,
     ],
   },
   {
@@ -25,7 +25,7 @@ const sections = [
   {
     title: "Availability and Service Changes",
     content: [
-      <>Channel and VOD options may vary in availability, quality (including 4K/FHD/HD), features, plans, and <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/pricing">pricing</Link>, and can be modified or removed by region without prior notification. We do not assure the availability of any particular <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/channels">channel</Link>, event, or title.</>,
+      <>Channel and VOD options may vary in availability, quality (including 4K/FHD/HD), features, plans, and <Link className="font-bold text-[#C084FC] hover:underline" href="/pricing">pricing</Link>, and can be modified or removed by region without prior notification. We do not assure the availability of any particular <Link className="font-bold text-[#C084FC] hover:underline" href="/channels">channel</Link>, event, or title.</>,
     ],
   },
   {
@@ -85,37 +85,48 @@ export default function DmcaPage() {
   const currentDate = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
   
   return (
-    <main className="flex-grow px-5 pb-20 pt-12 sm:px-8 md:pt-16">
-      <article className="mx-auto max-w-4xl">
-        <header className="border-b border-white/10 pb-10 text-center mx-auto max-w-3xl">
-          <span className="inline-flex rounded-full border border-primary-400/35 bg-primary-400/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-primary-300">Legal information</span>
-          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
-            <span className="block text-white">Legal Disclaimer</span>
-            <span className="mt-1 block text-[#E50914]">&amp; DMCA Notice.</span>
+    <main className="min-h-screen bg-[#06040F] text-white pt-28 pb-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full relative z-10 bg-grid-pattern overflow-hidden">
+      {/* Ambient Lighting Orbs */}
+      <div className="pointer-events-none absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[radial-gradient(circle,rgba(124,58,237,0.15)_0%,transparent_70%)]" />
+
+      <article className="relative z-10">
+        <header className="mb-14 text-center mx-auto max-w-3xl">
+          <div className="badge-pill mb-4 inline-flex items-center gap-2">
+            <span className="dot-blink" /> Legal Information
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.08] tracking-tight uppercase">
+            <span className="block text-white">Orexetv IPTV Legal Disclaimer</span>
+            <span className="mt-2 block bg-gradient-to-r from-[#C084FC] via-[#818CF8] to-[#22D3EE] bg-clip-text text-transparent">
+              &amp; DMCA Official Notice
+            </span>
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-gray-400">Last updated: {currentDate}</p>
+          <p className="mx-auto mt-4 max-w-2xl text-xs sm:text-sm text-slate-400">Last updated: {currentDate}</p>
         </header>
 
-        <div className="mt-10 space-y-10 text-base leading-7 text-on-surface-variant">
+        <div className="rounded-3xl border border-white/10 bg-[#0B0714] p-8 sm:p-12 shadow-2xl backdrop-blur-xl space-y-10 text-slate-300 leading-relaxed text-sm sm:text-base">
           <div className="space-y-4">
             <p>Content featured on this website is meant for general informational use and does not serve as legal advice. By engaging with our site or services, you agree to this disclaimer.</p>
-            <div className="rounded-xl border border-accent-500/20 bg-accent-500/10 p-5 text-sm">
-              <strong className="text-white">Important:</strong> Orexetv delivers an intuitive IPTV service interface alongside account provisioning. We do not host, upload, store, or archive any audiovisual content. The details on this site are provided 'as is' for general guidance, not legal counsel.
+            <div className="rounded-2xl border border-purple-500/30 bg-purple-950/20 p-5 text-xs sm:text-sm text-slate-200">
+              <strong className="text-white">Important:</strong> Orexetv delivers an intuitive IPTV service interface alongside account provisioning. We do not host, upload, store, or archive any audiovisual content. The details on this site are provided &apos;as is&apos; for general guidance, not legal counsel.
             </div>
           </div>
 
           {sections.map((section, index) => (
-            <section key={section.title}>
-              <h2 className="text-2xl font-bold text-white">{index + 1}. {section.title}</h2>
-              {section.content.map((paragraph, i) => <p className="mt-4" key={i}>{paragraph}</p>)}
-              {section.items && section.items.length > 0 && <ul className="mt-4 list-disc space-y-2 pl-6 marker:text-tertiary">{section.items.map((item, i) => <li key={i}>{item}</li>)}</ul>}
-              {section.after && <p className="mt-4">{section.after}</p>}
+            <section key={section.title} className="space-y-4">
+              <h2 className="text-xl sm:text-2xl font-black text-white uppercase tracking-tight">{index + 1}. {section.title}</h2>
+              {section.content.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
+              {section.items && section.items.length > 0 && (
+                <ul className="list-disc space-y-2 pl-6 marker:text-[#C084FC]">
+                  {section.items.map((item, i) => <li key={i}>{item}</li>)}
+                </ul>
+              )}
+              {section.after && <p>{section.after}</p>}
             </section>
           ))}
           
-          <section>
-            <h2 className="text-2xl font-bold text-white">11. Contact</h2>
-            <p className="mt-4">For any inquiries, refer to our Terms of Service and <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/privacy-policy">Privacy Policy</Link>, or contact <Link className="font-semibold text-primary-400 hover:text-primary-300" href="/contact">support</Link>.</p>
+          <section className="space-y-4 pt-6 border-t border-white/10">
+            <h2 className="text-xl sm:text-2xl font-black text-white uppercase tracking-tight">11. Contact</h2>
+            <p>For any inquiries, refer to our Terms of Service and <Link className="font-bold text-[#C084FC] hover:underline" href="/privacy-policy">Privacy Policy</Link>, or contact <Link className="font-bold text-[#C084FC] hover:underline" href="/contact">support</Link>.</p>
           </section>
         </div>
       </article>

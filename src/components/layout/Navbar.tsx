@@ -12,7 +12,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 40);
+    const handleScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -30,43 +30,46 @@ export default function Navbar() {
   const getLinkClass = (path: string) => {
     const isActive = pathname === path;
     return isActive 
-      ? "text-[#E50914] border-b-2 border-[#E50914] pb-1 transition-colors duration-200" 
-      : "text-gray-400 hover:text-[#E50914] pb-1 transition-colors duration-200 whitespace-nowrap";
+      ? "text-[#C084FC] border-b-2 border-[#8B5CF6] pb-1 font-bold transition-colors duration-200" 
+      : "text-slate-300 hover:text-[#C084FC] pb-1 transition-colors duration-200 whitespace-nowrap font-medium";
   };
 
   const getMobileLinkClass = (path: string) => {
     const isActive = pathname === path;
     return isActive
-      ? "text-[#E50914] py-1 font-bold"
-      : "hover:text-[#E50914] py-1 transition-colors text-gray-300";
+      ? "text-[#C084FC] py-1 font-bold"
+      : "hover:text-[#C084FC] py-1 transition-colors text-slate-300";
   };
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 flex flex-col ${
         scrolled
-          ? "bg-[#141414]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl"
-          : "bg-[#141414]/80 backdrop-blur-md"
+          ? "bg-[#06040F]/95 backdrop-blur-xl border-b border-white/10 shadow-[0_10px_35px_rgba(0,0,0,0.7)]"
+          : "bg-[#06040F]/80 backdrop-blur-md border-b border-white/5"
       }`}
     >
       {/* Promotional Top Bar */}
-      <div className="w-full bg-green-600 text-white py-2 overflow-hidden flex items-center shadow-sm">
+      <div className="w-full bg-gradient-to-r from-purple-950/90 via-indigo-950/90 to-purple-950/90 border-b border-purple-500/20 text-white py-2 overflow-hidden flex items-center shadow-sm">
         <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
           {[...Array(6)].map((_, i) => (
             <span key={i} className="flex items-center gap-2 px-8 text-xs sm:text-sm font-semibold tracking-wide whitespace-nowrap">
-              🎁 Special Offer: We offer a <span className="font-extrabold underline uppercase tracking-widest">Free Trial</span> to test our service! 
+              <span className="dot-blink inline-block" />
+              <span>Special Offer: Test our 4K premium service with a</span>
+              <span className="font-extrabold text-[#C084FC] underline uppercase tracking-wider">Free 24h Trial</span>! 
               <a 
                 href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20orexetv%20IPTV." 
                 target="_blank" 
                 rel="noreferrer"
-                className="inline-block ml-2 bg-black text-white px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold hover:bg-[#141414] hover:text-white transition-colors shadow-sm animate-button-pulse-white"
+                className="inline-block ml-2 bg-gradient-to-r from-[#7C3AED] to-[#4F46E5] text-white px-3.5 py-1 rounded-full text-[10px] sm:text-xs font-bold hover:from-[#8B5CF6] hover:to-[#6366F1] transition-all shadow-sm"
               >
-                Claim Now
+                Claim Now ➔
               </a>
             </span>
           ))}
         </div>
       </div>
+
       <div className="w-full max-w-[1480px] mx-auto px-4 sm:px-8 h-20 flex items-center justify-between relative">
         
         {/* LOGO */}
@@ -75,7 +78,7 @@ export default function Navbar() {
         </Link>
 
         {/* Nav Links */}
-        <nav className="hidden lg:flex relative z-10 items-center gap-6 xl:gap-8 px-6 text-sm font-semibold">
+        <nav className="hidden lg:flex relative z-10 items-center gap-6 xl:gap-8 px-6 text-sm">
           <Link href="/" onClick={handleLogoClick} className={getLinkClass("/")}>
             Home
           </Link>
@@ -102,16 +105,16 @@ export default function Navbar() {
             href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20orexetv%20IPTV."
             target="_blank"
             rel="noreferrer"
-            className="btn-primary-voltra px-6 py-2.5 text-sm"
+            className="btn-primary-voltra px-6 py-2.5 text-xs uppercase tracking-wider"
           >
-            Get Started
+            Get Free Trial
           </a>
         </div>
 
         {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden text-white p-2 rounded-lg bg-black/5 hover:bg-black/10 transition-colors z-20"
+          className="lg:hidden text-white p-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors z-20"
           aria-label="Toggle navigation menu"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -120,8 +123,8 @@ export default function Navbar() {
 
       {/* MOBILE DROPDOWN MENU */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#141414] border-b border-white/10 px-6 py-6 space-y-4 animate-in slide-in-from-top duration-300">
-          <nav className="flex flex-col space-y-3 font-semibold">
+        <div className="lg:hidden bg-[#0B0714] border-b border-white/10 px-6 py-6 space-y-4 animate-in slide-in-from-top duration-300">
+          <nav className="flex flex-col space-y-3 font-semibold text-sm">
             <Link href="/" onClick={handleLogoClick} className={getMobileLinkClass("/")}>Home</Link>
             <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/pricing")}>Pricing</Link>
             <Link href="/how-it-works" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/how-it-works")}>How It Works</Link>
@@ -134,9 +137,9 @@ export default function Navbar() {
               href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20orexetv%20IPTV."
               target="_blank"
               rel="noreferrer"
-              className="w-full text-center py-3 btn-primary-voltra text-sm"
+              className="w-full text-center py-3 btn-primary-voltra text-xs uppercase tracking-wider"
             >
-              Get Started
+              Get Free Trial
             </a>
           </div>
         </div>

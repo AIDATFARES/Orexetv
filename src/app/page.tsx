@@ -1,12 +1,5 @@
 import HeroSection from "@/components/home/HeroSection";
 import Link from "next/link";
-
-export const metadata = {
-  alternates: {
-    canonical: "/",
-  },
-};
-
 import BrandMarquee from "@/components/home/BrandMarquee";
 import MovieStrips from "@/components/home/MovieStrips";
 import ChannelCategories from "@/components/home/ChannelCategories";
@@ -17,46 +10,45 @@ import PricingSection from "@/components/home/PricingSection";
 import FAQSection from "@/components/home/FAQSection";
 import SupportCtaSection from "@/components/home/SupportCtaSection";
 
+export const metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
+
 export default function Home() {
   return (
-    <main className="flex-col flex min-h-screen">
+    <main className="flex-col flex min-h-screen bg-[#06040F] text-white">
       {/* Hero Section */}
       <HeroSection />
 
+      {/* Features & Channel Categories */}
+      <ChannelCategories />
+
+      {/* Pricing Section */}
+      <PricingSection />
+
+      {/* Movies, Sports & Entertainment Showcase (Image-free Interactive Hub) */}
       <MovieStrips />
 
-      {/* Sports Tape */}
-      <div className="w-full bg-[#141414] pt-12 pb-2 relative z-20">
-        <h3 className="text-center text-sm font-bold tracking-widest text-slate-400 uppercase mb-4">All Major Sports & Leagues Live</h3>
-      </div>
-      <BrandMarquee
-        imagesFolder="dawryate2"
-        images={[
-          "Untitled-design-50.webp", "Untitled-design-51.webp", "Untitled-design-52.webp",
-          "Untitled-design-53.webp", "Untitled-design-54.webp", "Untitled-design-55.webp",
-          "Untitled-design-56.webp", "Untitled-design-57.webp", "Untitled-design-58.webp"
-        ]}
-        cardClassName="flex-shrink-0 w-[140px] h-[200px] md:w-[200px] md:h-[280px] relative rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-[#141414] hover:border-[#E50914]/60 transition-all duration-300 group"
-        imageClassName="object-cover rounded-xl"
-      />
-
       {/* Channel & Installation Quick Links */}
-      <div className="w-full bg-[#141414] py-6 px-4 text-center border-t border-white/5 relative z-20">
-        <p className="text-center text-sm md:text-base text-gray-400 max-w-3xl mx-auto">
-          Find the comprehensive <Link prefetch={false} className="font-semibold text-[#E50914] hover:text-[#f44336]" href="/channels">Orexetv Channel List</Link> or navigate to our <Link prefetch={false} className="font-semibold text-[#E50914] hover:text-[#f44336]" href="/installation">Orexetv Installation Guide</Link> for a quick start.
+      <div className="w-full bg-[#06040F] py-6 px-4 text-center border-y border-white/5 relative z-20">
+        <p className="text-center text-xs sm:text-sm text-slate-400 max-w-3xl mx-auto">
+          Explore the complete <Link prefetch={false} className="font-bold text-[#C084FC] hover:underline" href="/channels">Orexetv Channel Lineup</Link> or view our <Link prefetch={false} className="font-bold text-[#C084FC] hover:underline" href="/installation">Installation Guide</Link> for simple step-by-step setup.
         </p>
       </div>
 
-      <PricingSection />
-      <ChannelCategories />
-
-      {/* Device Support & How It Works */}
+      {/* IPTV vs Cable Comparison */}
       <ComparisonSection />
+
+      {/* Device Support */}
       <DeviceSupport />
 
       {/* Device Logos Marquee */}
-      <div className="w-full bg-[#141414] border-t border-black/[0.05] pt-12 pb-6 relative z-10">
-        <h3 className="text-center text-sm font-bold tracking-widest text-slate-400 uppercase mb-8">Supported on all your favorite devices</h3>
+      <div className="w-full bg-[#080511] border-b border-white/5 pt-14 pb-8 relative z-10 bg-grid-pattern">
+        <p className="text-center text-xs font-extrabold tracking-widest text-slate-400 uppercase mb-8">
+          Supported on All Leading Devices &amp; IPTV Players
+        </p>
         <BrandMarquee
           imagesFolder="devices"
           images={[
@@ -72,17 +64,18 @@ export default function Home() {
             "Windows-krooz-tv.webp",
             "xbox-live-krooz-tv.webp"
           ]}
-          cardClassName="flex-shrink-0 w-[160px] h-[80px] md:w-[220px] md:h-[100px] relative bg-white border border-black/10 rounded-2xl p-4 md:p-6 hover:bg-slate-50 hover:border-primary-300 transition-all duration-300 shadow-md flex items-center justify-center"
+          cardClassName="flex-shrink-0 w-[160px] h-[80px] md:w-[210px] md:h-[95px] relative bg-white border border-white/10 rounded-2xl p-4 md:p-5 hover:border-purple-400/60 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.4)] flex items-center justify-center cursor-pointer"
           imageClassName="object-contain drop-shadow-sm"
         />
       </div>
 
+      {/* 3-Step Setup Timeline */}
       <HowItWorksSection />
 
-      {/* Info & Articles */}
+      {/* Frequently Asked Questions */}
       <FAQSection />
 
-      {/* Social Proof & Conversion */}
+      {/* 24/7 Support CTA */}
       <SupportCtaSection />
     </main>
   );

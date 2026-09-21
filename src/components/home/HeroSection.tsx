@@ -1,95 +1,130 @@
-import Link from "next/link";
-import { Monitor, Laptop, Smartphone, Tablet, Play } from "lucide-react";
+"use client";
+
+import { Play, ShieldCheck, Zap, Tv } from "lucide-react";
 import Image from "next/image";
-import TopFeatureBar from "./TopFeatureBar";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-black overflow-hidden pt-20">
+    <section className="relative min-h-[92vh] flex items-center bg-[#06040F] overflow-hidden pt-20 pb-12 bg-grid-pattern">
+      {/* Background Radial Glows */}
+      <div className="pointer-events-none absolute top-[-100px] left-[-100px] w-[700px] h-[700px] rounded-full bg-[radial-gradient(circle,rgba(124,58,237,0.2)_0%,transparent_70%)] animate-float" />
+      <div className="pointer-events-none absolute top-[20%] right-[-150px] w-[650px] h-[650px] rounded-full bg-[radial-gradient(circle,rgba(79,70,229,0.18)_0%,transparent_70%)]" />
 
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      {/* Expressive IPTV Cover Image Layer */}
+      <div className="absolute inset-0 z-0 opacity-75 lg:opacity-90 transition-opacity duration-500">
         <Image
-          src="/hero-custom-astronaut.webp"
-          alt="Orexetv Cinematic Space Background"
+          src="/hero-cover-orexetv.jpg"
+          alt="Orexetv Premium IPTV 4K Streaming Cover"
           priority
           fill
-          quality={85}
+          quality={90}
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-right md:object-center"
         />
-        {/* Dark overlay gradient to ensure text readability on the left */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#06040F] via-[#06040F]/90 md:via-[#06040F]/65 to-transparent/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#06040F] via-transparent to-[#06040F]/40" />
       </div>
 
       <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-12 flex flex-col items-start justify-center">
 
-        {/* Top Tag */}
-        <div className="inline-flex items-center border border-[#E50914] rounded-full px-4 py-1.5 bg-black/60 backdrop-blur-md mb-6">
-          <span className="text-[10px] sm:text-xs font-bold text-[#E50914] tracking-widest uppercase">
-            +7,500 Satisfied customers
-          </span>
+        {/* ArgonTV-style Live Pill Badge */}
+        <div className="badge-pill mb-6">
+          <span className="dot-blink" />
+          <span>Orexetv IPTV — Verified 4K Feeds · +7,500 Active Subscribers</span>
         </div>
 
         {/* Headline */}
-        <h1 className="text-5xl sm:text-6xl md:text-[72px] lg:text-[84px] font-black tracking-tight leading-[1.05] text-white drop-shadow-2xl max-w-5xl">
-          <span className="text-[#E50914]">Orexetv</span> The Best IPTV<br />
-          Service Provider for<br />
-          2026
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[80px] font-black tracking-tight leading-[1.05] uppercase text-white drop-shadow-2xl max-w-5xl">
+          <span className="text-white">Orexetv IPTV</span>{" "}
+          <span className="bg-gradient-to-r from-[#C084FC] via-[#818CF8] to-[#22D3EE] bg-clip-text text-transparent">
+            Premium 4K Streaming
+          </span><br />
+          <span>For Live Sports, Cinema</span><br />
+          <span className="text-white">&amp; +50,000 Channels</span>
         </h1>
 
         {/* Pricing Subheadline */}
-        <h2 className="text-2xl sm:text-3xl md:text-[32px] font-bold text-white mt-8 drop-shadow-md tracking-tight">
-          Get High-Quality Streaming for Just <span className="text-[#FFC107]">$4.2/Month!</span>
-        </h2>
+        <div className="mt-6 flex flex-wrap items-center gap-3">
+          <Link href="/pricing" className="inline-flex items-center gap-2 rounded-full bg-amber-400/10 border border-amber-400/25 px-4 py-1.5 text-xs sm:text-sm font-extrabold text-amber-300 hover:bg-amber-400/20 transition-colors">
+            🔥 Special Deal: From Only <strong className="text-white underline">$4.2 / Month</strong>!
+          </Link>
+          <span className="text-xs text-slate-400 font-semibold flex items-center gap-1.5">
+            <span className="text-emerald-400">✓</span> Instant Activation
+            <span className="text-emerald-400 ml-2">✓</span> Zero Buffering
+          </span>
+        </div>
 
         {/* Subtitle / Paragraph */}
-        <p className="text-base sm:text-lg md:text-xl text-white/90 font-medium max-w-[800px] mt-6 drop-shadow-lg leading-relaxed">
-          Choose from <span className="text-[#E50914] font-bold">50,000+ Live Channels</span>, +120,000 Films & Series, and 200,000+ VODs.<br className="hidden md:block" />
-          Enjoy your time with excellent image quality up to 4K on <span className="text-[#E50914] font-bold">any device of your choice</span><br className="hidden md:block" />
-          including Smart TV, Android Box, PC, tablet, and smartphone—anytime and anywhere.
+        <p className="text-base sm:text-lg md:text-xl text-slate-300 font-normal max-w-[820px] mt-6 leading-relaxed">
+          Experience next-generation streaming with Orexetv IPTV. Access over <Link href="/channels" className="text-white font-extrabold hover:text-[#C084FC] underline decoration-purple-500/40 transition-colors">+50,000 live TV channels</Link>, +120,000 films &amp; series, and <Link href="/channels" className="text-slate-200 hover:text-[#C084FC] underline decoration-purple-500/30 transition-colors">200,000+ VOD releases</Link> in pristine 4K 60FPS. Powered by dedicated anti-freeze servers for ultra-smooth playback on <Link href="/installation" className="text-[#C084FC] font-bold hover:text-white underline decoration-purple-500/50 transition-colors">any device you choose</Link>—Smart TV, Firestick, Android, iOS, and PC.
         </p>
 
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-5 mt-10 w-full sm:w-auto">
+        {/* Trust Badges */}
+        <div className="mt-6 flex flex-wrap items-center gap-6 text-xs text-slate-300">
+          <div className="flex items-center gap-2">
+            <div className="flex text-amber-400 text-sm">★★★★★</div>
+            <span className="font-bold text-white">4.9 / 5.0</span>
+            <span className="text-slate-400 font-medium">Customer Rating</span>
+          </div>
+          <div className="hidden sm:block w-px h-4 bg-white/15" />
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="w-4 h-4 text-[#4CFF91]" />
+            <span className="font-bold text-white">99.9% Uptime</span>
+            <span className="text-slate-400 font-medium">Anti-Freeze Technology</span>
+          </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
           <a
             href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20orexetv%20IPTV."
             target="_blank"
             rel="noreferrer"
-            className="group bg-[#E50914] text-white py-4 px-8 text-sm sm:text-base font-bold flex items-center justify-center transition-all duration-300 shadow-lg hover:bg-[#B3000B] hover:scale-105 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#E50914]/50 active:scale-95 animate-button-pulse rounded-xl"
+            className="btn-primary-voltra px-8 py-4 text-sm sm:text-base font-extrabold uppercase tracking-wider"
           >
-            GET 12 MONTHS — 2 MONTHS FREE <span className="ml-2 group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
+            GET 12 MONTHS — 2 MONTHS FREE <span className="ml-1">➔</span>
           </a>
           <a
             href="#pricing"
-            className="group py-4 px-8 text-sm sm:text-base font-bold text-white bg-transparent border border-white/50 backdrop-blur-sm transition-all duration-300 flex items-center justify-center gap-2 hover:bg-white/10 hover:border-white hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-white/10 active:scale-95 animate-button-pulse-white rounded-xl"
+            className="btn-secondary-voltra px-8 py-4 text-sm sm:text-base font-bold"
           >
-            <Play className="w-5 h-5 fill-current group-hover:scale-125 transition-transform duration-300" /> View Plans
+            <Play className="w-4 h-4 fill-current" /> View Pricing Plans
           </a>
         </div>
-        
-        {/* Bottom Icons - spread across width */}
-        <div className="flex w-full flex-wrap items-center justify-between sm:justify-around text-white/80 mt-14 mb-4">
-          <div className="flex flex-col items-center gap-2 group hover:text-white transition-colors cursor-pointer">
-            <Monitor className="h-6 w-6 sm:h-7 sm:w-7 stroke-[1.5]" />
-            <span className="text-[10px] sm:text-xs font-semibold tracking-wider">Smart TV</span>
+
+        {/* ArgonTV-style Floating Feature Badges */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 w-full max-w-4xl mt-12">
+          <div className="glass-card px-4 py-3 flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-purple-500/15 border border-purple-500/25 flex items-center justify-center text-purple-400 shrink-0">
+              <Zap className="w-5 h-5" />
+            </div>
+            <div>
+              <strong className="block text-xs font-extrabold text-white">Ultra-Fast Streaming</strong>
+              <small className="block text-[11px] text-slate-400 font-medium">Anti-Freeze, zero buffering</small>
+            </div>
           </div>
-          <div className="flex flex-col items-center gap-2 group hover:text-white transition-colors cursor-pointer">
-            <Laptop className="h-6 w-6 sm:h-7 sm:w-7 stroke-[1.5]" />
-            <span className="text-[10px] sm:text-xs font-semibold tracking-wider">Laptop / PC</span>
+
+          <div className="glass-card px-4 py-3 flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-indigo-500/15 border border-indigo-500/25 flex items-center justify-center text-indigo-400 shrink-0">
+              <Tv className="w-5 h-5" />
+            </div>
+            <div>
+              <strong className="block text-xs font-extrabold text-white">All Devices Supported</strong>
+              <small className="block text-[11px] text-slate-400 font-medium">Firestick, Smart TV, Tivimate, iOS</small>
+            </div>
           </div>
-          <div className="flex flex-col items-center gap-2 group hover:text-white transition-colors cursor-pointer">
-            <Smartphone className="h-6 w-6 sm:h-7 sm:w-7 stroke-[1.5]" />
-            <span className="text-[10px] sm:text-xs font-semibold tracking-wider">Android</span>
-          </div>
-          <div className="flex flex-col items-center gap-2 group hover:text-white transition-colors cursor-pointer">
-            <Tablet className="h-6 w-6 sm:h-7 sm:w-7 stroke-[1.5]" />
-            <span className="text-[10px] sm:text-xs font-semibold tracking-wider">IOS</span>
+
+          <div className="glass-card px-4 py-3 flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-cyan-500/15 border border-cyan-500/25 flex items-center justify-center text-cyan-400 shrink-0">
+              <ShieldCheck className="w-5 h-5" />
+            </div>
+            <div>
+              <strong className="block text-xs font-extrabold text-white">Secure &amp; Private</strong>
+              <small className="block text-[11px] text-slate-400 font-medium">Built-in VPN compatibility</small>
+            </div>
           </div>
         </div>
-
-        {/* Embedded Features */}
-        <TopFeatureBar />
 
       </div>
     </section>

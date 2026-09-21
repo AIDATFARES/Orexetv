@@ -19,28 +19,30 @@ export default function ArticleFAQAccordion({ faqs }: { faqs: FAQItem[] }) {
   if (!faqs || faqs.length === 0) return null;
 
   return (
-    <div className="my-10 space-y-4">
+    <div className="my-8 space-y-3">
       {faqs.map((faq, index) => {
         const isOpen = openIndex === index;
         return (
           <div
             key={index}
-            className="rounded-xl border border-white/10 bg-[#141414] overflow-hidden transition-all duration-300 hover:border-primary-500/40 shadow-lg"
+            className={`rounded-2xl border transition-all duration-300 overflow-hidden bg-[#06040F] ${
+              isOpen ? "border-[#8B5CF6]/60 shadow-[0_0_20px_rgba(139,92,246,0.15)]" : "border-white/10 hover:border-purple-500/30"
+            }`}
           >
             <button
               onClick={() => toggle(index)}
-              className="w-full px-6 py-4 flex items-center justify-between text-left gap-4 bg-[#1a1a1a]/80 hover:bg-[#141414] transition-colors cursor-pointer"
+              className="w-full px-5 py-4 flex items-center justify-between text-left gap-4 hover:bg-white/5 transition-colors cursor-pointer"
               aria-expanded={isOpen}
             >
               <div className="flex items-center gap-3">
-                <HelpCircle className="w-5 h-5 text-primary-500 shrink-0" />
-                <span className="font-bold text-base sm:text-lg text-white">
+                <HelpCircle className="w-4 h-4 text-[#C084FC] shrink-0" />
+                <h3 className="font-bold text-sm sm:text-base text-white leading-snug">
                   {faq.question}
-                </span>
+                </h3>
               </div>
               <ChevronDown
-                className={`w-5 h-5 text-gray-400 transition-transform duration-300 shrink-0 ${
-                  isOpen ? "rotate-180 text-primary-500" : ""
+                className={`w-4 h-4 text-slate-400 transition-transform duration-300 shrink-0 ${
+                  isOpen ? "rotate-180 text-[#C084FC]" : ""
                 }`}
               />
             </button>
@@ -51,9 +53,9 @@ export default function ArticleFAQAccordion({ faqs }: { faqs: FAQItem[] }) {
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  transition={{ duration: 0.25, ease: "easeInOut" }}
                 >
-                  <div className="px-6 py-5 text-gray-300 text-sm sm:text-base leading-relaxed bg-[#141414] border-t border-white/5">
+                  <div className="px-5 py-4 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-white/5">
                     {faq.answer}
                   </div>
                 </motion.div>

@@ -25,25 +25,23 @@ export default function BrandMarquee({
     : [...brandList, ...brandList];
 
   return (
-    <div className="w-full overflow-hidden bg-[#141414] py-6 relative flex items-center">
-      {/* Left/Right Gradient Masks removed per user request */}
-      
+    <div className="w-full overflow-hidden bg-transparent py-4 relative flex items-center [mask-image:linear-gradient(90deg,transparent_0%,#000_6%,#000_94%,transparent_100%)]">
       {/* The scrolling container */}
       <div
-        className={`flex gap-6 md:gap-8 px-6 items-center w-max ${brandList.length < 10 ? 'animate-marquee-fast' : 'animate-marquee'}`}
+        className={`flex gap-5 md:gap-7 px-6 items-center w-max ${brandList.length < 10 ? 'animate-marquee-fast' : 'animate-marquee'} hover:[animation-play-state:paused]`}
       >
         {repeatList.map((brand, i) => (
           <div 
             key={i} 
-            className={cardClassName || "flex-shrink-0 w-[100px] h-[50px] md:w-[140px] md:h-[65px] relative bg-white border border-white/10 rounded-xl p-3 hover:bg-gray-50 hover:scale-105 transition-all duration-300 shadow-md"}
+            className={cardClassName || "flex-shrink-0 w-[110px] h-[55px] md:w-[145px] md:h-[68px] relative bg-white rounded-xl p-3 border border-white/10 hover:border-purple-400/60 hover:scale-105 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.35)] flex items-center justify-center cursor-pointer"}
           >
-            <div className="relative w-full h-full overflow-hidden rounded-xl">
+            <div className="relative w-full h-full overflow-hidden rounded-lg">
               <Image 
                 src={`/${imagesFolder}/${brand}`} 
                 alt="Channel Logo" 
                 fill
-                sizes="(max-width: 640px) 100px, (max-width: 1024px) 140px, 160px"
-                className={imageClassName || "object-contain drop-shadow-md rounded-lg"}
+                sizes="(max-width: 640px) 110px, 145px"
+                className={imageClassName || "object-contain drop-shadow-sm rounded-lg"}
               />
             </div>
           </div>

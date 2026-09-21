@@ -1,24 +1,59 @@
 import { Monitor, Layers, Film, Zap, Smartphone, Globe2, ShieldCheck } from "lucide-react";
+import Link from "next/link";
 
 export default function ChannelCategories() {
   const topFeatures = [
     {
       icon: Monitor,
-      title: "4K ULTRA HD STREAMING",
-      desc: "Watch every channel and live event in crisp 4K, Full HD, and HD quality. Our anti-freeze technology ensures smooth streaming on every device.",
+      title: "4K ULTRA HD IPTV STREAMING",
+      desc: (
+        <>
+          Watch every sporting clash, championship game, and live broadcast in crisp 4K, Full HD, and 60FPS. Built-in anti-freeze algorithms guarantee stutter-free streaming on{" "}
+          <Link href="/installation" className="text-[#C084FC] hover:underline font-semibold">
+            every supported device
+          </Link>
+          .
+        </>
+      ),
       tags: ["4K UHD", "FULL HD", "ANTI-FREEZE"],
+      color: "from-purple-500/20 to-indigo-500/10",
+      iconColor: "text-[#C084FC] bg-purple-500/10 border-purple-500/30",
     },
     {
       icon: Layers,
-      title: "50,000+ LIVE CHANNELS",
-      desc: "Access 50,000+ live channels from sports, news, entertainment, kids, and more. Every broadcast is delivered in crystal-clear quality.",
+      title: "+50,000 LIVE TV CHANNELS",
+      desc: (
+        <>
+          Explore{" "}
+          <Link href="/channels" className="text-[#818CF8] hover:underline font-semibold">
+            +50,000 live TV channels
+          </Link>{" "}
+          covering live global sports, 24/7 breaking news, cinema networks, and family programming from over 160 countries in pristine audio-visual quality.
+        </>
+      ),
       tags: ["160+ COUNTRIES", "SPORTS", "NEWS", "KIDS"],
+      color: "from-indigo-500/20 to-blue-500/10",
+      iconColor: "text-[#818CF8] bg-indigo-500/10 border-indigo-500/30",
     },
     {
       icon: Film,
-      title: "200,000+ VODS",
-      desc: "Enjoy an on-demand library with movies, series, replays, highlights, and documentaries available any time, on any device.",
+      title: "200,000+ MOVIES & SERIES (VOD)",
+      desc: (
+        <>
+          Unlock a massive on-demand streaming archive with{" "}
+          <Link href="/channels" className="text-[#22D3EE] hover:underline font-semibold">
+            200,000+ movies &amp; series
+          </Link>
+          , boxsets, and pay-per-view replays on all{" "}
+          <Link href="/pricing" className="text-[#C084FC] hover:underline font-semibold">
+            Orexetv subscription plans
+          </Link>
+          .
+        </>
+      ),
       tags: ["MOVIES", "SERIES", "REPLAYS", "UPDATED DAILY"],
+      color: "from-cyan-500/20 to-purple-500/10",
+      iconColor: "text-[#22D3EE] bg-cyan-500/10 border-cyan-500/30",
     },
   ];
 
@@ -26,44 +61,91 @@ export default function ChannelCategories() {
     {
       icon: Zap,
       title: "Instant Activation",
-      desc: "Your subscription is activated within minutes.",
+      desc: (
+        <>
+          Your{" "}
+          <Link href="/pricing" className="text-[#C084FC] hover:underline font-semibold">
+            Orexetv IPTV subscription
+          </Link>{" "}
+          credentials are provisioned and delivered within minutes on WhatsApp or email.
+        </>
+      ),
+      iconColor: "text-[#C084FC] bg-purple-500/10",
     },
     {
       icon: Smartphone,
-      title: "All Devices Supported",
-      desc: "Smart TV, Android, iOS, Mac, Fire Stick, PC, and more.",
+      title: "Limitless Compatibility",
+      desc: (
+        <>
+          Full step-by-step setup guides for{" "}
+          <Link href="/installation" className="text-[#818CF8] hover:underline font-semibold">
+            Smart TV, Firestick, Android, iOS &amp; PC
+          </Link>
+          .
+        </>
+      ),
+      iconColor: "text-[#818CF8] bg-indigo-500/10",
     },
     {
       icon: Globe2,
-      title: "Works Worldwide",
-      desc: "Enjoy Orexetv wherever you are, on any connection.",
+      title: "Worldwide CDN Coverage",
+      desc: (
+        <>
+          Stream your favorite channels wherever you travel. Discover{" "}
+          <Link href="/how-it-works" className="text-[#22D3EE] hover:underline font-semibold">
+            how our IPTV network operates
+          </Link>
+          .
+        </>
+      ),
+      iconColor: "text-[#22D3EE] bg-cyan-500/10",
     },
     {
       icon: ShieldCheck,
-      title: "99.9% Uptime",
-      desc: "Reliable servers with stable, buffer-free streaming.",
+      title: "99.9% Uptime Guarantee",
+      desc: (
+        <>
+          Redundant high-capacity servers eliminate buffering during peak matches. Read our{" "}
+          <Link href="/faq" className="text-[#4CFF91] hover:underline font-semibold">
+            IPTV FAQ guide
+          </Link>
+          .
+        </>
+      ),
+      iconColor: "text-[#4CFF91] bg-emerald-500/10",
     },
   ];
 
   return (
-    <section className="relative z-10 bg-[#141414] py-16 sm:py-24">
+    <section className="relative z-10 bg-[#080511] py-20 sm:py-28 border-b border-white/5 bg-grid-pattern">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         
         {/* Heading */}
         <div className="mx-auto mb-16 max-w-4xl text-center">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-[#E50914]/10 text-[#E50914] font-bold text-xs tracking-widest uppercase mb-6 border border-[#E50914]/20">
-            Premium Features
-          </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.1] animate-fade-up">
+          <div className="badge-pill mb-4">
+            <span className="dot-blink" /> Premium IPTV Features
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-[1.1] uppercase">
             Everything You Need for the <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E50914] to-[#B3000B]">
-              Ultimate Viewing Experience.
+            <span className="bg-gradient-to-r from-[#C084FC] via-[#818CF8] to-[#22D3EE] bg-clip-text text-transparent">
+              Ultimate Orexetv Experience
             </span>
           </h2>
+          <p className="mt-4 text-sm sm:text-base text-slate-400 max-w-2xl mx-auto">
+            Engineered with high-bandwidth CDN nodes across Europe, North America, and worldwide for instant channel switching. Learn{" "}
+            <Link href="/how-it-works" className="text-[#C084FC] hover:underline font-semibold">
+              how our IPTV service works
+            </Link>{" "}
+            or explore our complete{" "}
+            <Link href="/channels" className="text-[#22D3EE] hover:underline font-semibold">
+              channels lineup
+            </Link>
+            .
+          </p>
         </div>
 
         {/* Feature Grid */}
-        <div className="flex flex-col gap-6 animate-fade-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
+        <div className="flex flex-col gap-6">
           
           {/* Top Row: 3 Large Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -72,20 +154,20 @@ export default function ChannelCategories() {
               return (
                 <div 
                   key={idx} 
-                  className="flex flex-col rounded-2xl border border-[#E50914] bg-[#141414] p-6 sm:p-8 shadow-[0_0_35px_rgba(112,0,255,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(112,0,255,0.35)]"
+                  className="flex flex-col rounded-3xl border border-white/10 bg-[#0B0714] p-7 sm:p-8 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-purple-500/40 hover:shadow-[0_16px_40px_rgba(0,0,0,0.6)] group"
                 >
-                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-[#E50914]/10 text-[#E50914] ring-1 ring-[#E50914]/20">
+                  <div className={`mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl border ${feature.iconColor} group-hover:scale-110 transition-transform`}>
                     <Icon className="h-7 w-7" strokeWidth={2} />
                   </div>
-                  <h3 className="mb-3 text-xl font-black uppercase text-white">{feature.title}</h3>
-                  <p className="mb-8 flex-grow text-[15px] leading-relaxed text-gray-400 font-medium">
+                  <h3 className="mb-3 text-lg font-black uppercase text-white tracking-wide">{feature.title}</h3>
+                  <p className="mb-8 flex-grow text-sm leading-relaxed text-slate-400 font-medium">
                     {feature.desc}
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 pt-4 border-t border-white/5">
                     {feature.tags.map((tag, tagIdx) => (
                       <span 
                         key={tagIdx} 
-                        className="rounded-full border border-white/10 bg-[#141414] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-400"
+                        className="rounded-full border border-purple-500/20 bg-purple-500/5 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-[#C084FC]"
                       >
                         {tag}
                       </span>
@@ -103,13 +185,13 @@ export default function ChannelCategories() {
               return (
                 <div 
                   key={idx} 
-                  className="flex flex-col rounded-2xl border border-[#E50914] bg-[#141414] p-6 shadow-[0_0_35px_rgba(112,0,255,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(112,0,255,0.35)]"
+                  className="flex flex-col rounded-2xl border border-white/10 bg-[#0B0714] p-6 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-500/40 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] group"
                 >
-                  <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-orange-50 text-[#E66000] ring-1 ring-orange-200">
+                  <div className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl ${feature.iconColor} group-hover:scale-110 transition-transform`}>
                     <Icon className="h-6 w-6" strokeWidth={2} />
                   </div>
-                  <h4 className="mb-2 text-[17px] font-bold text-white">{feature.title}</h4>
-                  <p className="text-sm leading-relaxed text-gray-400 font-medium">
+                  <h3 className="mb-1 text-base font-bold text-white">{feature.title}</h3>
+                  <p className="text-xs leading-relaxed text-slate-400 font-medium">
                     {feature.desc}
                   </p>
                 </div>

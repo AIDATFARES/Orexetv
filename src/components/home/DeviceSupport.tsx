@@ -1,27 +1,27 @@
-import { Monitor, Smartphone, Tv, Box, Laptop, Wifi } from "lucide-react";
+import { Monitor, Smartphone, Tv, Box, Wifi } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function DeviceSupport() {
   return (
-    <section className="py-24 bg-gradient-to-b from-[#141414] to-[#141414] text-white relative z-10 overflow-hidden border-y border-white/10">
+    <section className="py-24 bg-[#080511] text-white relative z-10 overflow-hidden border-b border-white/5 bg-grid-pattern">
       {/* Background glow */}
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[800px] h-[800px] bg-[#E50914]/5 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="pointer-events-none absolute top-1/2 right-0 -translate-y-1/2 w-[700px] h-[700px] bg-purple-900/15 rounded-full blur-[130px]" />
 
       <div className="max-w-[1240px] mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           
-          {/* Left Side: Radical Image Display */}
-          <div className="w-full lg:flex-1 relative group perspective-1000 min-w-0">
+          {/* Left Side: Device Banner Graphic */}
+          <div className="w-full lg:flex-1 relative group min-w-0">
             {/* Animated Glow */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#E50914] to-[#B3000B] blur-[60px] opacity-15 group-hover:opacity-30 transition-opacity duration-700 rounded-3xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#7C3AED] via-[#6366F1] to-[#22D3EE] blur-[60px] opacity-20 group-hover:opacity-35 transition-opacity duration-700 rounded-3xl" />
             
-            {/* Image Container with 3D-like float effect */}
-            <div className="relative rounded-[2rem] overflow-hidden border-2 border-white bg-[#141414]/50 backdrop-blur-md p-4 shadow-[0_20px_50px_rgba(112,0,255,0.1)] transition-transform duration-700 group-hover:-translate-y-2 group-hover:rotate-1">
-              <div className="relative rounded-2xl overflow-hidden shadow-inner">
+            {/* Image Container */}
+            <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-[#0B0714] backdrop-blur-xl p-4 shadow-[0_20px_50px_rgba(0,0,0,0.7)] transition-transform duration-500 group-hover:-translate-y-2">
+              <div className="relative rounded-2xl overflow-hidden">
                 <Image
-                  src="/devices-banner-nano.webp"
-                  alt="Supported IPTV Devices"
+                  src="/devices-banner-orexetv.jpg"
+                  alt="Supported Orexetv IPTV Devices"
                   width={800}
                   height={500}
                   className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
@@ -30,75 +30,86 @@ export default function DeviceSupport() {
             </div>
             
             {/* Floating decorative elements */}
-            <div className="absolute -bottom-6 -left-6 bg-[#141414] p-4 rounded-2xl shadow-xl border border-white/5 flex items-center gap-3 animate-bounce" style={{ animationDuration: '3s' }}>
-              <div className="bg-[#22c55e]/10 p-2 rounded-full">
-                <Wifi className="text-[#22c55e]" size={20} strokeWidth={3} />
+            <div className="absolute -bottom-5 -left-5 glass-card px-4 py-3 shadow-2xl flex items-center gap-3">
+              <div className="bg-[#4CFF91]/15 p-2 rounded-xl border border-[#4CFF91]/30">
+                <Wifi className="text-[#4CFF91]" size={18} strokeWidth={2.5} />
               </div>
-              <span className="font-bold text-sm">Zero Buffering</span>
+              <div>
+                <span className="font-extrabold text-xs block text-white">Zero Buffering</span>
+                <span className="text-[10px] text-slate-400 font-medium">Ultra-Fast 60FPS</span>
+              </div>
             </div>
           </div>
 
-          {/* Right Side: Title & Paragraph */}
+          {/* Right Side: Title & Feature Cards */}
           <div className="w-full lg:flex-1 space-y-8 min-w-0 flex flex-col justify-center">
             <div>
-              <span className="inline-block py-1.5 px-4 rounded-full bg-[#E50914]/10 text-[#E50914] font-bold text-xs tracking-widest uppercase mb-6 border border-[#E50914]/20">
-                Limitless Compatibility
-              </span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-8">
+              <div className="badge-pill mb-4">
+                <span className="dot-blink" /> Limitless Compatibility
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-[1.1] tracking-tight uppercase mb-4">
                 Stream Seamlessly on <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E50914] to-[#B3000B]">
-                  Any Device
+                <span className="bg-gradient-to-r from-[#C084FC] via-[#818CF8] to-[#22D3EE] bg-clip-text text-transparent">
+                  Any Screen You Own
                 </span>
               </h2>
-              <p className="text-gray-400 text-lg md:text-xl leading-relaxed w-full">
-                Orexetv is designed to adapt to your lifestyle. From the biggest screen in your living room to the smartphone in your pocket, enjoy a <Link href="/installation" className="font-semibold text-[#E50914] hover:text-[#B3000B] hover:underline transition-colors">premium viewing experience</Link> anywhere.
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Orexetv is designed to adapt to your lifestyle. From the biggest screen in your living room to your smartphone on the go, enjoy a <Link href="/installation" className="text-[#C084FC] font-bold hover:underline">premium 4K viewing experience</Link> across <Link href="/channels" className="text-[#818CF8] font-bold hover:underline">+50,000 channels</Link> without complicated hardware. Check our <Link href="/pricing" className="text-[#22D3EE] font-bold hover:underline">pricing plans</Link> for multi-screen support.
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
               {/* Feature 1 */}
-              <div className="p-5 rounded-2xl bg-[#141414] border border-white/5 shadow-sm hover:shadow-[0_10px_30px_rgba(112,0,255,0.1)] hover:border-[#E50914]/30 transition-all duration-300 group">
-                <div className="bg-[#141414] p-3 rounded-xl w-12 h-12 flex items-center justify-center text-[#E50914] mb-4 group-hover:bg-[#E50914]/10 transition-colors">
-                  <Tv size={24} />
+              <div className="p-5 rounded-2xl bg-[#0B0714] border border-white/10 hover:border-purple-500/40 hover:-translate-y-1 transition-all duration-300 group">
+                <div className="bg-purple-500/10 border border-purple-500/20 p-3 rounded-xl w-12 h-12 flex items-center justify-center text-[#C084FC] mb-3 group-hover:scale-110 transition-transform">
+                  <Tv size={22} />
                 </div>
-                <h4 className="font-bold text-white mb-1">Smart TVs</h4>
-                <p className="text-gray-400 text-sm">Samsung, LG, Android TV.</p>
+                <h3 className="font-bold text-white text-sm mb-1">Smart TVs</h3>
+                <p className="text-slate-400 text-xs">
+                  Setup for <Link href="/installation" className="text-slate-300 hover:text-[#C084FC] underline decoration-purple-500/30">Samsung, LG, Android TV, Sony</Link>.
+                </p>
               </div>
 
               {/* Feature 2 */}
-              <div className="p-5 rounded-2xl bg-[#141414] border border-white/5 shadow-sm hover:shadow-[0_10px_30px_rgba(112,0,255,0.1)] hover:border-[#E50914]/30 transition-all duration-300 group">
-                <div className="bg-[#141414] p-3 rounded-xl w-12 h-12 flex items-center justify-center text-[#E50914] mb-4 group-hover:bg-[#E50914]/10 transition-colors">
-                  <Monitor size={24} />
+              <div className="p-5 rounded-2xl bg-[#0B0714] border border-white/10 hover:border-purple-500/40 hover:-translate-y-1 transition-all duration-300 group">
+                <div className="bg-indigo-500/10 border border-indigo-500/20 p-3 rounded-xl w-12 h-12 flex items-center justify-center text-[#818CF8] mb-3 group-hover:scale-110 transition-transform">
+                  <Monitor size={22} />
                 </div>
-                <h4 className="font-bold text-white mb-1">Computers</h4>
-                <p className="text-gray-400 text-sm">Windows & Mac Support.</p>
+                <h3 className="font-bold text-white text-sm mb-1">Computers</h3>
+                <p className="text-slate-400 text-xs">
+                  Guides for <Link href="/installation" className="text-slate-300 hover:text-[#818CF8] underline decoration-indigo-500/30">Windows, macOS &amp; Web Player</Link>.
+                </p>
               </div>
 
               {/* Feature 3 */}
-              <div className="p-5 rounded-2xl bg-[#141414] border border-white/5 shadow-sm hover:shadow-[0_10px_30px_rgba(112,0,255,0.1)] hover:border-[#E50914]/30 transition-all duration-300 group">
-                <div className="bg-[#141414] p-3 rounded-xl w-12 h-12 flex items-center justify-center text-[#E50914] mb-4 group-hover:bg-[#E50914]/10 transition-colors">
-                  <Box size={24} />
+              <div className="p-5 rounded-2xl bg-[#0B0714] border border-white/10 hover:border-purple-500/40 hover:-translate-y-1 transition-all duration-300 group">
+                <div className="bg-cyan-500/10 border border-cyan-500/20 p-3 rounded-xl w-12 h-12 flex items-center justify-center text-[#22D3EE] mb-3 group-hover:scale-110 transition-transform">
+                  <Box size={22} />
                 </div>
-                <h4 className="font-bold text-white mb-1">Set-Top Boxes</h4>
-                <p className="text-gray-400 text-sm">Firestick, MAG & Apple TV.</p>
+                <h3 className="font-bold text-white text-sm mb-1">Streaming Sticks</h3>
+                <p className="text-slate-400 text-xs">
+                  Tutorials for <Link href="/blog/how-to-set-up-iptv-on-firestick" className="text-slate-300 hover:text-[#22D3EE] underline decoration-cyan-500/30">Firestick</Link>, MAG Box, &amp; <Link href="/installation" className="text-slate-300 hover:text-[#22D3EE] underline decoration-cyan-500/30">Apple TV</Link>.
+                </p>
               </div>
 
               {/* Feature 4 */}
-              <div className="p-5 rounded-2xl bg-[#141414] border border-white/5 shadow-sm hover:shadow-[0_10px_30px_rgba(112,0,255,0.1)] hover:border-[#E50914]/30 transition-all duration-300 group">
-                <div className="bg-[#141414] p-3 rounded-xl w-12 h-12 flex items-center justify-center text-[#E50914] mb-4 group-hover:bg-[#E50914]/10 transition-colors">
-                  <Smartphone size={24} />
+              <div className="p-5 rounded-2xl bg-[#0B0714] border border-white/10 hover:border-purple-500/40 hover:-translate-y-1 transition-all duration-300 group">
+                <div className="bg-pink-500/10 border border-pink-500/20 p-3 rounded-xl w-12 h-12 flex items-center justify-center text-[#F472B6] mb-3 group-hover:scale-110 transition-transform">
+                  <Smartphone size={22} />
                 </div>
-                <h4 className="font-bold text-white mb-1">Mobile & Tablets</h4>
-                <p className="text-gray-400 text-sm">Watch anywhere on the go.</p>
+                <h3 className="font-bold text-white text-sm mb-1">Mobile &amp; Tablets</h3>
+                <p className="text-slate-400 text-xs">
+                  Stream on <Link href="/installation" className="text-slate-300 hover:text-[#F472B6] underline decoration-pink-500/30">Android phones, iPhone &amp; iPad</Link>.
+                </p>
               </div>
             </div>
 
             <div className="pt-2">
               <Link 
                 href="/installation" 
-                className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white bg-black rounded-xl hover:bg-[#E50914] hover:shadow-[0_10px_25px_rgba(112,0,255,0.3)] transition-all duration-300 gap-2"
+                className="btn-primary-voltra px-7 py-3.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider"
               >
-                Get Setup Instructions <span aria-hidden="true">&rarr;</span>
+                Get Setup Instructions &rarr;
               </Link>
             </div>
           </div>
