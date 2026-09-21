@@ -90,6 +90,7 @@ export default function GlobalCoverageSection() {
         <div className="flex w-[max-content] animate-marquee-fast hover:[animation-play-state:paused]">
           {marqueeCountries.map((country, idx) => (
             <div key={`top-${country.code}-${idx}`} className="flex items-center space-x-2 px-6">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`https://flagcdn.com/w40/${country.code}.webp`}
                 alt={country.name}
@@ -183,6 +184,7 @@ export default function GlobalCoverageSection() {
                 transition={{ duration: 0.2 }}
                 className="bg-[#141414]/90 border border-white/10 hover:border-primary-500/40 hover:bg-[#141414] rounded-xl px-3.5 py-2.5 flex items-center gap-3 transition-all cursor-default group shadow-sm"
               >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={`https://flagcdn.com/w40/${country.code}.webp`}
                   alt={`${country.name} flag`}
@@ -222,6 +224,7 @@ export default function GlobalCoverageSection() {
         <div className="flex w-[max-content] animate-marquee-reverse hover:[animation-play-state:paused]">
           {marqueeCountries.map((country, idx) => (
             <div key={`bottom-${country.code}-${idx}`} className="flex items-center space-x-2 px-6">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`https://flagcdn.com/w40/${country.code}.webp`}
                 alt={country.name}

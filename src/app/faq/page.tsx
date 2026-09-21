@@ -42,7 +42,7 @@ const faqs: FAQItem[] = [
         </Link>
         . You can also read our in-depth{" "}
         <Link href="/blog/choose-iptv-service-guide" className="text-[#818CF8] font-semibold hover:underline">
-          IPTV Buyer's Guide
+          IPTV Buyer&apos;s Guide
         </Link>
         .
       </>
