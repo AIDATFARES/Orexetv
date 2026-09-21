@@ -12,12 +12,13 @@ export default function TVMockup() {
       >
         <div className="animate-float w-full transition-transform duration-500 filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.7)] group-hover:scale-[1.03] group-hover:-translate-y-2">
           <Image
-            alt="Orexetv streaming on TV, phone, tablet, and laptop"
+            alt="Orexetv Premium 4K IPTV Streaming Ecosystem across Smart TV, Smartphone, Tablet, and Laptop"
+            title="Orexetv Multi-Device Streaming Platform"
             className="h-auto w-full object-contain filter drop-shadow-[0_12px_30px_rgba(6,182,212,0.2)]"
             height={1000}
             priority
             sizes="(max-width: 1024px) 100vw, 60vw"
-            src="/bunnystream-iptv-transparent.webp"
+            src="/orexetv-tv-screen.webp"
             width={1800}
           />
         </div>

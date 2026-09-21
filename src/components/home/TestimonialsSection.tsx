@@ -75,7 +75,8 @@ export default function TestimonialsSection() {
               >
                 <Image
                   src={`/reviews/${img}`}
-                  alt="Orexetv Customer Review"
+                  alt={`Verified Orexetv 5-Star Subscriber Review and Stream Verification ${(index % reviewImages.length) + 1}`}
+                  title={`Orexetv Verified Customer Rating & Testimonial ${(index % reviewImages.length) + 1}`}
                   fill
                   sizes="(max-width: 640px) 220px, 280px"
                   className="object-contain group-hover:scale-105 transition-transform duration-300 p-2"

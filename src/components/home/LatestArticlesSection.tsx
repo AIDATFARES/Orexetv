@@ -32,8 +32,9 @@ export default function LatestArticlesSection() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    alt={post.title}
-                    src={post.coverImage || "/blog/high-quality-iptv-service.webp"}
+                    alt={`Orexetv Blog Guide: ${post.title}`}
+                    title={post.title}
+                    src={post.coverImage || "/blog/choose-iptv-service-hero.jpg"}
                   />
                   <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-[#141414] to-transparent"></div>
                   <span className="absolute top-4 left-4 px-3 py-1 bg-[#141414] backdrop-blur-md text-white rounded-full text-xs font-bold border border-white/10">

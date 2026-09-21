@@ -7,6 +7,33 @@ interface BrandMarqueeProps {
   imageClassName?: string;
 }
 
+function getAccessibleImageDetails(folder: string, filename: string) {
+  const cleanName = filename
+    .replace(/\.[^/.]+$/, "")
+    .replace(/^\d+[-_]?/, "")
+    .replace(/[-_]/g, " ")
+    .trim();
+
+  if (folder === "devices") {
+    const formattedDevice = cleanName
+      ? cleanName.split(" ").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")
+      : "Streaming Device";
+    return {
+      alt: `Orexetv Compatible Device: ${formattedDevice}`,
+      title: `Watch Orexetv on ${formattedDevice}`,
+    };
+  }
+
+  const formattedChannel = cleanName && isNaN(Number(cleanName))
+    ? cleanName.split(" ").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")
+    : "Live Sports & Entertainment Network";
+
+  return {
+    alt: `Orexetv 4K Live Broadcast Channel: ${formattedChannel}`,
+    title: `Stream ${formattedChannel} on Orexetv`,
+  };
+}
+
 export default function BrandMarquee({
   imagesFolder = "brands",
   images,
@@ -30,22 +57,26 @@ export default function BrandMarquee({
       <div
         className={`flex gap-5 md:gap-7 px-6 items-center w-max ${brandList.length < 10 ? 'animate-marquee-fast' : 'animate-marquee'} hover:[animation-play-state:paused]`}
       >
-        {repeatList.map((brand, i) => (
-          <div 
-            key={i} 
-            className={cardClassName || "flex-shrink-0 w-[110px] h-[55px] md:w-[145px] md:h-[68px] relative bg-white rounded-xl p-3 border border-white/10 hover:border-purple-400/60 hover:scale-105 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.35)] flex items-center justify-center cursor-pointer"}
-          >
-            <div className="relative w-full h-full overflow-hidden rounded-lg">
-              <Image 
-                src={`/${imagesFolder}/${brand}`} 
-                alt="Channel Logo" 
-                fill
-                sizes="(max-width: 640px) 110px, 145px"
-                className={imageClassName || "object-contain drop-shadow-sm rounded-lg"}
-              />
+        {repeatList.map((brand, i) => {
+          const imgMeta = getAccessibleImageDetails(imagesFolder, brand);
+          return (
+            <div 
+              key={i} 
+              className={cardClassName || "flex-shrink-0 w-[110px] h-[55px] md:w-[145px] md:h-[68px] relative bg-white rounded-xl p-3 border border-white/10 hover:border-purple-400/60 hover:scale-105 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.35)] flex items-center justify-center cursor-pointer"}
+            >
+              <div className="relative w-full h-full overflow-hidden rounded-lg">
+                <Image 
+                  src={`/${imagesFolder}/${brand}`} 
+                  alt={imgMeta.alt}
+                  title={imgMeta.title}
+                  fill
+                  sizes="(max-width: 640px) 110px, 145px"
+                  className={imageClassName || "object-contain drop-shadow-sm rounded-lg"}
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

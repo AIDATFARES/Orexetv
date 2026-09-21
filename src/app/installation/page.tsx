@@ -106,17 +106,17 @@ export default function Installation() {
             <BrandMarquee 
               imagesFolder="devices" 
               images={[
-                "Amazon-Fire-tv-stick-krooz-tv.webp",
-                "Apple-TV-krooz-tv.webp",
-                "hisense-krooz-tv.webp",
-                "iptv-smarter-krooz-tv.webp",
-                "LG-smart-krooz-tv.webp",
-                "Shield-krooz-tv.webp",
-                "Smart-android-tv-krooz-tv.webp",
-                "sony-select-krooz-tv.webp",
-                "Tv-media-boxs-krooz-tv.webp",
-                "Windows-krooz-tv.webp",
-                "xbox-live-krooz-tv.webp"
+                "amazon-fire-tv-stick.webp",
+                "apple-tv.webp",
+                "hisense-smart-tv.webp",
+                "iptv-smarters-pro.webp",
+                "lg-smart-tv.webp",
+                "nvidia-shield-tv.webp",
+                "android-tv-box.webp",
+                "sony-bravia-tv.webp",
+                "tv-media-box.webp",
+                "windows-pc.webp",
+                "xbox-console.webp"
               ]}
               cardClassName="flex-shrink-0 w-[150px] h-[75px] md:w-[200px] md:h-[90px] relative bg-[#06040F] border border-white/10 rounded-2xl p-4 hover:border-purple-500/50 transition-all duration-300 shadow-md flex items-center justify-center"
               imageClassName="object-contain drop-shadow-sm brightness-90 hover:brightness-100"

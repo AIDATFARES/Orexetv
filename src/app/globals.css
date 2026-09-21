@@ -37,7 +37,7 @@
   --color-on-background: #FFFFFF;
   --color-surface-variant: #160D27;
 
-  /* Brand Colors - ArgonTV-Inspired Premium Purple & Indigo Palette */
+  /* Brand Colors - Orexetv Premium Purple & Indigo Palette */
   --color-primary-300: #C084FC;
   --color-primary-400: #A855F7;
   --color-primary-500: #8B5CF6;
@@ -119,7 +119,7 @@
     text-shadow: 0 0 20px rgba(34, 211, 238, 0.45);
   }
 
-  /* ArgonTV-style Pill Badge */
+  /* Orexetv-style Pill Badge */
   .badge-pill {
     display: inline-flex;
     align-items: center;

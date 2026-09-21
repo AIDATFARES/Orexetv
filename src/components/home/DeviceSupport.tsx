@@ -21,7 +21,8 @@ export default function DeviceSupport() {
               <div className="relative rounded-2xl overflow-hidden">
                 <Image
                   src="/devices-banner-orexetv.jpg"
-                  alt="Supported Orexetv IPTV Devices"
+                  alt="Supported Orexetv IPTV Devices — Firestick, Smart TV, Android Box, Apple TV, PC & MAG"
+                  title="Orexetv Cross-Platform IPTV Compatibility"
                   width={800}
                   height={500}
                   className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"

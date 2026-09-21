@@ -26,6 +26,28 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     alternates: {
       canonical: `/blog/${post.slug}`,
     },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url: `https://www.orexetv.vip/blog/${post.slug}`,
+      type: "article",
+      images: post.coverImage
+        ? [
+            {
+              url: post.coverImage,
+              width: 1200,
+              height: 630,
+              alt: `Orexetv Guide - ${post.title}`,
+            },
+          ]
+        : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: post.coverImage ? [post.coverImage] : undefined,
+    },
   };
 }
 
@@ -64,6 +86,31 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   }
 
   const { beforeFaq, faqs, afterFaq } = parseArticleContent(post.content);
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    image: post.coverImage ? `https://www.orexetv.vip${post.coverImage}` : undefined,
+    datePublished: post.date,
+    author: {
+      "@type": "Person",
+      name: post.author,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Orexetv",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.orexetv.vip/icon-192.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://www.orexetv.vip/blog/${post.slug}`,
+    },
+  };
 
   const faqJsonLd = faqs.length > 0 ? {
     "@context": "https://schema.org",
@@ -114,6 +161,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       {/* Ambient Lighting Orbs */}
       <div className="pointer-events-none absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[radial-gradient(circle,rgba(124,58,237,0.15)_0%,transparent_70%)]" />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+
       {faqJsonLd && (
         <script
           type="application/ld+json"
@@ -146,7 +198,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={post.coverImage}
-              alt={post.title}
+              alt={`Orexetv Editorial Guide: ${post.title}`}
+              title={post.title}
               className="w-full h-full object-cover"
             />
           </div>
@@ -189,8 +242,9 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        alt={relPost.title}
-                        src={relPost.coverImage || "/blog/high-quality-iptv-service.webp"}
+                        alt={`Orexetv Guide: ${relPost.title}`}
+                        title={relPost.title}
+                        src={relPost.coverImage || "/blog/choose-iptv-service-hero.jpg"}
                       />
                     </div>
                     <div className="p-5 flex flex-col flex-grow">

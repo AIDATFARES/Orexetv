@@ -38,8 +38,9 @@ export default function Blog() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  alt={featuredPost.title}
-                  src={featuredPost.coverImage || ""}
+                  alt={`Orexetv Featured Guide: ${featuredPost.title}`}
+                  title={featuredPost.title}
+                  src={featuredPost.coverImage || "/blog/choose-iptv-service-hero.jpg"}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B0714] to-transparent md:bg-gradient-to-r md:from-transparent md:to-[#0B0714] opacity-80 md:opacity-100"></div>
               </div>
@@ -72,8 +73,9 @@ export default function Blog() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  alt={post.title}
-                  src={post.coverImage || ""}
+                  alt={`Orexetv Guide: ${post.title}`}
+                  title={post.title}
+                  src={post.coverImage || "/blog/choose-iptv-service-hero.jpg"}
                 />
                 <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-[#0B0714] to-transparent"></div>
                 <span className="absolute top-4 left-4 px-2.5 py-1 bg-[#06040F]/80 backdrop-blur-md text-[#C084FC] rounded-full text-[10px] font-black uppercase tracking-wider border border-purple-500/30">

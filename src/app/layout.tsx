@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         url: "/og-image-orexetv-v2.webp",
         width: 1200,
         height: 630,
-        alt: "Orexetv Premium IPTV Service",
+        alt: "Orexetv — Premium 4K IPTV Service with 50,000+ Channels & VOD",
       },
     ],
     locale: "en_US",
@@ -61,6 +61,36 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.orexetv.vip/#organization",
+      "name": "Orexetv",
+      "url": "https://www.orexetv.vip",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.orexetv.vip/#logo",
+        "url": "https://www.orexetv.vip/icon-192.png",
+        "caption": "Orexetv IPTV Brand Logo",
+      },
+      "image": {
+        "@id": "https://www.orexetv.vip/#logo",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.orexetv.vip/#website",
+      "url": "https://www.orexetv.vip",
+      "name": "Orexetv",
+      "publisher": {
+        "@id": "https://www.orexetv.vip/#organization",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -69,6 +99,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`dark ${inter.variable} ${geist.variable}`}>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
       </head>
       <body className="bg-[#06040F] text-slate-100 min-h-screen flex flex-col antialiased selection:bg-[#7C3AED] selection:text-white bg-grid-pattern">
         {/* Navbar Component */}

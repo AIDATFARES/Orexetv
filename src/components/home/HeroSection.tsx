@@ -15,7 +15,8 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0 opacity-75 lg:opacity-90 transition-opacity duration-500">
         <Image
           src="/hero-cover-orexetv.jpg"
-          alt="Orexetv Premium IPTV 4K Streaming Cover"
+          alt="Orexetv Premium IPTV 4K Ultra HD Streaming — Live Sports, Global Cinema & 50,000+ Channels"
+          title="Orexetv 4K Ultra HD IPTV Streaming Platform"
           priority
           fill
           quality={90}
@@ -28,7 +29,7 @@ export default function HeroSection() {
 
       <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-12 flex flex-col items-start justify-center">
 
-        {/* ArgonTV-style Live Pill Badge */}
+        {/* Live Status Pill Badge */}
         <div className="badge-pill mb-6">
           <span className="dot-blink" />
           <span>Orexetv IPTV — Verified 4K Feeds · +7,500 Active Subscribers</span>
@@ -93,7 +94,7 @@ export default function HeroSection() {
           </a>
         </div>
 
-        {/* ArgonTV-style Floating Feature Badges */}
+        {/* Orexetv Floating Feature Badges */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 w-full max-w-4xl mt-12">
           <div className="glass-card px-4 py-3 flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-purple-500/15 border border-purple-500/25 flex items-center justify-center text-purple-400 shrink-0">
