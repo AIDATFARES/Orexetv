@@ -108,7 +108,7 @@ export default function RootLayout({
         {/* Navbar Component */}
         <Navbar />
 
-        <div className="flex-grow pt-[124px] flex flex-col">{children}</div>
+        <div className="flex-grow pt-[102px] sm:pt-[118px] flex flex-col">{children}</div>
 
         {/* Footer */}
         <footer className="w-full mt-auto border-t border-white/10 bg-[#06040F] relative overflow-hidden">

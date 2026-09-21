@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[92vh] flex items-center bg-[#06040F] overflow-hidden pt-20 pb-12 bg-grid-pattern">
+    <section className="relative flex flex-col justify-start bg-[#06040F] overflow-hidden pt-3 sm:pt-6 pb-12 sm:pb-16 bg-grid-pattern">
       {/* Background Radial Glows */}
       <div className="pointer-events-none absolute top-[-100px] left-[-100px] w-[700px] h-[700px] rounded-full bg-[radial-gradient(circle,rgba(124,58,237,0.2)_0%,transparent_70%)] animate-float" />
       <div className="pointer-events-none absolute top-[20%] right-[-150px] w-[650px] h-[650px] rounded-full bg-[radial-gradient(circle,rgba(79,70,229,0.18)_0%,transparent_70%)]" />
@@ -27,10 +27,10 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#06040F] via-transparent to-[#06040F]/40" />
       </div>
 
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-12 flex flex-col items-start justify-center">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-12 flex flex-col items-start">
 
         {/* Live Status Pill Badge */}
-        <div className="badge-pill mb-6">
+        <div className="badge-pill mb-4 sm:mb-6">
           <span className="dot-blink" />
           <span>Orexetv IPTV — Verified 4K Feeds · +7,500 Active Subscribers</span>
         </div>

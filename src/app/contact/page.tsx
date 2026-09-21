@@ -5,7 +5,7 @@ import { Mail, MessageCircle, ArrowRight, Clock, Send } from "lucide-react";
 
 export default function Contact() {
   return (
-    <main className="min-h-screen bg-[#06040F] text-white pt-28 pb-24 px-6 md:px-12 max-w-7xl mx-auto w-full relative z-10 bg-grid-pattern overflow-hidden">
+    <main className="min-h-screen bg-[#06040F] text-white pt-6 sm:pt-10 pb-24 px-6 md:px-12 max-w-7xl mx-auto w-full relative z-10 bg-grid-pattern overflow-hidden">
       {/* Ambient Lighting Orbs */}
       <div className="pointer-events-none absolute top-10 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-[radial-gradient(circle,rgba(124,58,237,0.16)_0%,transparent_70%)]" />
 

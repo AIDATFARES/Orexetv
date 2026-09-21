@@ -26,7 +26,7 @@ export const metadata = {
 
 export default function Installation() {
   return (
-    <main className="min-h-screen bg-[#06040F] text-white pt-24 pb-24 relative overflow-hidden bg-grid-pattern">
+    <main className="min-h-screen bg-[#06040F] text-white pt-6 sm:pt-10 pb-24 relative overflow-hidden bg-grid-pattern">
       {/* Ambient Lighting Orbs */}
       <div className="pointer-events-none absolute top-[6%] left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-[radial-gradient(circle,rgba(124,58,237,0.15)_0%,transparent_70%)]" />
 
